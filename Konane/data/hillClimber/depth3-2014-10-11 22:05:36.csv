@@ -1,0 +1,2 @@
+%roundNum, %playerNum, %fitness, %myMovesWeight, %theirMovesWeight, %myPiecesWeight, %theirPiecesWeight, %gamesPerRound
+0, 0, 0.24, 1.0, 3.0, 1.0, 3.0, 100

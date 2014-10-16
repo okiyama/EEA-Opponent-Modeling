@@ -1,0 +1,73 @@
+Random vs Human
+  0 1 2 3 4 5 6 7 
+0 B W B W B W B W 
+1 W B W B W B W B 
+2 B W B W B W B W 
+3 W B W B W B W B 
+4 B W B W B W B W 
+5 W B W B W B W B 
+6 B W B W B W B W 
+7 W B W B W B W B 
+
+player B's turn
+[7, 7, 7, 7]
+  0 1 2 3 4 5 6 7 
+0 B W B W B W B W 
+1 W B W B W B W B 
+2 B W B W B W B W 
+3 W B W B W B W B 
+4 B W B W B W B W 
+5 W B W B W B W B 
+6 B W B W B W B W 
+7 W B W B W B W . 
+
+player W's turn
+[7, 6, 7, 6]
+  0 1 2 3 4 5 6 7 
+0 B W B W B W B W 
+1 W B W B W B W B 
+2 B W B W B W B W 
+3 W B W B W B W B 
+4 B W B W B W B W 
+5 W B W B W B W B 
+6 B W B W B W B W 
+7 W B W B W B . . 
+
+player B's turn
+[5, 7, 7, 7]
+  0 1 2 3 4 5 6 7 
+0 B W B W B W B W 
+1 W B W B W B W B 
+2 B W B W B W B W 
+3 W B W B W B W B 
+4 B W B W B W B W 
+5 W B W B W B W . 
+6 B W B W B W B . 
+7 W B W B W B . B 
+
+player W's turn
+[5, 6, 7, 6]
+  0 1 2 3 4 5 6 7 
+0 B W B W B W B W 
+1 W B W B W B W B 
+2 B W B W B W B W 
+3 W B W B W B W B 
+4 B W B W B W B W 
+5 W B W B W B . . 
+6 B W B W B W . . 
+7 W B W B W B W B 
+
+player B's turn
+[6, 4, 6, 6]
+  0 1 2 3 4 5 6 7 
+0 B W B W B W B W 
+1 W B W B W B W B 
+2 B W B W B W B W 
+3 W B W B W B W B 
+4 B W B W B W B W 
+5 W B W B W B . . 
+6 B W B W . . B . 
+7 W B W B W B W B 
+
+player W's turn
+Game over: Human loses.

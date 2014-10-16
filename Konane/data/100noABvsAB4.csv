@@ -1,0 +1,8 @@
+%gameNum, %player1Name, %player2Name, player1NodesExplores, players2NodesExplored, winner, player1ABPruned, player2ABPruned
+%gameNum, %player1Name, %player2Name, player1NodesExplores, players2NodesExplored, winner, player1ABPruned, player2ABPruned
+0 , MinimaxDepth4Jocque , MinimaxDepth4Jocque , 105311 , 13258 , 1, False , True
+1 , MinimaxDepth4Jocque , MinimaxDepth4Jocque , 105311 , 13258 , 1, False , True
+2 , MinimaxDepth4Jocque , MinimaxDepth4Jocque , 105311 , 13258 , 1, False , True
+3 , MinimaxDepth4Jocque , MinimaxDepth4Jocque , 105311 , 13258 , 1, False , True
+4 , MinimaxDepth4Jocque , MinimaxDepth4Jocque , 105311 , 13258 , 1, False , True
+5 , MinimaxDepth4Jocque , MinimaxDepth4Jocque , 105311 , 13258 , 1, False , True

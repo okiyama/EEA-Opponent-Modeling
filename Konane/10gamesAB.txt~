@@ -1,0 +1,62 @@
+Game 0
+MinimaxDepth1Jocque vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+MinimaxDepth1Jocque  explored:  137
+MinimaxDepth3Jocque  explored:  6304
+Game 1
+MinimaxDepth3Jocque vs MinimaxDepth1Jocque
+Game over
+MinimaxDepth1Jocque wins
+MinimaxDepth3Jocque  explored:  4870
+MinimaxDepth1Jocque  explored:  301
+Game 2
+MinimaxDepth1Jocque vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+MinimaxDepth1Jocque  explored:  137
+MinimaxDepth3Jocque  explored:  6304
+Game 3
+MinimaxDepth3Jocque vs MinimaxDepth1Jocque
+Game over
+MinimaxDepth1Jocque wins
+MinimaxDepth3Jocque  explored:  4870
+MinimaxDepth1Jocque  explored:  301
+Game 4
+MinimaxDepth1Jocque vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+MinimaxDepth1Jocque  explored:  137
+MinimaxDepth3Jocque  explored:  6304
+Game 5
+MinimaxDepth3Jocque vs MinimaxDepth1Jocque
+Game over
+MinimaxDepth1Jocque wins
+MinimaxDepth3Jocque  explored:  4870
+MinimaxDepth1Jocque  explored:  301
+Game 6
+MinimaxDepth1Jocque vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+MinimaxDepth1Jocque  explored:  137
+MinimaxDepth3Jocque  explored:  6304
+Game 7
+MinimaxDepth3Jocque vs MinimaxDepth1Jocque
+Game over
+MinimaxDepth1Jocque wins
+MinimaxDepth3Jocque  explored:  4870
+MinimaxDepth1Jocque  explored:  301
+Game 8
+MinimaxDepth1Jocque vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+MinimaxDepth1Jocque  explored:  137
+MinimaxDepth3Jocque  explored:  6304
+Game 9
+MinimaxDepth3Jocque vs MinimaxDepth1Jocque
+Game over
+MinimaxDepth1Jocque wins
+MinimaxDepth3Jocque  explored:  4870
+MinimaxDepth1Jocque  explored:  301
+MinimaxDepth1Jocque Wins:5 Losses:5
+MinimaxDepth3Jocque Wins:5 Losses:5

@@ -1,0 +1,57 @@
+Game 0
+Simple vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+Simple  explored: 
+Game 0
+Simple vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+Simple  explored:  MinimaxDepth3Jocque  explored:  3026
+Game 1
+MinimaxDepth3Jocque vs Simple
+Game over
+MinimaxDepth3Jocque wins
+MinimaxDepth3Jocque  explored:  5465
+Simple  explored:  Game 2
+Simple vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+Simple  explored:  MinimaxDepth3Jocque  explored:  3026
+Game 3
+MinimaxDepth3Jocque vs Simple
+Game over
+MinimaxDepth3Jocque wins
+MinimaxDepth3Jocque  explored:  5465
+Simple  explored:  Game 4
+Simple vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+Simple  explored:  MinimaxDepth3Jocque  explored:  3026
+Game 5
+MinimaxDepth3Jocque vs Simple
+Game over
+MinimaxDepth3Jocque wins
+MinimaxDepth3Jocque  explored:  5465
+Simple  explored:  Game 6
+Simple vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+Simple  explored:  MinimaxDepth3Jocque  explored:  3026
+Game 7
+MinimaxDepth3Jocque vs Simple
+Game over
+MinimaxDepth3Jocque wins
+MinimaxDepth3Jocque  explored:  5465
+Simple  explored:  Game 8
+Simple vs MinimaxDepth3Jocque
+Game over
+MinimaxDepth3Jocque wins
+Simple  explored:  MinimaxDepth3Jocque  explored:  3026
+Game 9
+MinimaxDepth3Jocque vs Simple
+Game over
+MinimaxDepth3Jocque wins
+MinimaxDepth3Jocque  explored:  5465
+Simple  explored:  Simple Wins:0 Losses:10
+MinimaxDepth3Jocque Wins:10 Losses:0

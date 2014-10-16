@@ -1,0 +1,6 @@
+%roundNum, %playerNum, %fitness, %myMovesWeight, %theirMovesWeight, %myPiecesWeight, %theirMovesWeight, %myMovableWeight, %theirMovableWeight , %gamesPerRound, %timeIndividualFinished
+0, 0, 0.55, 1.0, 3.0, 1.0, 3.0, 1.0, 3.0, 20, 20:32:47.276985
+0, 1, 0.2, 1.0, 3.0, 1.0, 3.0, 1.0, 3.0, 20, 20:32:54.234509
+0, 2, 0.35, 1.0, 3.0, 1.0, 3.0, 1.0, 3.0, 20, 20:33:01.039666
+0, 3, 0.5, 1.0, 3.0, 1.0, 3.0, 1.0, 3.0, 20, 20:33:07.270078
+0, 4, 0.5, 1.0, 3.0, 1.0, 3.0, 1.0, 3.0, 20, 20:33:14.032979
