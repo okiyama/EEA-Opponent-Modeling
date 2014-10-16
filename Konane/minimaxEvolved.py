@@ -35,7 +35,7 @@ class MinimaxPlayer(Konane, Player):
         Konane.__init__(self, size)
         Player.__init__(self)
         self.limit = depthLimit
-        self.ABPrune = False
+        self.ABPrune = True 
         self.nodesExplored = 0
         self.model = StaticEvalModel(size)
         self.gamesPlayed = 0

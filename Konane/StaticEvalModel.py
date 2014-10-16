@@ -24,21 +24,21 @@ class StaticEvalModel(Konane):
 
     #Return the weighted static evaluation of the given node
     #This is the sum of the weighted differences of each pair of features
-    # def staticEval(self, node):
-    #     return ((len(self.generateMoves(node.state, node.player)) * self.myMovesWeight) \
-    #                 - (len(self.generateMoves(node.state, self.opponent(node.player))) * self.theirMovesWeight)) \
-    #                 + ((self.countSymbol(node.state, node.player) * self.myPiecesWeight) \
-    #                 - (self.countSymbol(node.state, self.opponent(node.player)) * self.theirPiecesWeight)) \
-    #                 + ((self.countMovablePieces(node.state, node.player) * self.myMovableWeight ) \
-    #                 - (self.countMovablePieces(node.state, self.opponent(node.player)) * self.theirMovableWeight))
+    def staticEval(self, node):
+        return ((len(self.generateMoves(node.state, node.player)) * self.myMovesWeight) \
+                    - (len(self.generateMoves(node.state, self.opponent(node.player))) * self.theirMovesWeight)) \
+                    + ((self.countSymbol(node.state, node.player) * self.myPiecesWeight) \
+                    - (self.countSymbol(node.state, self.opponent(node.player)) * self.theirPiecesWeight)) \
+                    + ((self.countMovablePieces(node.state, node.player) * self.myMovableWeight ) \
+                    - (self.countMovablePieces(node.state, self.opponent(node.player)) * self.theirMovableWeight))
     
     # Returns weighted static evaluation of the given node.
     # Uses board evaluation function L from the Thompson paper.
     # This is (number of moves J have / (number of moves opponent has * 3))
     # This was chosen for its high win rate versus a random player as well as ease of implementation
-    def staticEval(self, node):
-        return (len(self.generateMoves(node.state, node.player)) * self.myMovesWeight) \
-            - (len(self.generateMoves(node.state, self.opponent(node.player))) * self.theirMovesWeight)
+    # def staticEval(self, node):
+    #     return (len(self.generateMoves(node.state, node.player)) * self.myMovesWeight) \
+    #         - (len(self.generateMoves(node.state, self.opponent(node.player))) * self.theirMovesWeight)
 
     def crossOver(self, other):
         pass

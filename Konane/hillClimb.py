@@ -1,13 +1,16 @@
 ## Hill Climb some static evaluators for konane
+## Can provide command line arguments:
+## -ABPrune (True/False/0/1) True/1 result in pruning, all other input will make pruning turn off.
 ## Author: Julian Jocque
 ## Date: 10/6/14
 
 from StaticEvalModel import *
 from updatedKonane import *
-from minimaxEvolvedABon import *
+from minimaxEvolved import *
 from time import strftime
 from copy import copy
 from datetime import datetime
+import sys
 
 ## Make (3/5?) minimax players, all with default static evaluators that then get evolved once (bit of randomness)
 ## Play 10 games with each, updating the fitness and # games played versus # wins
@@ -22,12 +25,28 @@ class HillClimb(Konane):
         self.size = 6
         self.depthLimit = 3
         self.models = []
+        self.ABPrune = True
+        self.processArgs()
+        
         self.initModels()
         self.currPlayers = []
-	self.startTime = strftime("%Y-%m-%d %H:%M:%S")
+    	self.startTime = strftime("%Y-%m-%d %H:%M:%S")
         self.datafile = open("data/hillClimber/data-" + self.startTime + ".csv", "w")
         self.attrFile = open("data/hillClimber/attr-" + self.startTime + ".csv", "w")
-	self.logAttributes(MinimaxPlayer(self.size, self.depthLimit)) #Kinda bad, but this will accurately give if AB is on
+        self.logAttributes()
+
+    def processArgs(self):
+        """ Processes the command line arguments for initialization """
+        for i in range(len(sys.argv)):
+            if sys.argv[i].lower() == "-abprune":
+                try:
+                    if sys.argv[i+1].lower() in ["true", "1"]:
+                        self.ABPrune = True
+                    else:
+                        self.ABPrune = False
+                except IndexError:
+                    print "Did not properly provide if we should AB prune or not."
+                print self.ABPrune
 
     def initModels(self):
         """ Initializes the models that we'll evolve """
@@ -37,7 +56,7 @@ class HillClimb(Konane):
             self.models.append(currModel)
 
     def hillClimb(self):
-        self.datafile.write("%roundNum, %playerNum, %fitness, " + self.models[0].dumpFeatures() + " , %gamesPerRound, %timeIndividualFinished\n")
+        self.datafile.write("%roundNum, %playerNum, %fitness, " + self.models[0].dumpFeatures() + ", %timeIndividualFinished\n")
         running = True
         roundNum = 0
         try:
@@ -45,6 +64,7 @@ class HillClimb(Konane):
                 for playerNum in range(self.numPlayers):
                     player1 = MinimaxPlayer(self.size, self.depthLimit)
                     player1.model = self.models[playerNum]
+                    player1.ABPrune = self.ABPrune
                     self.currPlayers.append(player1)
                     player2 = RandomPlayer(self.size)
 
@@ -63,7 +83,7 @@ class HillClimb(Konane):
 		bestIndex = 0
 		for i in range(len(self.currPlayers)):
 			if self.currPlayers[i].getFitness() > bestYet:
-				bestYet = self.currPlayers[i].getFitness()
+	
 				bestIndex = i	
                 parent = self.currPlayers[bestIndex]
                 self.evolveModels(parent)
@@ -88,11 +108,7 @@ class HillClimb(Konane):
         p1.initialize('B')
         p2.initialize('W')
         while True:
-            try:
-                move = p1.getMove(self.board)
-            except TimedOutException:
-                print p1.name, "move took too long!"
-                move = self.randomMove(self.board, p1.side)
+            move = p1.getMove(self.board)
             if move == []:
                 return p2
             try: 
@@ -102,11 +118,7 @@ class HillClimb(Konane):
                 print move
                 print self
                 return p2
-            try:
-                move = p2.getMove(self.board)
-            except TimedOutException:
-                print p2.name, "move took too long!"
-                move = self.randomMove(self.board, p2.side)
+            move = p2.getMove(self.board)
             if move == []:
                 return p1
             try:
@@ -117,14 +129,14 @@ class HillClimb(Konane):
                 print self
                 return p1
 
-    def logAttributes(self, minimaxPlayer):
+    def logAttributes(self):
         """ 
 	Logs the attributes like depth, number of games and if AB is on or off. 
 	Format is as follows:
 	%numGamesPerRound, %ABon, %depth, %boardSize, %numPlayers
 	"""
         self.attrFile.write("%numGamesPerRound, %ABon, %depth, %boardSize, %numPlayers\n")
-	self.attrFile.write(str(self.numGames) + ", " + str(minimaxPlayer.ABPrune) + ", "
+	self.attrFile.write(str(self.numGames) + ", " + str(self.ABPrune) + ", "
 		+ str(self.depthLimit) + ", " + str(self.size) + ", " + str(self.numPlayers) + "\n") 
 
     def log(self, player, playerNum, roundNum, time):
