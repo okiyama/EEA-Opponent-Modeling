@@ -4,7 +4,7 @@
 
 from StaticEvalModel import *
 from updatedKonane import *
-from minimaxEvolvedABon import *
+from minimaxEvolvedABoff import *
 from time import strftime
 from copy import copy
 from datetime import datetime
