@@ -1,0 +1,25 @@
+----------------------------------------
+Begin PBS Prologue Thu Oct 16 13:03:04 EDT 2014 1413478984
+Job ID:		3392203.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node083
+End PBS Prologue Thu Oct 16 13:03:05 EDT 2014 1413478985
+----------------------------------------
+=>> PBS: job killed: walltime 7201 exceeded limit 7200
+----------------------------------------
+Begin PBS Epilogue Thu Oct 16 15:03:10 EDT 2014 1413486190
+Job ID:		3392203.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	hillClimb_ABon.sh
+Session:	27208
+Limits:		neednodes=a1,procs=1,walltime=02:00:00
+Resources:	cput=01:59:59,mem=7640kb,vmem=257700kb,walltime=02:00:01
+Queue:		dque
+Account:		
+Nodes:	node083
+Killing leftovers...
+
+End PBS Epilogue Thu Oct 16 15:03:10 EDT 2014 1413486190
+----------------------------------------

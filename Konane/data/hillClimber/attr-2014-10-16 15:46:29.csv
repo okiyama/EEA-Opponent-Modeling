@@ -1,0 +1,2 @@
+%numGamesPerRound, %ABon, %depth, %boardSize, %numPlayers
+50, True, 3, 6, 5

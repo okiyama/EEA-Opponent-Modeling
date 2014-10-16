@@ -1,0 +1,25 @@
+----------------------------------------
+Begin PBS Prologue Wed Oct 15 21:46:35 EDT 2014 1413423995
+Job ID:		3392171.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node084
+End PBS Prologue Wed Oct 15 21:46:36 EDT 2014 1413423996
+----------------------------------------
+=>> PBS: job killed: walltime 28801 exceeded limit 28800
+----------------------------------------
+Begin PBS Epilogue Thu Oct 16 05:46:41 EDT 2014 1413452801
+Job ID:		3392171.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	jupiter_1.sh
+Session:	27792
+Limits:		neednodes=a1,procs=1,walltime=08:00:00
+Resources:	cput=07:59:57,mem=7704kb,vmem=257692kb,walltime=08:00:01
+Queue:		dque
+Account:		
+Nodes:	node084
+Killing leftovers...
+
+End PBS Epilogue Thu Oct 16 05:46:43 EDT 2014 1413452803
+----------------------------------------

@@ -1,0 +1,27 @@
+----------------------------------------
+Begin PBS Prologue Wed Oct 15 21:31:58 EDT 2014 1413423118
+Job ID:		3392161.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node083
+End PBS Prologue Wed Oct 15 21:31:58 EDT 2014 1413423118
+----------------------------------------
+Unknown option: --
+usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Try `python -h' for more information.
+----------------------------------------
+Begin PBS Epilogue Wed Oct 15 21:32:03 EDT 2014 1413423123
+Job ID:		3392161.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	test.sh
+Session:	12789
+Limits:		neednodes=a1,procs=1,walltime=08:00:00
+Resources:	cput=00:00:00,mem=0kb,vmem=0kb,walltime=00:00:00
+Queue:		dque
+Account:		
+Nodes:	node083
+Killing leftovers...
+
+End PBS Epilogue Wed Oct 15 21:32:03 EDT 2014 1413423123
+----------------------------------------

@@ -1,0 +1,30 @@
+----------------------------------------
+Begin PBS Prologue Wed Oct 15 21:11:08 EDT 2014 1413421868
+Job ID:		3392153.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node084
+End PBS Prologue Wed Oct 15 21:11:08 EDT 2014 1413421868
+----------------------------------------
+Traceback (most recent call last):
+  File "./hillClimb.py", line 120, in ?
+    climber.hillClimb()
+  File "./hillClimb.py", line 57, in hillClimb
+    parent = max(self.currPlayers, key = lambda player: player.getFitness())
+TypeError: max() takes no keyword arguments
+----------------------------------------
+Begin PBS Epilogue Wed Oct 15 21:12:14 EDT 2014 1413421934
+Job ID:		3392153.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	jupiter_1.sh
+Session:	24166
+Limits:		neednodes=a1,procs=1,walltime=08:00:00
+Resources:	cput=00:01:00,mem=7620kb,vmem=257564kb,walltime=00:01:01
+Queue:		dque
+Account:		
+Nodes:	node084
+Killing leftovers...
+
+End PBS Epilogue Wed Oct 15 21:12:15 EDT 2014 1413421935
+----------------------------------------

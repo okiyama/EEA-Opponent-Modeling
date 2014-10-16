@@ -1,0 +1,24 @@
+----------------------------------------
+Begin PBS Prologue Thu Oct 16 12:59:08 EDT 2014 1413478748
+Job ID:		3392192.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node084
+End PBS Prologue Thu Oct 16 12:59:09 EDT 2014 1413478749
+----------------------------------------
+----------------------------------------
+Begin PBS Epilogue Thu Oct 16 13:02:09 EDT 2014 1413478929
+Job ID:		3392192.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	hillClimb_ABon.sh
+Session:	9571
+Limits:		neednodes=a1,procs=1,walltime=02:00:00
+Resources:	cput=00:02:22,mem=8100kb,vmem=258184kb,walltime=00:02:56
+Queue:		dque
+Account:		
+Nodes:	node084
+Killing leftovers...
+
+End PBS Epilogue Thu Oct 16 13:02:09 EDT 2014 1413478929
+----------------------------------------
