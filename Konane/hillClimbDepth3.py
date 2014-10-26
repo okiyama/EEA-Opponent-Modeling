@@ -22,6 +22,7 @@ class HillClimb(Konane):
         self.numGames = 50 
         self.size = 6
         self.depthLimit = 3
+        self.opponentDepth = 3
         self.models = []
         #self.ABPrune = True
         #self.processArgs()
@@ -57,6 +58,7 @@ class HillClimb(Konane):
         self.datafile.write("%roundNum, %playerNum, %fitness, " + self.models[0].dumpFeatures() + ", %timeIndividualFinished\n")
         running = True
         roundNum = 0
+        player2 = MinimaxPlayer(self.size, self.opponentDepth)
         try:
             while(running):
                 for playerNum in range(self.numPlayers):
@@ -64,11 +66,13 @@ class HillClimb(Konane):
                     player1.model = self.models[playerNum]
                     #player1.ABPrune = self.ABPrune
                     self.currPlayers.append(player1)
-                    player2 = RandomPlayer(self.size)
 
                     for gameNum in range(self.numGames):
                         #print "On game num", gameNum
-                        winner = self.playOneGame(player1, player2)
+                        if gameNum % 2 == 0: #so that players swap playing white/black
+                            winner = self.playOneGame(player1, player2)
+                        else:
+                            winner = self.playOneGame(player2, player1)
                         player1.gamesPlayed += 1
                         if winner == player1:
                             player1.gamesWon += 1

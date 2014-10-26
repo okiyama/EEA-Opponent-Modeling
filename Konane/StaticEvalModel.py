@@ -9,11 +9,11 @@ class StaticEvalModel(Konane):
     def __init__(self, size):
         self.size = size
         self.myMovesWeight = 1.0
-        self.theirMovesWeight = 1.0
+        self.theirMovesWeight = 3.0
         self.myPiecesWeight = 1.0
-        self.theirPiecesWeight = 1.0
+        self.theirPiecesWeight = 3.0
         self.myMovableWeight = 1.0
-        self.theirMovableWeight = 1.0
+        self.theirMovableWeight = 3.0
         self.chanceToMutate = 15 #as a percent
         self.gamesWon = 0
         self.gamesPlayed = 0
