@@ -17,6 +17,7 @@ import random
 import copy
 from alarm import *
 from time import sleep
+from minimaxEvolved import MinimaxPlayer
 
 class KonaneError(AttributeError):
     """
@@ -258,7 +259,7 @@ class Konane:
         p2.initialize('W')
         log = open(p1.name + "vs" + p2.name + ".log", "w")
         log.write(p1.name + " vs " + p2.name +"\n")
-        print p1.name, "vs", p2.name
+        #print p1.name, "vs", p2.name
         while True:
             log.write(str(self))
             log.write("\nplayer B's turn\n")
@@ -272,7 +273,7 @@ class Konane:
                 move = self.randomMove(self.board, p1.side)
             if move == []:
                 log.write("Game over: " + p1.name + " loses.\n")
-                print "Game over"
+                #print "Game over"
                 return 'W'
             try: 
                 self.makeMove('B', move)
@@ -299,7 +300,7 @@ class Konane:
                 move = self.randomMove(self.board, p2.side)
             if move == []:
                 log.write("Game over: " + p2.name + " loses.\n")
-                print "Game over"
+                #print "Game over"
                 return 'B'
             try:
                 self.makeMove('W', move)
@@ -323,23 +324,42 @@ class Konane:
         The players alternate going first.  Prints the total
         number of games won by each player.
         """
+        print "%gameNum, %player1Name, %player2Name, player1NodesExplores, players2NodesExplored, winner, player1ABPruned, player2ABPruned" 
         first = p1
         second = p2
         for i in range(n):
-            print "Game", i
             winner = self.playOneGame(first, second, show)
+            print i, ",", first.name, ",", second.name, ",",
+            try:
+                print first.nodesExplored, ",",
+                first.nodesExplored = 0
+            except AttributeError:
+                print "0,",
+            try:
+                print second.nodesExplored, ",",
+                second.nodesExplored = 0
+            except AttributeError:
+                print "0,",
             if winner == 'B':
                 first.won()
                 second.lost()
-                print first.name, "wins"
+                print "1,",
             else:
                 first.lost()
                 second.won()
-                print second.name, "wins"
-            first, second = second, first
-        print first.results()
-        print second.results()
-
+                print "2,",
+            #first, second = second, first
+            try:
+                print first.ABPrune, ",",
+            except AttributeError:
+                print "N/A,",
+            try:
+                print second.ABPrune
+            except AttributeError:
+                print "N/A"
+            first.model.evolve()
+        #print first.results()
+        #print second.results()
 
 class Player:
     """
@@ -388,7 +408,7 @@ class SimplePlayer(Konane, Player):
     # Checks when the method below is called whether it returns within
     # the given time limit of 1 second.  If it does not, it will raise a
     # TimedOutException.  To test this, uncomment the delaying code below.
-    @timed_out(1)
+    #@timed_out(1)
     def getMove(self, board):
         #if random.random() < .1:
         #    print "delaying..."
@@ -447,5 +467,5 @@ class HumanPlayer(Konane, Player):
                 print "Invalid choice, try again."
 
 if __name__ == '__main__':
-    game = Konane(6)
-    game.playNGames(2, RandomPlayer(6), SimplePlayer(6))
+    game = Konane(8)
+    game.playNGames(100, MinimaxPlayer(8, 3), RandomPlayer(8), False)

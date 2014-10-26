@@ -15,7 +15,7 @@ must explicitly initialize the second base class.
 
 import random
 import copy
-from alarm import *
+#from alarm import *
 from time import sleep
 
 class KonaneError(AttributeError):
@@ -233,6 +233,30 @@ class Konane:
                                                 self.opponent(player))
             return moves
         
+    def countMovablePieces(self, board, player):
+        """
+        Generates and returns all legal moves for the given player
+        using the current board configuration.
+        """
+        if self.openingMove(board):
+            if player=='B':
+                return len(self.generateFirstMoves(board))
+            else:
+                return len(self.generateSecondMoves(board))
+        else:
+            count = 0
+            rd = [-1,0,1,0]
+            cd = [0,1,0,-1]
+            for r in range(self.size):
+                for c in range(self.size):
+                    if board[r][c] == player:
+                        for i in range(len(rd)):
+                            if (self.check(board,r,c,rd[i],cd[i],1,
+                                self.opponent(player)) != []):
+                                count += 1
+                                break
+            return count 
+        
     def randomMove(self, board, player):
         moves = self.generateMoves(board, player)
         n = len(moves)
@@ -265,11 +289,12 @@ class Konane:
             if show:
                 print self
                 print "player B's turn"
-            try:
-                move = p1.getMove(self.board)
-            except TimedOutException:
-                print p1.name, "move took too long!"
-                move = self.randomMove(self.board, p1.side)
+            # try:
+            #     move = p1.getMove(self.board)
+            # except TimedOutException:
+            #     print p1.name, "move took too long!"
+            #     move = self.randomMove(self.board, p1.side)
+            move = p1.getMove(self.board)
             if move == []:
                 log.write("Game over: " + p1.name + " loses.\n")
                 print "Game over"
@@ -292,11 +317,12 @@ class Konane:
                 print
                 print self
                 print "player W's turn"
-            try:
-                move = p2.getMove(self.board)
-            except TimedOutException:
-                print p2.name, "move took too long!"
-                move = self.randomMove(self.board, p2.side)
+            # try:
+            #     move = p2.getMove(self.board)
+            # except TimedOutException:
+            #     print p2.name, "move took too long!"
+            #     move = self.randomMove(self.board, p2.side)
+            move = p2.getMove(self.board)
             if move == []:
                 log.write("Game over: " + p2.name + " loses.\n")
                 print "Game over"
@@ -388,7 +414,7 @@ class SimplePlayer(Konane, Player):
     # Checks when the method below is called whether it returns within
     # the given time limit of 1 second.  If it does not, it will raise a
     # TimedOutException.  To test this, uncomment the delaying code below.
-    @timed_out(1)
+    #@timed_out(1)
     def getMove(self, board):
         #if random.random() < .1:
         #    print "delaying..."

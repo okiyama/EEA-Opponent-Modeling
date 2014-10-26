@@ -1,22 +1,9 @@
-"""
-File: konane.py
-Classes defined: KonaneError, Konane, Player, SimplePlayer,
-RandomPlayer, HumanPlayer
-
-New feature: See the SimplePlayer class for an example of how to limit
-the time that a method will run.  For the Konane tournament, your
-minimax player's getMove method must run within 5 seconds.  Notice how
-the getMove method is called within the playOneGame method.  If the
-getMove method times out, then a random move is chosen instead.
-
-Bug fix: When doing mulitple inheritance in the player classes,
-must explicitly initialize the second base class.
-"""
+### File: konane.py
+### Classes defined: KonaneError, Konane, Player, SimplePlayer,
+### RandomPlayer, HumanPlayer
 
 import random
 import copy
-from alarm import *
-from time import sleep
 
 class KonaneError(AttributeError):
     """
@@ -233,13 +220,6 @@ class Konane:
                                                 self.opponent(player))
             return moves
         
-    def randomMove(self, board, player):
-        moves = self.generateMoves(board, player)
-        n = len(moves)
-        if n == 0:
-            return []
-        else:
-            return moves[random.randrange(0, n)]
 
     def playOneGame(self, p1, p2, show):
         """
@@ -247,11 +227,6 @@ class Konane:
         between them.  Returns 'B' if black wins, or 'W' if
         white wins. When show is true, it will display each move
         in the game.
-
-        New feature: Allows you to limit the time each player
-        takes to make a move.  Will raise a TimedOutException
-        when the limit is exceeded.  In these cases, choose a
-        random move instead.
         """
         self.reset()
         p1.initialize('B')
@@ -265,11 +240,7 @@ class Konane:
             if show:
                 print self
                 print "player B's turn"
-            try:
-                move = p1.getMove(self.board)
-            except TimedOutException:
-                print p1.name, "move took too long!"
-                move = self.randomMove(self.board, p1.side)
+            move = p1.getMove(self.board)
             if move == []:
                 log.write("Game over: " + p1.name + " loses.\n")
                 print "Game over"
@@ -292,11 +263,7 @@ class Konane:
                 print
                 print self
                 print "player W's turn"
-            try:
-                move = p2.getMove(self.board)
-            except TimedOutException:
-                print p2.name, "move took too long!"
-                move = self.randomMove(self.board, p2.side)
+            move = p2.getMove(self.board)
             if move == []:
                 log.write("Game over: " + p2.name + " loses.\n")
                 print "Game over"
@@ -317,7 +284,7 @@ class Konane:
                 print
         log.close()
 
-    def playNGames(self, n, p1, p2, show=False):
+    def playNGames(self, n, p1, p2, show):
         """
         Will play out n games between player p1 and player p2.
         The players alternate going first.  Prints the total
@@ -337,8 +304,6 @@ class Konane:
                 second.won()
                 print second.name, "wins"
             first, second = second, first
-        print first.results()
-        print second.results()
 
 
 class Player:
@@ -379,20 +344,10 @@ class SimplePlayer(Konane, Player):
     """
     Always chooses the first move from the set of possible moves.
     """
-    def __init__(self, boardSize):
-        Konane.__init__(self, boardSize)
-        Player.__init__(self)
     def initialize(self, side):
         self.side = side
         self.name = "Simple"
-    # Checks when the method below is called whether it returns within
-    # the given time limit of 1 second.  If it does not, it will raise a
-    # TimedOutException.  To test this, uncomment the delaying code below.
-    @timed_out(1)
     def getMove(self, board):
-        #if random.random() < .1:
-        #    print "delaying..."
-        #    sleep(2)
         moves = self.generateMoves(board, self.side)
         n = len(moves)
         if n == 0:
@@ -404,9 +359,6 @@ class RandomPlayer(Konane, Player):
     """
     Chooses a random move from the set of possible moves.
     """
-    def __init__(self, boardSize):
-        Konane.__init__(self, boardSize)
-        Player.__init__(self)
     def initialize(self, side):
         self.side = side
         self.name = "Random"
@@ -422,9 +374,6 @@ class HumanPlayer(Konane, Player):
     """
     Prompts a human player for a move.
     """
-    def __init__(self, boardSize):
-        Konane.__init__(self, boardSize)
-        Player.__init__(self)
     def initialize(self, side):
         self.side = side
         self.name = "Human"
@@ -447,5 +396,5 @@ class HumanPlayer(Konane, Player):
                 print "Invalid choice, try again."
 
 if __name__ == '__main__':
-    game = Konane(6)
-    game.playNGames(2, RandomPlayer(6), SimplePlayer(6))
+    game = Konane(8)
+    game.playOneGame(RandomPlayer(8), HumanPlayer(8), True)

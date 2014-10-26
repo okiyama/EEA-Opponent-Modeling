@@ -1,10 +1,12 @@
 ## Hill Climb some static evaluators for konane
+## Can provide command line arguments:
+## -ABPrune (True/False/0/1) True/1 result in pruning, all other input will make pruning turn off.
 ## Author: Julian Jocque
 ## Date: 10/6/14
 
 from StaticEvalModel import *
 from updatedKonane import *
-from johnMinimaxEvolved import *
+from minimaxEvolved import *
 from time import strftime
 from copy import copy
 from datetime import datetime
@@ -19,12 +21,12 @@ class HillClimb(Konane):
 
     def __init__(self):
         self.numPlayers = 5
-        self.numGames = 20
-        self.size = 8
-        self.depthLimit = 2
+        self.numGames = 50
+        self.size = 6
+        self.depthLimit = 3
         self.models = []
-        #self.ABPrune = True
-        #self.processArgs()
+        self.ABPrune = True
+        self.processArgs()
         
         self.initModels()
         self.currPlayers = []
@@ -38,10 +40,10 @@ class HillClimb(Konane):
         for i in range(len(sys.argv)):
             if sys.argv[i].lower() == "-abprune":
                 try:
-                    if sys.argv[i+1].lower() in ["false", "0"]:
+                    if sys.argv[i+1].lower() in ["true", "1"]:
+                        self.ABPrune = True
+                    else:
                         self.ABPrune = False
-                    else: #default to AB prune on
-                        self.ABPrune = True 
                 except IndexError:
                     print "Did not properly provide if we should AB prune or not."
                 print self.ABPrune
@@ -62,7 +64,7 @@ class HillClimb(Konane):
                 for playerNum in range(self.numPlayers):
                     player1 = MinimaxPlayer(self.size, self.depthLimit)
                     player1.model = self.models[playerNum]
-                    #player1.ABPrune = self.ABPrune
+                    player1.ABPrune = self.ABPrune
                     self.currPlayers.append(player1)
                     player2 = RandomPlayer(self.size)
 
@@ -129,13 +131,13 @@ class HillClimb(Konane):
 
     def logAttributes(self):
         """ 
-        Logs the attributes like depth, number of games and if AB is on or off. 
-        Format is as follows:
-        %numGamesPerRound, %depth, %boardSize, %numPlayers
-        """
-        self.attrFile.write("%numGamesPerRound, %depth, %boardSize, %numPlayers\n")
-        self.attrFile.write(str(self.numGames) + ", "
-            + str(self.depthLimit) + ", " + str(self.size) + ", " + str(self.numPlayers) + "\n") 
+	Logs the attributes like depth, number of games and if AB is on or off. 
+	Format is as follows:
+	%numGamesPerRound, %ABon, %depth, %boardSize, %numPlayers
+	"""
+        self.attrFile.write("%numGamesPerRound, %ABon, %depth, %boardSize, %numPlayers\n")
+	self.attrFile.write(str(self.numGames) + ", " + str(self.ABPrune) + ", "
+		+ str(self.depthLimit) + ", " + str(self.size) + ", " + str(self.numPlayers) + "\n") 
 
     def log(self, player, playerNum, roundNum, time):
         """ 

@@ -1,4 +1,5 @@
 from konane import *
+from StaticEvalModel import *
 
 class MinimaxNode:
     """
@@ -34,6 +35,9 @@ class MinimaxPlayer(Konane, Player):
         Konane.__init__(self, size)
         Player.__init__(self)
         self.limit = depthLimit
+        self.model = StaticEvalModel(size)
+        self.gamesPlayed = 0
+        self.gamesWon = 0
 
     def initialize(self, side):
         self.side = side
@@ -46,6 +50,10 @@ class MinimaxPlayer(Konane, Player):
         #print "BEST MOVE:", self.bestMove
         return self.bestMove
 
+    def getFitness(self):
+        """ Gets the fitness of this player """
+        return (float(self.gamesWon) / self.gamesPlayed)
+
     def eval(self, node):
         """
         Given a search node, returns an estimate of the value of its
@@ -57,7 +65,7 @@ class MinimaxPlayer(Konane, Player):
         minMoves = len(self.generateMoves(node.state, node.minimizer))
         if minMoves == 0 and node.player == node.minimizer:
             return self.infinity
-        return maxMoves - minMoves
+        return self.model.staticEval(node)
 
     def successors(self, node):
         result = []
