@@ -17,11 +17,15 @@ class randomStateGenerator:
 
     def __init__(self, fileName="randomStates"):
         self.boardSize = 8
-        self.statesFilename = fileName + str(self.boardSize) + ".p"
+        self.blackStatesFilename = fileName + "black" + str(self.boardSize) + ".p"
+        self.whiteStatesFilename = fileName + "white" + str(self.boardSize) + ".p"
         try:
-            self.states = cPickle.load(open(self.statesFilename, "rb"))
+            self.blackStates = cPickle.load(open(self.blackStatesFilename, "rb"))
+            self.whiteStates = cPickle.load(open(self.whiteStatesFilename, "rb"))
         except (EOFError, IOError):
-            self.states = []
+            self.blackStates = []
+            self.whiteStates = []
+        print self.blackStates
 
     def dupeCheck(self):
         """ To check if there are any duplicates in the states. """
@@ -33,9 +37,14 @@ class randomStateGenerator:
                 print "at " + str(i)
         print "Done duplicate checking"
 
-    def getRandom(self):
-        """ Gets a random legal board state. """
-
+    def getRandom(self, side):
+        """ Gets a random legal board state from the given side. """
+        if side.lower() == "w":
+            return random.choice(self.whiteStates)
+        elif side.lower() == "b":
+            return random.choice(self.blackStates)
+        else:
+            raise ValueError("Side must be W or B")
 
     def genRandom(self, N = None):
         """ 
@@ -55,9 +64,13 @@ class randomStateGenerator:
         player1Turn = True
         try:
             while N is None or count < N:
-                if not game.board in self.states:
+                if player1Turn and not game.board in self.whiteStates:
                     numGenerated += 1
-                    self.states.append(game.board)
+                    self.whiteStates.append(game.board)
+                elif not player1Turn and not game.board in self.blackStates:
+                    numGenerated += 1
+                    self.blackStates.append(game.board)
+
                 if player1Turn:
                     # Would be nice to do this, doesn't fit current control flow
                     # if len(game.generateMoves(game.board, player1.side)) == 1:
@@ -93,7 +106,8 @@ class randomStateGenerator:
                     print "Just generated state " + str(count)
         except KeyboardInterrupt:
             pass #We always want to close out, if we hit this or if we complete the loop
-        cPickle.dump(self.states, open(self.statesFilename, "wb+"))
+        cPickle.dump(self.whiteStates, open(self.whiteStatesFilename, "wb+"))
+        cPickle.dump(self.blackStates, open(self.blackStatesFilename, "wb+"))
         print "Out of " + str(count) + " states generated, " + str(numGenerated) + " were unique"
         print "Done generating"
 
