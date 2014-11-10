@@ -11,9 +11,7 @@ import updatedKonane as konane
 import cPickle
 import random
 
-##TODO: Woops, need the states to be pairs of (board, player) where player corresponds to whose turn it is to move at that board.
-## This means scrapping all previous data.
-class randomStateGenerator:
+class RandomStateGenerator:
 
     def __init__(self, fileName="randomStates"):
         self.boardSize = 8
@@ -25,7 +23,6 @@ class randomStateGenerator:
         except (EOFError, IOError):
             self.blackStates = []
             self.whiteStates = []
-        print self.blackStates
 
     def dupeCheck(self):
         """ To check if there are any duplicates in the states. """
@@ -110,8 +107,9 @@ class randomStateGenerator:
         cPickle.dump(self.blackStates, open(self.blackStatesFilename, "wb+"))
         print "Out of " + str(count) + " states generated, " + str(numGenerated) + " were unique"
         print "Done generating"
+        print "Now at " + str(len(self.whiteStates)) + " white board states and " + str(len(self.blackStates)) + " black states."
 
 
 if __name__ == "__main__":
-    generator = randomStateGenerator()
+    generator = RandomStateGenerator()
     generator.genRandom()

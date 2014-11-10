@@ -8,23 +8,33 @@ from johnMinimaxEvolved import *
 from time import strftime
 from copy import copy
 from datetime import datetime
-import sys
+from randomBoardStates import RandomStateGenerator
 
-## Make (3/5?) minimax players, all with default static evaluators that then get evolved once (bit of randomness)
-## Play 10 games with each, updating the fitness and # games played versus # wins
-## After each round, take the best one and make new minimax players that use that model and evolve them once.
-## Rinse and repeat, need to keep getting data continuously
+# Generate random model (static evaluator). This can be subbed in for any given opponent.
+## Therefore, better to have it be a KonanePlayer or whatever, for subbing in easily.
+# Record the opponent's evaluator to a file, for starters.
+# Generate random models
+# LOOP:
+## Generate a set of N random board states, randomizing the sides would be good.
+### A bit annoying to implement because we'd need to ask for moves from different sides from opponent.
+### Not awful though, it might just be opponent.side = state.side, opponent.getMove(state.board)
+## Get the moves the opponent responds with and store them internally.
+### Keep track of the sides, so there is a self.whiteOpponentResponses and self.blackOpponentResponses
+### OR it could be (initial board, whose turn it is from that board, resulting move) tuples.
+## Evolve the models
+### Fitness is 
 
-class HillClimb(Konane):
+
+class EEA(Konane):
 
     def __init__(self):
         self.numPlayers = 5
         self.numGames = 50 
-        self.size = 6
+        self.size = 8 #If you want to change this, you need to generate new random states and specify the new file
+                      #in the call for the RandomStateGenerator
         self.depthLimit = 3
         self.models = []
-        #self.ABPrune = True
-        #self.processArgs()
+        self.randomMoveGenerator = RandomStateGenerator()
         
         self.initModels()
         self.currPlayers = []
