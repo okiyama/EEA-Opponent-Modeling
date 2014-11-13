@@ -6,13 +6,13 @@
 ## Author: Julian Jocque
 ## Date: 10/13/14
 
-import
+from prettyplotlib import *
 
 class FigMaker:
 
     def __init__(self, folder=None, fileName):
         self.dataFolder = folder
-        self.outPutFile = "PopDataAnalysis" + str(datetime.datetime.time(datetime.datetime.now())) + ".txt"
+        self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
         self.data = []
         self.timeTaken = []
         if self.dataFolder is not None:
@@ -241,60 +241,6 @@ class PopFileData():
 
         show()
 
-    def hackyFunction(self):
-        """
-        Thrown together to relate the number of interferences with the generation number. Not future proof, don't use.
-        """
-        maxes = []
-        tempMax = []
-        for i in range(len(self.genNum)):
-            tempMax.append(float(self.fitness[i]))
-            if i == len(self.genNum)-1:
-                maxes.append(max(tempMax))
-                tempMax = []
-                break
-
-            if (self.genNum[i] != self.genNum[i+1]):
-                maxes.append(max(tempMax))
-                tempMax = []
-
-        #print averages         
-        hardCodedData = [10, 9, 10, 10, 10, 10, 8, 10, 6, 10, 8, 8, 9, 10, 10, 10, 6, 10, 10, \
-                          10, 10, 9, 9, 10, 9, 10, 10, 10, 9, 9, 10, 10, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
-
-        
-        fig, ax1 = subplots()
-        
-        ax2 = ax1.twinx()
-        ax2.plot(range(len(maxes)+1)[1:], hardCodedData, "r", zorder=2)
-        ax2.fill_between(range(len(maxes)+1)[1:], hardCodedData, 0, color="red", zorder=1)
-        ax2.set_ylabel("Number of Interferences", color='r')
-        for tl in ax2.get_yticklabels():
-            tl.set_color('r')
-        
-        ax1.plot(range(len(maxes)+1)[1:], maxes, "b", zorder=20, linewidth = 10)
-        ax1.set_xlabel('Generation Number')
-        # Make the y-axis label and tick labels match the line color.
-        ax1.set_ylabel("Generation's Maximum Fitness", color='b')
-        ax1.set_xlim([1,self.getNumGenerations()])
-        for tl in ax1.get_yticklabels():
-            tl.set_color('b')
-        
-        
-            
-        suptitle("Generational Maximum Fitness versus Generation Number")
-        show()
-# 
-#         
-#         plot(range(len(maxes)+1)[1:], maxes)
-#         plot(range(len(maxes)+1)[1:], hardCodedData)
-#         xlim([1,self.getNumGenerations()])
-#         xlabel("Generation Number")
-#         ylabel("Generation's Maximum Fitness")
-#         suptitle("Generational Maximum Fitness versus Generation Number")
-# 
-#         show()
-
     def generateAvgFitnessOverTimes(self):
         """
         Generates a graph of the average fitness of a generation over time.
@@ -371,6 +317,6 @@ class PopFileData():
         show()
     
 if __name__ == "__main__":
-    analyzer = PopDataAnalyzer()
+    maker = FigMaker(folder=argv[1])
     #analyzer.outputToFile()
-    analyzer.generateAllGraphs()
+    maker.generateAllGraphs()
