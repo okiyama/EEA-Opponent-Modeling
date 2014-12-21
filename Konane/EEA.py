@@ -10,76 +10,106 @@ from copy import copy
 from datetime import datetime
 from randomBoardStates import RandomStateGenerator
 
-# Generate random model (static evaluator). This can be subbed in for any given opponent.
-## Therefore, better to have it be a KonanePlayer or whatever, for subbing in easily.
-# Record the opponent's evaluator to a file, for starters.
-# Generate random models
-# LOOP:
-## Generate a set of N random board states, randomizing the sides would be good.
-### A bit annoying to implement because we'd need to ask for moves from different sides from opponent.
-### Not awful though, it might just be opponent.side = state.side, opponent.getMove(state.board)
-## Get the moves the opponent responds with and store them internally.
-### Keep track of the sides, so there is a self.whiteOpponentResponses and self.blackOpponentResponses
-### OR it could be (initial board, whose turn it is from that board, resulting move) tuples.
-## Evolve the models
-### Fitness is 
-
-
 class EEA(Konane):
 
     def __init__(self):
-        self.numPlayers = 5
-        self.numGames = 50 
-        self.size = 8 #If you want to change this, you need to generate new random states and specify the new file
-                      #in the call for the RandomStateGenerator
+        self.numModels = 5
+        self.numTests = 5
+        self.size = 8 # If you want to change this, you need to generate new random states and specify the new file
+                      # in the call for the RandomStateGenerator
         self.depthLimit = 3
         self.models = []
         self.randomMoveGenerator = RandomStateGenerator()
-        
+
+
+        self.eeaOpponent = self.generateOpponent()
+
         self.initModels()
         self.currPlayers = []
-    	self.startTime = strftime("%Y-%m-%d %H:%M:%S")
-        self.datafile = open("data/hillClimber/data-" + self.startTime + ".csv", "w")
-        self.attrFile = open("data/hillClimber/attr-" + self.startTime + ".csv", "w")
+        self.startTime = strftime("%Y-%m-%d %H:%M:%S")
+        self.datafile = open("data/EEA/data-" + self.startTime + ".csv", "w")
+        self.attrFile = open("data/EEA/attr-" + self.startTime + ".csv", "w")
         self.logAttributes()
 
     def initModels(self):
         """ Initializes the models that we'll evolve """
-        for i in range(self.numPlayers):
+        for i in range(self.numModels):
             currModel = StaticEvalModel(self.size)
             currModel.mutate()
             self.models.append(currModel)
 
+    def generateOpponent(self):
+        """
+        :return: An opponent who has a singly mutated model.
+            The model is mutated more than the default values for a model's mutation.
+            Just to make it a bit harder to find.
+        """
+        opponent = MinimaxPlayer(self.size, self.depthLimit)
+        opponent.model = StaticEvalModel(self.size)
+        opponent.model.chanceToMutate = 100
+        opponent.model.mutate()
+        return opponent
+
+
+    def run(self, timeToRun = None):
+        # If timeToRun is None, go until interrupt else do that many seconds
+        """
+        Runs the EEA, trying to determine the static evaluator of self.opponent
+        """
+        # Generate random model (static evaluator). This can be subbed in for any given opponent. DONE - self.opponent
+        ## Therefore, better to have it be a KonanePlayer or whatever, for subbing in easily.
+        # Record the opponent's evaluator to a file, for starters.
+        self.recordOpponent()
+        # Generate random models DONE - initModels
+        # LOOP:
+
+        ## Generate a set of N random board states, randomizing the sides would be good.
+        ### This will eventually be evolved to maximize disagreement among the existing models.
+        ### A bit annoying to implement because we'd need to ask for moves from different sides from opponent.
+        ### Not awful though, it might just be opponent.side = state.side, opponent.getMove(state.board)
+        ## Get the moves the opponent responds with and store them internally.
+        ### Keep track of the sides, so there is a self.whiteOpponentResponses and self.blackOpponentResponses
+        ### OR it could be (initial board, whose turn it is from that board, resulting move) tuples.
+        ## Evolve the models
+        ### Fitness is what percent of the test suite that it correctly predicts the outcome for
+        ### Might need a notion of diversity eventually
+
+    def recordOpponent(self):
+        """
+        Records relevant information about self.opponent.
+        """
+        pass
+
     def hillClimb(self):
-        self.datafile.write("%roundNum, %playerNum, %fitness, " + self.models[0].dumpFeatures() + ", %timeIndividualFinished\n")
+        self.datafile.write("%roundNum, %playerNum, %fitness, " +
+                            self.models[0].dumpFeatures() + ", %timeIndividualFinished\n")
         running = True
         roundNum = 0
         try:
-            while(running):
-                for playerNum in range(self.numPlayers):
+            while running:
+                for playerNum in range(self.numModels):
                     player1 = MinimaxPlayer(self.size, self.depthLimit)
                     player1.model = self.models[playerNum]
-                    #player1.ABPrune = self.ABPrune
+                    # player1.ABPrune = self.ABPrune
                     self.currPlayers.append(player1)
                     player2 = RandomPlayer(self.size)
 
                     for gameNum in range(self.numGames):
-                        #print "On game num", gameNum
+                        # print "On game num", gameNum
                         winner = self.playOneGame(player1, player2)
-                        player1.gamesPlayed += 1
+                        player1.model.gamesPlayed += 1
                         if winner == player1:
-                            player1.gamesWon += 1
+                            player1.model.gamesWon += 1
                     self.log(player1, playerNum, roundNum, datetime.time(datetime.now()))
                 self.datafile.flush()
                 roundNum += 1
 
-		#Bleh, Python 2.4...
-		bestYet = -1000000
-		bestIndex = 0
-		for i in range(len(self.currPlayers)):
-			if self.currPlayers[i].getFitness() > bestYet:
-	
-				bestIndex = i	
+                # Bleh, Python 2.4...
+                bestYet = -1000000
+                bestIndex = 0
+                for i in range(len(self.currPlayers)):
+                    if self.currPlayers[i].model.getFitness() > bestYet:
+                        bestIndex = i
                 parent = self.currPlayers[bestIndex]
                 self.evolveModels(parent)
                 self.currPlayers = []
@@ -88,7 +118,7 @@ class EEA(Konane):
 
     def evolveModels(self, parent):
         """ Evolves the models in self.models based on the given parent. """
-        for i in range(self.numPlayers):
+        for i in range(self.numModels):
             curr = copy(parent.model)
             curr.mutate()
             self.models[i] = curr
@@ -132,7 +162,7 @@ class EEA(Konane):
         """
         self.attrFile.write("%numGamesPerRound, %depth, %boardSize, %numPlayers\n")
         self.attrFile.write(str(self.numGames) + ", "
-            + str(self.depthLimit) + ", " + str(self.size) + ", " + str(self.numPlayers) + "\n") 
+            + str(self.depthLimit) + ", " + str(self.size) + ", " + str(self.numModels) + "\n")
 
     def log(self, player, playerNum, roundNum, time):
         """ 
@@ -144,5 +174,5 @@ class EEA(Konane):
                 + ", " + player.model.dumpModel() + ", " + str(time) + "\n")
 
 if __name__ == "__main__":
-    climber = HillClimb()
-    climber.hillClimb()
+    eea = EEA()
+    eea.run()

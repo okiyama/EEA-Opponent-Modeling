@@ -50,10 +50,6 @@ class MinimaxPlayer(Konane, Player):
         #print "BEST MOVE:", self.bestMove
         return self.bestMove
 
-    def getFitness(self):
-        """ Gets the fitness of this player """
-        return (float(self.gamesWon) / self.gamesPlayed)
-
     def eval(self, node):
         """
         Given a search node, returns an estimate of the value of its
