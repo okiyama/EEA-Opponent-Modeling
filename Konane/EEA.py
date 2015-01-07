@@ -68,6 +68,7 @@ class EEA(Konane):
             while timeToRun is None or elapsedTime < timeToRun:
                 elapsedTime = (datetime.now() - startTime).seconds
                 self.testSuite.runRound()
+                self.updateModelFitness(self.testSuite)
         except KeyboardInterrupt:
             pass
 
@@ -82,6 +83,33 @@ class EEA(Konane):
         ## Evolve the models
         ### Fitness is what percent of the test suite that it correctly predicts the outcome for
         ### Might need a notion of diversity eventually
+
+    def updateModelFitness(self, testSuite):
+        """
+        Updates the fitnesses of the models in self.models given the current testSuite
+        Assumes that the models have accounted for everything but the last testSuite.incSize tests.
+        Meaning this *WILL FAIL* unless it is run exactly once per test round!
+        :param testSuite: The recently updated suite used to update the model's fitnesses
+        :return: The models as a list of StaticEvalModels
+        """
+        testList = testSuite.getSuite()
+        incrementSize = testSuite.incSize
+        dummyPlayer = MinimaxPlayer(self.size, self.depthLimit)
+
+        for model in self.models:
+            for i in range(incrementSize):
+                currTest = testList[incrementSize - i]
+                testSide = currTest.side
+                testState = currTest.state
+                testResult = currTest.result
+                dummyPlayer.model = model
+                dummyPlayer.setSide(testSide)
+                modelMove = dummyPlayer.getMove(testState)
+                model.numTested += 1
+                if testResult == modelMove:
+                    model.numCorrect += 1
+            print("Fitness is now: " + str(model.getFitness()))
+
 
     def recordOpponent(self):
         """
@@ -106,9 +134,9 @@ class EEA(Konane):
                     for gameNum in range(self.numGames):
                         # print "On game num", gameNum
                         winner = self.playOneGame(player1, player2)
-                        player1.model.gamesPlayed += 1
+                        player1.model.numTested += 1
                         if winner == player1:
-                            player1.model.gamesWon += 1
+                            player1.model.numCorrect += 1
                     self.log(player1, playerNum, roundNum, datetime.time(datetime.now()))
                 self.datafile.flush()
                 roundNum += 1

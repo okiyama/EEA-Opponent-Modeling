@@ -15,8 +15,8 @@ class StaticEvalModel(Konane):
         self.myMovableWeight = 1.0
         self.theirMovableWeight = 1.0
         self.chanceToMutate = 15 #as a percent
-        self.gamesWon = 0
-        self.gamesPlayed = 0
+        self.numCorrect = 0
+        self.numTested = 0
         #self.fitness = 0 #Fitness should be win rate of past X games?
 
 
@@ -58,7 +58,6 @@ class StaticEvalModel(Konane):
                 + str(self.myPiecesWeight) + ", " + str(self.theirMovesWeight) + ", " \
                 + str(self.myMovableWeight) + ", " + str(self.theirMovableWeight)
 
-
     def dumpFeatures(self):
         return "%myMovesWeight" + ", " + "%theirMovesWeight" + ", " \
                 + "%myPiecesWeight" + ", " + "%theirMovesWeight" + ", " \
@@ -66,4 +65,4 @@ class StaticEvalModel(Konane):
 
     def getFitness(self):
         """ Gets the fitness as a win percentage for this model. """
-        return float(self.gamesWon / self.gamesPlayed)
+        return float(self.numCorrect / self.numTested)
