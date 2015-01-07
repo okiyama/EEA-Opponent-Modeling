@@ -13,8 +13,8 @@ import random
 
 class RandomStateGenerator:
 
-    def __init__(self, fileName="randomStates"):
-        self.boardSize = 8
+    def __init__(self, fileName="randomStates", boardSize = 8):
+        self.boardSize = boardSize
         self.blackStatesFilename = fileName + "black" + str(self.boardSize) + ".p"
         self.whiteStatesFilename = fileName + "white" + str(self.boardSize) + ".p"
         try:
@@ -35,7 +35,9 @@ class RandomStateGenerator:
         print "Done duplicate checking"
 
     def getRandom(self, side):
-        """ Gets a random legal board state from the given side. """
+        """ Gets a random legal board state from the given side. 
+        :rtype : boardState
+        """
         if side.lower() == "w":
             return random.choice(self.whiteStates)
         elif side.lower() == "b":

@@ -376,6 +376,8 @@ class Player:
         self.name = "Player"
         self.wins = 0
         self.losses = 0
+    def setSide(self, side):
+        self.side = side
     def results(self):
         result = self.name
         result += " Wins:" + str(self.wins)

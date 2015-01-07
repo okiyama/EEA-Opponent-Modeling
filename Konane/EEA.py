@@ -4,11 +4,11 @@
 
 from StaticEvalModel import *
 from updatedKonane import *
+from TestSuite import *
 from johnMinimaxEvolved import *
 from time import strftime
 from copy import copy
 from datetime import datetime
-from randomBoardStates import RandomStateGenerator
 
 class EEA(Konane):
 
@@ -19,10 +19,11 @@ class EEA(Konane):
                       # in the call for the RandomStateGenerator
         self.depthLimit = 3
         self.models = []
-        self.randomMoveGenerator = RandomStateGenerator()
-
 
         self.eeaOpponent = self.generateOpponent()
+
+        self.suiteSize = 5
+        self.testSuite = TestSuite(self.eeaOpponent, self.suiteSize)
 
         self.initModels()
         self.currPlayers = []
@@ -52,6 +53,7 @@ class EEA(Konane):
 
 
     def run(self, timeToRun = None):
+        startTime = datetime.now()
         # If timeToRun is None, go until interrupt else do that many seconds
         """
         Runs the EEA, trying to determine the static evaluator of self.opponent
@@ -62,6 +64,13 @@ class EEA(Konane):
         self.recordOpponent()
         # Generate random models DONE - initModels
         # LOOP:
+        try:
+            while timeToRun is None or elapsedTime < timeToRun:
+                elapsedTime = (datetime.now() - startTime).seconds
+                self.testSuite.runRound()
+        except KeyboardInterrupt:
+            pass
+
 
         ## Generate a set of N random board states, randomizing the sides would be good.
         ### This will eventually be evolved to maximize disagreement among the existing models.
