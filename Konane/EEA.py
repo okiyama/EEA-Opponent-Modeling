@@ -15,15 +15,16 @@ class EEA(Konane):
     def __init__(self):
         self.numModels = 5
         self.numTests = 5
-        self.size = 8 # If you want to change this, you need to generate new random states and specify the new file
+        self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
+                      # Must also do similar stuff for initializing TestSuite
         self.depthLimit = 3
         self.models = []
 
         self.eeaOpponent = self.generateOpponent()
 
-        self.suiteSize = 5
-        self.testSuite = TestSuite(self.eeaOpponent, self.suiteSize)
+        self.incSize = 10
+        self.testSuite = TestSuite(self.eeaOpponent, self.incSize)
 
         self.initModels()
         self.currPlayers = []
@@ -39,15 +40,17 @@ class EEA(Konane):
             currModel.mutate()
             self.models.append(currModel)
 
-    def generateOpponent(self):
+    def generateOpponent(self, side = "W"):
         """
+        :param side: The side the opponent should start as
         :return: An opponent who has a singly mutated model.
             The model is mutated more than the default values for a model's mutation.
             Just to make it a bit harder to find.
         """
         opponent = MinimaxPlayer(self.size, self.depthLimit)
+        opponent.initialize(side)
         opponent.model = StaticEvalModel(self.size)
-        opponent.model.chanceToMutate = 100
+        opponent.model.chanceToMutate = 50
         opponent.model.mutate()
         return opponent
 
@@ -95,10 +98,11 @@ class EEA(Konane):
         testList = testSuite.getSuite()
         incrementSize = testSuite.incSize
         dummyPlayer = MinimaxPlayer(self.size, self.depthLimit)
+        dummyPlayer.initialize("W")
 
         for model in self.models:
             for i in range(incrementSize):
-                currTest = testList[incrementSize - i]
+                currTest = testList[incrementSize - i - 1]
                 testSide = currTest.side
                 testState = currTest.state
                 testResult = currTest.result
@@ -197,8 +201,8 @@ class EEA(Konane):
         Format is as follows:
         %numGamesPerRound, %depth, %boardSize, %numPlayers
         """
-        self.attrFile.write("%numGamesPerRound, %depth, %boardSize, %numPlayers\n")
-        self.attrFile.write(str(self.numGames) + ", "
+        self.attrFile.write("%numTestsPerRound, %depth, %boardSize, %numPlayers\n")
+        self.attrFile.write(str(self.incSize) + ", "
             + str(self.depthLimit) + ", " + str(self.size) + ", " + str(self.numModels) + "\n")
 
     def log(self, player, playerNum, roundNum, time):

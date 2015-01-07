@@ -113,5 +113,5 @@ class RandomStateGenerator:
 
 
 if __name__ == "__main__":
-    generator = RandomStateGenerator()
+    generator = RandomStateGenerator(boardSize=6)
     generator.genRandom()

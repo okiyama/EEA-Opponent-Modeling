@@ -1,6 +1,6 @@
 ## A test suite, contains tests which are board states with a side of the board associated with them
 ## As well as the response from the opponent
-## This assumes board size is 8 due to the inflexibility of RandomBoardGenerator
+## This assumes that the board size in RandomStateGenerator and in the opponent is the same
 ## Date: 1/6/15
 __author__ = 'julian'
 

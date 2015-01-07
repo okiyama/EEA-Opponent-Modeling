@@ -15,7 +15,7 @@ class EEATest:
         :return:
         """
         self.state = boardState
-        self.boardSide = side
+        self.side = side
         self.result = result
 
     def getResult(self, opponent):
@@ -25,7 +25,7 @@ class EEATest:
         :return: The resultant move
         """
         initialSide = copy(opponent.side)
-        opponent.setSide(self.boardSide)
+        opponent.setSide(self.side)
         self.result = opponent.getMove(self.state)
         opponent.setSide(initialSide)
         return self.result
