@@ -200,14 +200,15 @@ class EEA(Konane):
         Initializes the data file by writing the attributes line of the CSV.
         :return: None
         """
-        self.datafile.write("%roundNum, %fitness, %myMovesWeight, %theirMovesWeight, " +
-                            "%myPiecesWeight, %theirPiecesWeight, %roundEndTime\n")
+        dummyModel = StaticEvalModel(self.size)
+        self.datafile.write("%roundNum, %fitness, " + dummyModel.dumpFeatures() + ", %roundEndTime\n")
 
     def log(self, models, roundNum, roundEndTime):
         """ 
         Logs the results of one round of the EEA to the log file.
         Each line is this format:
-        %roundNum, %fitness, %myMovesWeight, %theirMovesWeight, %myPiecesWeight, %theirPiecesWeight, %roundEndTime
+        %roundNum, %fitness, %myMovesWeight, %theirMovesWeight, %myPiecesWeight, %theirPiecesWeight,
+         %myMovableWeight , %theirMovableWeight, %roundEndTime
         """
         for model in models:
             self.datafile.write(str(roundNum) + ", " + str(model.getFitness())
