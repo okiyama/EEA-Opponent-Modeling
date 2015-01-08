@@ -40,6 +40,7 @@ class RandomStateGenerator:
         gain no information from those states.
         :return: None
         """
+        #TODO: If the move is of the form [A, B, A, B] Then it is invalid and should be removed.
         game = konane.Konane(self.boardSize)
         print(len(self.blackStates))
         for blackState in self.blackStates:

@@ -65,8 +65,13 @@ class MinimaxPlayer(Konane, Player):
 
     def successors(self, node):
         result = []
-        for move in self.generateMoves(node.state, node.player):
-            nextState = self.nextBoard(node.state, node.player, move)
+        moves = self.generateMoves(node.state, node.player)
+        for move in moves:
+            try:
+                nextState = self.nextBoard(node.state, node.player, move)
+            except KonaneError:
+                print("Hit a konane error!")
+                print("State: " + str(node.state) + "\nPlayer: " + str(node.player) + "\nMove: " + str(move))
             nextNode = MinimaxNode(nextState, move, node.depth+1,
                                    self.opponent(node.player))
             result.append(nextNode)
