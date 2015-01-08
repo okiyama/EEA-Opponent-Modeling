@@ -34,6 +34,30 @@ class RandomStateGenerator:
                 print "at " + str(i)
         print "Done duplicate checking"
 
+    def cleanUp(self):
+        """
+        Cleans up the states to remove anything where the number of states is 0 or 1, since we
+        gain no information from those states.
+        :return: None
+        """
+        game = konane.Konane(self.boardSize)
+        print(len(self.blackStates))
+        for blackState in self.blackStates:
+            if len(game.generateMoves(blackState, "B")) <= 1:
+                #print("Removing black move " + str(blackState))
+                #print(str(game.generateMoves(self.blackStates[i], "B")))
+                self.blackStates.remove(blackState)
+        print(len(self.blackStates))
+
+        print(len(self.whiteStates))
+        for whiteState in self.whiteStates:
+            if len(game.generateMoves(whiteState, "W")) <= 1:
+                #print("Removing white move " + str(whiteState))
+                self.whiteStates.remove(whiteState)
+        print(len(self.whiteStates))
+
+        self.updatePickleFiles()
+
     def getRandom(self, side):
         """ Gets a random legal board state from the given side. 
         :rtype : boardState
@@ -105,13 +129,20 @@ class RandomStateGenerator:
                     print "Just generated state " + str(count)
         except KeyboardInterrupt:
             pass #We always want to close out, if we hit this or if we complete the loop
-        cPickle.dump(self.whiteStates, open(self.whiteStatesFilename, "wb+"))
-        cPickle.dump(self.blackStates, open(self.blackStatesFilename, "wb+"))
+        self.updatePickleFiles()
         print "Out of " + str(count) + " states generated, " + str(numGenerated) + " were unique"
         print "Done generating"
         print "Now at " + str(len(self.whiteStates)) + " white board states and " + str(len(self.blackStates)) + " black states."
 
+    def updatePickleFiles(self):
+        """
+        Updates the pickle files to contain the current whiteStates and blackStates.
+        :return:
+        """
+        cPickle.dump(self.whiteStates, open(self.whiteStatesFilename, "wb+"))
+        cPickle.dump(self.blackStates, open(self.blackStatesFilename, "wb+"))
 
 if __name__ == "__main__":
-    generator = RandomStateGenerator(boardSize=6)
-    generator.genRandom()
+    generator = RandomStateGenerator(boardSize=8)
+    #generator.genRandom()
+    generator.cleanUp()
