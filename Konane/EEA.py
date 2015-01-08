@@ -75,7 +75,7 @@ class EEA(Konane):
                 elapsedTime = (datetime.now() - startTime).seconds
                 self.testSuite.runRound()
                 self.updateModelFitness(self.testSuite)
-                self.log(self.models, roundNum, datetime.now())
+                self.log(self.models, roundNum, datetime.time(datetime.now()))
                 self.evolveModels()
                 roundNum += 1
         except KeyboardInterrupt:
