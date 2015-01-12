@@ -14,17 +14,16 @@ class EEA(Konane):
 
     def __init__(self):
         self.numModels = 10
-        self.numTests = 5
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
         self.depthLimit = 3
         self.models = []
 
-        self.eeaOpponent = self.generateOpponent(numTimesToMutate=100)
+        self.opponent = self.generateOpponent(numTimesToMutate=100)
 
         self.incSize = 25
-        self.testSuite = TestSuite(self.eeaOpponent, self.incSize)
+        self.testSuite = TestSuite(self.opponent, self.incSize)
 
         self.initModels()
         self.startTime = strftime("%Y-%m-%d %H:%M:%S")
@@ -122,9 +121,13 @@ class EEA(Konane):
 
     def recordOpponent(self):
         """
-        Records relevant information about self.opponent.
+        Records relevant information about self.opponent to the attribute file.
         """
-        pass
+        oppModel = self.opponent.model
+        self.attrFile.write("Opponent info:\n")
+        self.attrFile.write(oppModel.dumpFeatures() + ", %depth\n")
+        self.attrFile.write(oppModel.dumpModel() + ", " + str(self.opponent.limit) + "\n")
+
 
     def evolveModels(self):
         """
@@ -191,7 +194,6 @@ class EEA(Konane):
         self.attrFile.write("%numTestsPerRound, %depth, %boardSize, %numModels\n")
         self.attrFile.write(str(self.incSize) + ", "
             + str(self.depthLimit) + ", " + str(self.size) + ", " + str(self.numModels) + "\n")
-        self.attrFile.close()
 
     def initDataFile(self):
         """
