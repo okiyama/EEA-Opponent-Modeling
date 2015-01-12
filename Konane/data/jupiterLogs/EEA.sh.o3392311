@@ -1,0 +1,531 @@
+----------------------------------------
+Begin PBS Prologue Sun Jan 11 22:05:41 EST 2015 1421031941
+Job ID:		3392311.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node074
+End PBS Prologue Sun Jan 11 22:05:42 EST 2015 1421031942
+----------------------------------------
+Fitness of current model: 0.68
+Fitness of current model: 0.72
+Fitness of current model: 0.68
+Fitness of current model: 0.72
+Fitness of current model: 0.72
+Fitness of current model: 0.68
+Fitness of current model: 0.72
+Fitness of current model: 0.72
+Fitness of current model: 0.72
+Fitness of current model: 0.68
+Best fitness of generation is: 0.72
+Fitness of current model: 0.64
+Fitness of current model: 0.64
+Fitness of current model: 0.626666666667
+Fitness of current model: 0.64
+Fitness of current model: 0.64
+Fitness of current model: 0.64
+Fitness of current model: 0.64
+Fitness of current model: 0.626666666667
+Fitness of current model: 0.64
+Fitness of current model: 0.64
+Best fitness of generation is: 0.64
+Fitness of current model: 0.573333333333
+Fitness of current model: 0.58
+Fitness of current model: 0.566666666667
+Fitness of current model: 0.58
+Fitness of current model: 0.586666666667
+Fitness of current model: 0.58
+Fitness of current model: 0.58
+Fitness of current model: 0.566666666667
+Fitness of current model: 0.58
+Fitness of current model: 0.58
+Best fitness of generation is: 0.586666666667
+Fitness of current model: 0.552
+Fitness of current model: 0.56
+Fitness of current model: 0.56
+Fitness of current model: 0.56
+Fitness of current model: 0.56
+Fitness of current model: 0.552
+Fitness of current model: 0.556
+Fitness of current model: 0.552
+Fitness of current model: 0.564
+Fitness of current model: 0.56
+Best fitness of generation is: 0.564
+Fitness of current model: 0.557333333333
+Fitness of current model: 0.557333333333
+Fitness of current model: 0.557333333333
+Fitness of current model: 0.557333333333
+Fitness of current model: 0.557333333333
+Fitness of current model: 0.554666666667
+Fitness of current model: 0.549333333333
+Fitness of current model: 0.557333333333
+Fitness of current model: 0.557333333333
+Fitness of current model: 0.557333333333
+Best fitness of generation is: 0.557333333333
+Fitness of current model: 0.546666666667
+Fitness of current model: 0.548571428571
+Fitness of current model: 0.552380952381
+Fitness of current model: 0.552380952381
+Fitness of current model: 0.552380952381
+Fitness of current model: 0.550476190476
+Fitness of current model: 0.550476190476
+Fitness of current model: 0.552380952381
+Fitness of current model: 0.546666666667
+Fitness of current model: 0.552380952381
+Best fitness of generation is: 0.552380952381
+Fitness of current model: 0.541428571429
+Fitness of current model: 0.547142857143
+Fitness of current model: 0.544285714286
+Fitness of current model: 0.544285714286
+Fitness of current model: 0.544285714286
+Fitness of current model: 0.547142857143
+Fitness of current model: 0.548571428571
+Fitness of current model: 0.548571428571
+Fitness of current model: 0.548571428571
+Fitness of current model: 0.548571428571
+Best fitness of generation is: 0.548571428571
+Fitness of current model: 0.544444444444
+Fitness of current model: 0.544444444444
+Fitness of current model: 0.544444444444
+Fitness of current model: 0.541111111111
+Fitness of current model: 0.541111111111
+Fitness of current model: 0.544444444444
+Fitness of current model: 0.544444444444
+Fitness of current model: 0.541111111111
+Fitness of current model: 0.542222222222
+Fitness of current model: 0.544444444444
+Best fitness of generation is: 0.544444444444
+Fitness of current model: 0.541333333333
+Fitness of current model: 0.537777777778
+Fitness of current model: 0.542222222222
+Fitness of current model: 0.538666666667
+Fitness of current model: 0.539555555556
+Fitness of current model: 0.540444444444
+Fitness of current model: 0.541333333333
+Fitness of current model: 0.542222222222
+Fitness of current model: 0.540444444444
+Fitness of current model: 0.542222222222
+Best fitness of generation is: 0.542222222222
+Fitness of current model: 0.541818181818
+Fitness of current model: 0.541090909091
+Fitness of current model: 0.541818181818
+Fitness of current model: 0.541090909091
+Fitness of current model: 0.541818181818
+Fitness of current model: 0.541818181818
+Fitness of current model: 0.541818181818
+Fitness of current model: 0.542545454545
+Fitness of current model: 0.541818181818
+Fitness of current model: 0.541818181818
+Best fitness of generation is: 0.542545454545
+Fitness of current model: 0.538787878788
+Fitness of current model: 0.539393939394
+Fitness of current model: 0.538787878788
+Fitness of current model: 0.538787878788
+Fitness of current model: 0.538787878788
+Fitness of current model: 0.539393939394
+Fitness of current model: 0.536363636364
+Fitness of current model: 0.538787878788
+Fitness of current model: 0.538787878788
+Fitness of current model: 0.538787878788
+Best fitness of generation is: 0.539393939394
+Fitness of current model: 0.533846153846
+Fitness of current model: 0.534871794872
+Fitness of current model: 0.534871794872
+Fitness of current model: 0.534871794872
+Fitness of current model: 0.534871794872
+Fitness of current model: 0.535897435897
+Fitness of current model: 0.535897435897
+Fitness of current model: 0.532820512821
+Fitness of current model: 0.535897435897
+Fitness of current model: 0.535897435897
+Best fitness of generation is: 0.535897435897
+Fitness of current model: 0.530989010989
+Fitness of current model: 0.530989010989
+Fitness of current model: 0.529230769231
+Fitness of current model: 0.53010989011
+Fitness of current model: 0.531428571429
+Fitness of current model: 0.53010989011
+Fitness of current model: 0.530989010989
+Fitness of current model: 0.531428571429
+Fitness of current model: 0.531428571429
+Fitness of current model: 0.531428571429
+Best fitness of generation is: 0.531428571429
+Fitness of current model: 0.528380952381
+Fitness of current model: 0.528380952381
+Fitness of current model: 0.528380952381
+Fitness of current model: 0.527619047619
+Fitness of current model: 0.528
+Fitness of current model: 0.528380952381
+Fitness of current model: 0.528380952381
+Fitness of current model: 0.525714285714
+Fitness of current model: 0.528380952381
+Fitness of current model: 0.528380952381
+Best fitness of generation is: 0.528380952381
+Fitness of current model: 0.526
+Fitness of current model: 0.526333333333
+Fitness of current model: 0.523
+Fitness of current model: 0.525
+Fitness of current model: 0.524333333333
+Fitness of current model: 0.526
+Fitness of current model: 0.526333333333
+Fitness of current model: 0.524666666667
+Fitness of current model: 0.526
+Fitness of current model: 0.526333333333
+Best fitness of generation is: 0.526333333333
+Fitness of current model: 0.524705882353
+Fitness of current model: 0.524117647059
+Fitness of current model: 0.524411764706
+Fitness of current model: 0.523823529412
+Fitness of current model: 0.524411764706
+Fitness of current model: 0.522647058824
+Fitness of current model: 0.524411764706
+Fitness of current model: 0.524705882353
+Fitness of current model: 0.524411764706
+Fitness of current model: 0.524411764706
+Best fitness of generation is: 0.524705882353
+Fitness of current model: 0.523921568627
+Fitness of current model: 0.522091503268
+Fitness of current model: 0.523921568627
+Fitness of current model: 0.522875816993
+Fitness of current model: 0.523921568627
+Fitness of current model: 0.522875816993
+Fitness of current model: 0.522614379085
+Fitness of current model: 0.523921568627
+Fitness of current model: 0.523921568627
+Fitness of current model: 0.523921568627
+Best fitness of generation is: 0.523921568627
+Fitness of current model: 0.521637426901
+Fitness of current model: 0.522339181287
+Fitness of current model: 0.521169590643
+Fitness of current model: 0.522573099415
+Fitness of current model: 0.522339181287
+Fitness of current model: 0.522105263158
+Fitness of current model: 0.522339181287
+Fitness of current model: 0.520233918129
+Fitness of current model: 0.522573099415
+Fitness of current model: 0.522573099415
+Best fitness of generation is: 0.522573099415
+Fitness of current model: 0.520842105263
+Fitness of current model: 0.521052631579
+Fitness of current model: 0.52
+Fitness of current model: 0.521052631579
+Fitness of current model: 0.521052631579
+Fitness of current model: 0.518736842105
+Fitness of current model: 0.521473684211
+Fitness of current model: 0.521052631579
+Fitness of current model: 0.52
+Fitness of current model: 0.521052631579
+Best fitness of generation is: 0.521473684211
+Fitness of current model: 0.518857142857
+Fitness of current model: 0.518857142857
+Fitness of current model: 0.518857142857
+Fitness of current model: 0.517523809524
+Fitness of current model: 0.519238095238
+Fitness of current model: 0.51619047619
+Fitness of current model: 0.519047619048
+Fitness of current model: 0.517333333333
+Fitness of current model: 0.519619047619
+Fitness of current model: 0.519047619048
+Best fitness of generation is: 0.519619047619
+Fitness of current model: 0.518095238095
+Fitness of current model: 0.516883116883
+Fitness of current model: 0.519134199134
+Fitness of current model: 0.519134199134
+Fitness of current model: 0.518961038961
+Fitness of current model: 0.518961038961
+Fitness of current model: 0.518614718615
+Fitness of current model: 0.518614718615
+Fitness of current model: 0.518614718615
+Fitness of current model: 0.518787878788
+Best fitness of generation is: 0.519134199134
+Fitness of current model: 0.517786561265
+Fitness of current model: 0.518102766798
+Fitness of current model: 0.516363636364
+Fitness of current model: 0.518260869565
+Fitness of current model: 0.519367588933
+Fitness of current model: 0.518260869565
+Fitness of current model: 0.518260869565
+Fitness of current model: 0.518260869565
+Fitness of current model: 0.519051383399
+Fitness of current model: 0.517312252964
+Best fitness of generation is: 0.519367588933
+Fitness of current model: 0.519130434783
+Fitness of current model: 0.519275362319
+Fitness of current model: 0.518405797101
+Fitness of current model: 0.517826086957
+Fitness of current model: 0.519420289855
+Fitness of current model: 0.519420289855
+Fitness of current model: 0.519275362319
+Fitness of current model: 0.519130434783
+Fitness of current model: 0.518985507246
+Fitness of current model: 0.519275362319
+Best fitness of generation is: 0.519420289855
+Fitness of current model: 0.518266666667
+Fitness of current model: 0.5192
+Fitness of current model: 0.519333333333
+Fitness of current model: 0.518133333333
+Fitness of current model: 0.517866666667
+Fitness of current model: 0.5192
+Fitness of current model: 0.5184
+Fitness of current model: 0.5192
+Fitness of current model: 0.519066666667
+Fitness of current model: 0.5192
+Best fitness of generation is: 0.519333333333
+Fitness of current model: 0.518769230769
+Fitness of current model: 0.518892307692
+Fitness of current model: 0.518892307692
+Fitness of current model: 0.517538461538
+Fitness of current model: 0.518523076923
+Fitness of current model: 0.518892307692
+Fitness of current model: 0.518769230769
+Fitness of current model: 0.519015384615
+Fitness of current model: 0.518769230769
+Fitness of current model: 0.517784615385
+Best fitness of generation is: 0.519015384615
+Fitness of current model: 0.51886039886
+Fitness of current model: 0.518176638177
+Fitness of current model: 0.518518518519
+Fitness of current model: 0.518746438746
+Fitness of current model: 0.517948717949
+Fitness of current model: 0.519316239316
+Fitness of current model: 0.51886039886
+Fitness of current model: 0.51886039886
+Fitness of current model: 0.518746438746
+Fitness of current model: 0.518404558405
+Best fitness of generation is: 0.519316239316
+Fitness of current model: 0.519259259259
+Fitness of current model: 0.520211640212
+Fitness of current model: 0.519682539683
+Fitness of current model: 0.519788359788
+Fitness of current model: 0.519788359788
+Fitness of current model: 0.519788359788
+Fitness of current model: 0.519894179894
+Fitness of current model: 0.519576719577
+Fitness of current model: 0.520634920635
+Fitness of current model: 0.520211640212
+Best fitness of generation is: 0.520634920635
+Fitness of current model: 0.520985221675
+Fitness of current model: 0.52157635468
+Fitness of current model: 0.521674876847
+Fitness of current model: 0.521773399015
+Fitness of current model: 0.524630541872
+Fitness of current model: 0.52118226601
+Fitness of current model: 0.521773399015
+Fitness of current model: 0.52118226601
+Fitness of current model: 0.521773399015
+Fitness of current model: 0.521674876847
+Best fitness of generation is: 0.524630541872
+Fitness of current model: 0.528367816092
+Fitness of current model: 0.528183908046
+Fitness of current model: 0.527908045977
+Fitness of current model: 0.527908045977
+Fitness of current model: 0.528275862069
+Fitness of current model: 0.525517241379
+Fitness of current model: 0.528183908046
+Fitness of current model: 0.528275862069
+Fitness of current model: 0.525425287356
+Fitness of current model: 0.529655172414
+Best fitness of generation is: 0.529655172414
+Fitness of current model: 0.534279569892
+Fitness of current model: 0.534451612903
+Fitness of current model: 0.53264516129
+Fitness of current model: 0.533849462366
+Fitness of current model: 0.534365591398
+Fitness of current model: 0.534451612903
+Fitness of current model: 0.532817204301
+Fitness of current model: 0.533935483871
+Fitness of current model: 0.534451612903
+Fitness of current model: 0.534365591398
+Best fitness of generation is: 0.534451612903
+Fitness of current model: 0.53685483871
+Fitness of current model: 0.538709677419
+Fitness of current model: 0.539112903226
+Fitness of current model: 0.538790322581
+Fitness of current model: 0.537177419355
+Fitness of current model: 0.536935483871
+Fitness of current model: 0.538870967742
+Fitness of current model: 0.5375
+Fitness of current model: 0.538790322581
+Fitness of current model: 0.536532258065
+Best fitness of generation is: 0.539112903226
+Fitness of current model: 0.542878787879
+Fitness of current model: 0.542954545455
+Fitness of current model: 0.542954545455
+Fitness of current model: 0.538712121212
+Fitness of current model: 0.543560606061
+Fitness of current model: 0.542954545455
+Fitness of current model: 0.544015151515
+Fitness of current model: 0.542651515152
+Fitness of current model: 0.544015151515
+Fitness of current model: 0.542954545455
+Best fitness of generation is: 0.544015151515
+Fitness of current model: 0.549090909091
+Fitness of current model: 0.548877005348
+Fitness of current model: 0.547593582888
+Fitness of current model: 0.548948306595
+Fitness of current model: 0.547308377897
+Fitness of current model: 0.548520499109
+Fitness of current model: 0.547593582888
+Fitness of current model: 0.547878787879
+Fitness of current model: 0.548520499109
+Fitness of current model: 0.548591800357
+Best fitness of generation is: 0.549090909091
+Fitness of current model: 0.553882352941
+Fitness of current model: 0.552268907563
+Fitness of current model: 0.553680672269
+Fitness of current model: 0.55381512605
+Fitness of current model: 0.554554621849
+Fitness of current model: 0.553882352941
+Fitness of current model: 0.55381512605
+Fitness of current model: 0.55468907563
+Fitness of current model: 0.553882352941
+Fitness of current model: 0.554016806723
+Best fitness of generation is: 0.55468907563
+Fitness of current model: 0.560380952381
+Fitness of current model: 0.559682539683
+Fitness of current model: 0.560063492063
+Fitness of current model: 0.56
+Fitness of current model: 0.56
+Fitness of current model: 0.558857142857
+Fitness of current model: 0.560380952381
+Fitness of current model: 0.560063492063
+Fitness of current model: 0.56019047619
+Fitness of current model: 0.559619047619
+Best fitness of generation is: 0.560380952381
+Fitness of current model: 0.565945945946
+Fitness of current model: 0.565765765766
+Fitness of current model: 0.565585585586
+Fitness of current model: 0.565585585586
+Fitness of current model: 0.565525525526
+Fitness of current model: 0.565705705706
+Fitness of current model: 0.565585585586
+Fitness of current model: 0.566186186186
+Fitness of current model: 0.565585585586
+Fitness of current model: 0.566006006006
+Best fitness of generation is: 0.566186186186
+Fitness of current model: 0.571664295875
+Fitness of current model: 0.570697012802
+Fitness of current model: 0.571266002845
+Fitness of current model: 0.571038406828
+Fitness of current model: 0.571664295875
+Fitness of current model: 0.571721194879
+Fitness of current model: 0.571095305832
+Fitness of current model: 0.571664295875
+Fitness of current model: 0.571778093883
+Fitness of current model: 0.571379800853
+Best fitness of generation is: 0.571778093883
+Fitness of current model: 0.576626180837
+Fitness of current model: 0.57689608637
+Fitness of current model: 0.57705802969
+Fitness of current model: 0.57705802969
+Fitness of current model: 0.577543859649
+Fitness of current model: 0.577219973009
+Fitness of current model: 0.57705802969
+Fitness of current model: 0.577112010796
+Fitness of current model: 0.57705802969
+Fitness of current model: 0.577219973009
+Best fitness of generation is: 0.577543859649
+Fitness of current model: 0.582358974359
+Fitness of current model: 0.582461538462
+Fitness of current model: 0.582820512821
+Fitness of current model: 0.582769230769
+Fitness of current model: 0.582769230769
+Fitness of current model: 0.582820512821
+Fitness of current model: 0.582871794872
+Fitness of current model: 0.582717948718
+Fitness of current model: 0.582820512821
+Fitness of current model: 0.582717948718
+Best fitness of generation is: 0.582871794872
+Fitness of current model: 0.589024390244
+Fitness of current model: 0.587804878049
+Fitness of current model: 0.587609756098
+Fitness of current model: 0.588390243902
+Fitness of current model: 0.588
+Fitness of current model: 0.588536585366
+Fitness of current model: 0.588
+Fitness of current model: 0.587902439024
+Fitness of current model: 0.587658536585
+Fitness of current model: 0.588195121951
+Best fitness of generation is: 0.589024390244
+Fitness of current model: 0.59475029036
+Fitness of current model: 0.594703832753
+Fitness of current model: 0.593914053426
+Fitness of current model: 0.594703832753
+Fitness of current model: 0.594703832753
+Fitness of current model: 0.59512195122
+Fitness of current model: 0.59493612079
+Fitness of current model: 0.59475029036
+Fitness of current model: 0.594703832753
+Fitness of current model: 0.59475029036
+Best fitness of generation is: 0.59512195122
+Fitness of current model: 0.600841638981
+Fitness of current model: 0.600442967885
+Fitness of current model: 0.600620155039
+Fitness of current model: 0.600930232558
+Fitness of current model: 0.599512735327
+Fitness of current model: 0.600620155039
+Fitness of current model: 0.600620155039
+Fitness of current model: 0.59942414175
+Fitness of current model: 0.601240310078
+Fitness of current model: 0.600487264673
+Best fitness of generation is: 0.601240310078
+Fitness of current model: 0.606300211416
+Fitness of current model: 0.606131078224
+Fitness of current model: 0.606765327696
+Fitness of current model: 0.607019027484
+Fitness of current model: 0.607145877378
+Fitness of current model: 0.607019027484
+Fitness of current model: 0.606849894292
+Fitness of current model: 0.606765327696
+Fitness of current model: 0.606765327696
+Fitness of current model: 0.606257928118
+Best fitness of generation is: 0.607145877378
+Fitness of current model: 0.612808080808
+Fitness of current model: 0.61195959596
+Fitness of current model: 0.612929292929
+Fitness of current model: 0.613050505051
+Fitness of current model: 0.612686868687
+Fitness of current model: 0.612525252525
+Fitness of current model: 0.612848484848
+Fitness of current model: 0.611797979798
+Fitness of current model: 0.612686868687
+Fitness of current model: 0.611717171717
+Best fitness of generation is: 0.613050505051
+Fitness of current model: 0.618009661836
+Fitness of current model: 0.616927536232
+Fitness of current model: 0.619748792271
+Fitness of current model: 0.618550724638
+Fitness of current model: 0.618396135266
+Fitness of current model: 0.617314009662
+Fitness of current model: 0.618550724638
+Fitness of current model: 0.61870531401
+Fitness of current model: 0.61870531401
+Fitness of current model: 0.618975845411
+Best fitness of generation is: 0.619748792271
+Fitness of current model: 0.625494912118
+Fitness of current model: 0.625938945421
+Fitness of current model: 0.625938945421
+Fitness of current model: 0.625457909343
+Fitness of current model: 0.625901942646
+Fitness of current model: 0.624976873265
+Fitness of current model: 0.62586493987
+Fitness of current model: 0.62571692877
+Fitness of current model: 0.626530989824
+Fitness of current model: 0.625420906568
+Best fitness of generation is: 0.626530989824
+Fitness of current model: 0.632943262411
+Fitness of current m----------------------------------------
+Begin PBS Epilogue Mon Jan 12 06:05:48 EST 2015 1421060748
+Job ID:		3392311.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	EEA.sh
+Session:	13455
+Limits:		neednodes=a1,procs=1,walltime=08:00:00
+Resources:	cput=07:59:58,mem=409464kb,vmem=663772kb,walltime=08:00:02
+Queue:		dque
+Account:		
+Nodes:	node074
+Killing leftovers...
+
+End PBS Epilogue Mon Jan 12 06:05:48 EST 2015 1421060748
+----------------------------------------

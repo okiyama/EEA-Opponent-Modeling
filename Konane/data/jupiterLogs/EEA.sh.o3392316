@@ -1,0 +1,209 @@
+----------------------------------------
+Begin PBS Prologue Sun Jan 11 22:05:45 EST 2015 1421031945
+Job ID:		3392316.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node074
+End PBS Prologue Sun Jan 11 22:05:46 EST 2015 1421031946
+----------------------------------------
+Fitness of current model: 0.4
+Fitness of current model: 0.4
+Fitness of current model: 0.32
+Fitness of current model: 0.4
+Fitness of current model: 0.4
+Fitness of current model: 0.36
+Fitness of current model: 0.4
+Fitness of current model: 0.4
+Fitness of current model: 0.4
+Fitness of current model: 0.44
+Best fitness of generation is: 0.44
+Fitness of current model: 0.466666666667
+Fitness of current model: 0.453333333333
+Fitness of current model: 0.44
+Fitness of current model: 0.44
+Fitness of current model: 0.453333333333
+Fitness of current model: 0.466666666667
+Fitness of current model: 0.466666666667
+Fitness of current model: 0.453333333333
+Fitness of current model: 0.453333333333
+Fitness of current model: 0.453333333333
+Best fitness of generation is: 0.466666666667
+Fitness of current model: 0.473333333333
+Fitness of current model: 0.466666666667
+Fitness of current model: 0.48
+Fitness of current model: 0.453333333333
+Fitness of current model: 0.466666666667
+Fitness of current model: 0.466666666667
+Fitness of current model: 0.48
+Fitness of current model: 0.473333333333
+Fitness of current model: 0.473333333333
+Fitness of current model: 0.473333333333
+Best fitness of generation is: 0.48
+Fitness of current model: 0.492
+Fitness of current model: 0.484
+Fitness of current model: 0.492
+Fitness of current model: 0.496
+Fitness of current model: 0.496
+Fitness of current model: 0.492
+Fitness of current model: 0.496
+Fitness of current model: 0.48
+Fitness of current model: 0.496
+Fitness of current model: 0.496
+Best fitness of generation is: 0.496
+Fitness of current model: 0.490666666667
+Fitness of current model: 0.490666666667
+Fitness of current model: 0.493333333333
+Fitness of current model: 0.493333333333
+Fitness of current model: 0.496
+Fitness of current model: 0.490666666667
+Fitness of current model: 0.493333333333
+Fitness of current model: 0.490666666667
+Fitness of current model: 0.493333333333
+Fitness of current model: 0.490666666667
+Best fitness of generation is: 0.496
+Fitness of current model: 0.500952380952
+Fitness of current model: 0.510476190476
+Fitness of current model: 0.500952380952
+Fitness of current model: 0.504761904762
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.493333333333
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.504761904762
+Fitness of current model: 0.506666666667
+Best fitness of generation is: 0.510476190476
+Fitness of current model: 0.517142857143
+Fitness of current model: 0.52
+Fitness of current model: 0.518571428571
+Fitness of current model: 0.517142857143
+Fitness of current model: 0.52
+Fitness of current model: 0.515714285714
+Fitness of current model: 0.512857142857
+Fitness of current model: 0.515714285714
+Fitness of current model: 0.517142857143
+Fitness of current model: 0.52
+Best fitness of generation is: 0.52
+Fitness of current model: 0.521111111111
+Fitness of current model: 0.534444444444
+Fitness of current model: 0.527777777778
+Fitness of current model: 0.53
+Fitness of current model: 0.533333333333
+Fitness of current model: 0.518888888889
+Fitness of current model: 0.522222222222
+Fitness of current model: 0.532222222222
+Fitness of current model: 0.533333333333
+Fitness of current model: 0.527777777778
+Best fitness of generation is: 0.534444444444
+Fitness of current model: 0.541333333333
+Fitness of current model: 0.545777777778
+Fitness of current model: 0.544888888889
+Fitness of current model: 0.543111111111
+Fitness of current model: 0.546666666667
+Fitness of current model: 0.544888888889
+Fitness of current model: 0.543111111111
+Fitness of current model: 0.545777777778
+Fitness of current model: 0.544
+Fitness of current model: 0.544888888889
+Best fitness of generation is: 0.546666666667
+Fitness of current model: 0.556363636364
+Fitness of current model: 0.552727272727
+Fitness of current model: 0.555636363636
+Fitness of current model: 0.555636363636
+Fitness of current model: 0.555636363636
+Fitness of current model: 0.553454545455
+Fitness of current model: 0.555636363636
+Fitness of current model: 0.554909090909
+Fitness of current model: 0.554181818182
+Fitness of current model: 0.555636363636
+Best fitness of generation is: 0.556363636364
+Fitness of current model: 0.56303030303
+Fitness of current model: 0.564242424242
+Fitness of current model: 0.563636363636
+Fitness of current model: 0.563636363636
+Fitness of current model: 0.563636363636
+Fitness of current model: 0.560606060606
+Fitness of current model: 0.563636363636
+Fitness of current model: 0.564242424242
+Fitness of current model: 0.565454545455
+Fitness of current model: 0.562424242424
+Best fitness of generation is: 0.565454545455
+Fitness of current model: 0.564102564103
+Fitness of current model: 0.570256410256
+Fitness of current model: 0.570256410256
+Fitness of current model: 0.566153846154
+Fitness of current model: 0.571282051282
+Fitness of current model: 0.561538461538
+Fitness of current model: 0.572820512821
+Fitness of current model: 0.569743589744
+Fitness of current model: 0.572820512821
+Fitness of current model: 0.561538461538
+Best fitness of generation is: 0.572820512821
+Fitness of current model: 0.569230769231
+Fitness of current model: 0.583296703297
+Fitness of current model: 0.566593406593
+Fitness of current model: 0.575384615385
+Fitness of current model: 0.576263736264
+Fitness of current model: 0.578461538462
+Fitness of current model: 0.575824175824
+Fitness of current model: 0.578901098901
+Fitness of current model: 0.57978021978
+Fitness of current model: 0.578461538462
+Best fitness of generation is: 0.583296703297
+Fitness of current model: 0.592761904762
+Fitness of current model: 0.593142857143
+Fitness of current model: 0.592
+Fitness of current model: 0.592761904762
+Fitness of current model: 0.595428571429
+Fitness of current model: 0.594666666667
+Fitness of current model: 0.593523809524
+Fitness of current model: 0.585904761905
+Fitness of current model: 0.586666666667
+Fitness of current model: 0.593523809524
+Best fitness of generation is: 0.595428571429
+Fitness of current model: 0.605666666667
+Fitness of current model: 0.606
+Fitness of current model: 0.604333333333
+Fitness of current model: 0.606333333333
+Fitness of current model: 0.606333333333
+Fitness of current model: 0.607
+Fitness of current model: 0.599666666667
+Fitness of current model: 0.604666666667
+Fitness of current model: 0.607
+Fitness of current model: 0.612333333333
+Best fitness of generation is: 0.612333333333
+Hit a konane error!
+State: [['.', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', '.'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', '.'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [0, 0, 0, 0]
+Traceback (most recent call last):
+  File "./EEA.py", line 217, in ?
+    eea.run()
+  File "./EEA.py", line 76, in run
+    self.testSuite.runRound()
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/TestSuite.py", line 29, in runRound
+    currTest.getResult(self.opponent)
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/EEATest.py", line 29, in getResult
+    self.result = opponent.getMove(self.state)
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/johnMinimaxEvolved.py", line 49, in getMove
+    self.alphaBeta(initialNode, -self.infinity, self.infinity)
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/johnMinimaxEvolved.py", line 134, in alphaBeta
+    children = self.successors(node)
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/johnMinimaxEvolved.py", line 75, in successors
+    nextNode = MinimaxNode(nextState, move, node.depth+1,
+UnboundLocalError: local variable 'nextState' referenced before assignment
+----------------------------------------
+Begin PBS Epilogue Sun Jan 11 22:49:14 EST 2015 1421034554
+Job ID:		3392316.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	EEA.sh
+Session:	14076
+Limits:		neednodes=a1,procs=1,walltime=08:00:00
+Resources:	cput=00:43:22,mem=409452kb,vmem=663772kb,walltime=00:43:24
+Queue:		dque
+Account:		
+Nodes:	node074
+Killing leftovers...
+
+End PBS Epilogue Sun Jan 11 22:49:15 EST 2015 1421034555
+----------------------------------------
