@@ -97,8 +97,6 @@ class EEA(Konane):
     def updateModelFitness(self, testSuite):
         """
         Updates the fitnesses of the models in self.models given the current testSuite
-        Assumes that the models have accounted for everything but the last testSuite.incSize tests.
-        Meaning this *WILL FAIL* unless it is run exactly once per test round!
         :param testSuite: The recently updated suite used to update the model's fitnesses
         :return: The models as a list of StaticEvalModels
         """
@@ -108,8 +106,8 @@ class EEA(Konane):
         dummyPlayer.initialize("W")
 
         for model in self.models:
-            for i in range(incrementSize):
-                currTest = testList[incrementSize - i - 1]
+            for i in range(len(testList)):
+                currTest = testList[i]
                 testSide = currTest.side
                 testState = currTest.state
                 testResult = currTest.result
@@ -119,7 +117,7 @@ class EEA(Konane):
                 model.numTested += 1
                 if testResult == modelMove:
                     model.numCorrect += 1
-            print("Fitness is now: " + str(model.getFitness()))
+            print("Fitness of current model: " + str(model.getFitness()))
 
 
     def recordOpponent(self):
