@@ -3,9 +3,9 @@
 # 10/3/14
 
 import random
-from updatedKonane import *
+import updatedKonane
 
-class StaticEvalModel(Konane):
+class StaticEvalModel(updatedKonane.Konane):
     def __init__(self, size):
         self.size = size
         self.myMovesWeight = 1.0

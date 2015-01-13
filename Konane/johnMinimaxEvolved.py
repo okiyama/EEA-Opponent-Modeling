@@ -1,5 +1,5 @@
-from konane import *
-from StaticEvalModel import *
+import updatedKonane
+import StaticEvalModel
 
 class MinimaxNode:
     """
@@ -21,21 +21,27 @@ class MinimaxNode:
             result += "Minimizing "
         result += "node at depth: " + str(self.depth) + "\n"
         result += "Operator: " + str(self.operator) + "\n"
+        result += "State: \n" + self.prettyBoard()
         #result += str(self.state)
         return result
     def maximizing(self):
         return self.player == self.maximizer
+    def prettyBoard(self):
+        string = ""
+        for row in self.state:
+            string += str(row) + "\n"
+        return string
 
-class MinimaxPlayer(Konane, Player):
+class MinimaxPlayer(updatedKonane.Konane, updatedKonane.Player):
     infinity = 5000
     limit = 0
     bestMove = None
 
     def __init__(self, size, depthLimit):
-        Konane.__init__(self, size)
-        Player.__init__(self)
+        updatedKonane.Konane.__init__(self, size)
+        updatedKonane.Player.__init__(self)
         self.limit = depthLimit
-        self.model = StaticEvalModel(size)
+        self.model = StaticEvalModel.StaticEvalModel(size)
         self.gamesPlayed = 0
         self.gamesWon = 0
 
@@ -69,9 +75,9 @@ class MinimaxPlayer(Konane, Player):
         for move in moves:
             try:
                 nextState = self.nextBoard(node.state, node.player, move)
-            except KonaneError:
+            except updatedKonane.KonaneError:
                 print("Hit a konane error!")
-                print("State: " + str(node.state) + "\nPlayer: " + str(node.player) + "\nMove: " + str(move))
+                print("State: " + node.prettyBoard() + "\nPlayer: " + str(node.player) + "\nMove: " + str(move))
             nextNode = MinimaxNode(nextState, move, node.depth+1,
                                    self.opponent(node.player))
             result.append(nextNode)
@@ -163,7 +169,7 @@ class MinimaxPlayer(Konane, Player):
             return beta
 
 if __name__ == '__main__':
-    game = Konane(8)
-    game.playNGames(50, MinimaxPlayer(8,2), RandomPlayer(8))
+    game = updatedKonane.Konane(6)
+    game.playNGames(50, MinimaxPlayer(8,2), updatedKonane.RandomPlayer(8))
 
 

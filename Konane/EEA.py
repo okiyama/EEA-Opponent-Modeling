@@ -2,15 +2,18 @@
 ## Author: Julian Jocque
 ## Date: 10/6/14
 
-from StaticEvalModel import *
-from updatedKonane import *
-from TestSuite import *
-from johnMinimaxEvolved import *
+import StaticEvalModel
+import updatedKonane
+import TestSuite
+import johnMinimaxEvolved
 from time import strftime
 from copy import copy
 from datetime import datetime
 
-class EEA(Konane):
+
+#NOTE: The node size is 8 for some reason, no idea why. It needs to be 6 across the board.
+#Getting a ton fo KonaneErrors because of this.
+class EEA(updatedKonane.Konane):
 
     def __init__(self):
         self.numModels = 10
@@ -23,7 +26,7 @@ class EEA(Konane):
         self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = 4) #Try it with limit 4, see if a limit 3 can model it
 
         self.incSize = 25
-        self.testSuite = TestSuite(self.opponent, self.incSize)
+        self.testSuite = TestSuite.TestSuite(self.opponent, self.incSize, self.size)
 
         self.initModels()
         self.startTime = strftime("%Y-%m-%d %H:%M:%S")
@@ -35,7 +38,7 @@ class EEA(Konane):
     def initModels(self):
         """ Initializes the models that we'll evolve """
         for i in range(self.numModels):
-            currModel = StaticEvalModel(self.size)
+            currModel = StaticEvalModel.StaticEvalModel(self.size)
             currModel.mutate()
             self.models.append(currModel)
 
@@ -49,9 +52,9 @@ class EEA(Konane):
             The model is mutated more than the default values for a model's mutation.
             Just to make it a bit harder to find.
         """
-        opponent = MinimaxPlayer(self.size, depthLimit)
+        opponent = johnMinimaxEvolved.MinimaxPlayer(self.size, depthLimit)
         opponent.initialize(side)
-        opponent.model = StaticEvalModel(self.size)
+        opponent.model = StaticEvalModel.StaticEvalModel(self.size)
         opponent.model.chanceToMutate = 100
         for i in range(numTimesToMutate):
             opponent.model.mutate()
@@ -101,7 +104,7 @@ class EEA(Konane):
         """
         testList = testSuite.getSuite()
         incrementSize = testSuite.incSize
-        dummyPlayer = MinimaxPlayer(self.size, self.depthLimit)
+        dummyPlayer = johnMinimaxEvolved.MinimaxPlayer(self.size, self.depthLimit)
         dummyPlayer.initialize("W")
 
         for model in self.models:
@@ -169,7 +172,7 @@ class EEA(Konane):
                 return p2
             try: 
                 self.makeMove('B', move)
-            except KonaneError:
+            except updatedKonane.KonaneError:
                 print "Game over: Invalid move by", p1.name
                 print move
                 print self
@@ -179,7 +182,7 @@ class EEA(Konane):
                 return p1
             try:
                 self.makeMove('W', move)
-            except KonaneError:
+            except updatedKonane.KonaneError:
                 print "Game over: Invalid move by", p2.name
                 print move
                 print self
@@ -200,7 +203,7 @@ class EEA(Konane):
         Initializes the data file by writing the attributes line of the CSV.
         :return: None
         """
-        dummyModel = StaticEvalModel(self.size)
+        dummyModel = StaticEvalModel.StaticEvalModel(self.size)
         self.datafile.write("%roundNum, %fitness, " + dummyModel.dumpFeatures() + ", %roundEndTime\n")
 
     def log(self, models, roundNum, roundEndTime):

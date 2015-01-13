@@ -9,14 +9,17 @@ minimax player's getMove method must run within 5 seconds.  Notice how
 the getMove method is called within the playOneGame method.  If the
 getMove method times out, then a random move is chosen instead.
 
-Bug fix: When doing mulitple inheritance in the player classes,
+Bug fix: When doing multiple inheritance in the player classes,
 must explicitly initialize the second base class.
 """
 
 import random
 import copy
-#from alarm import *
 from time import sleep
+
+def log(string):
+    #We really don't need to log this
+    pass
 
 class KonaneError(AttributeError):
     """
@@ -26,33 +29,33 @@ class KonaneError(AttributeError):
 class Konane:
     """
     This class implements Konane, the Hawaiian version of checkers.
-    The board is represented as a two-dimensional list.  Each 
+    The board is represented as a two-dimensional list.	 Each
     location on the board contains one of the following symbols:
        'B' for a black piece
        'W' for a white piece
        '.' for an empty location
-    The black player always goes first.  The opening moves by both
+    The black player always goes first.	 The opening moves by both
     players are special cases and involve removing one piece from
-    specific designated locations.  Subsequently, each move is a
+    specific designated locations.	Subsequently, each move is a
     jump over one of the opponent's pieces into an empty location.
     The jump may continue in the same direction, if appropriate.
     The jumped pieces are removed, and then it is the opponent's
     turn.  Play continues until one player has no possible moves,
-    making the other player the winner. 
+    making the other player the winner.
     """
     def __init__(self, n):
         self.size = n
         self.reset()
-        
+
     def reset(self):
         """
         Resets the starting board state.
         """
         self.board = []
         value = 'B'
-        for i in range(self.size):
+        for i in xrange(self.size):
             row = []
-            for j in range(self.size):
+            for j in xrange(self.size):
                 row.append(value)
                 value = self.opponent(value)
             self.board.append(row)
@@ -60,13 +63,13 @@ class Konane:
                 value = self.opponent(value)
 
     def __str__(self):
-        result = "  "
-        for i in range(self.size):
+        result = "	"
+        for i in xrange(self.size):
             result += str(i) + " "
         result += "\n"
-        for i in range(self.size):
+        for i in xrange(self.size):
             result += str(i) + " "
-            for j in range(self.size):
+            for j in xrange(self.size):
                 result += str(self.board[i][j]) + " "
             result += "\n"
         return result
@@ -76,23 +79,26 @@ class Konane:
         Returns true if the given row and col represent a valid location on
         the konane board.
         """
-        return row >= 0 and col >= 0 and row < self.size and col < self.size
+        #return row >= 0 and col >= 0 and row < self.size and col < self.size
+        return 0 <= row < self.size and 0 <= col < self.size
 
     def contains(self, board, row, col, symbol):
         """
         Returns true if the given row and col represent a valid location on
         the konane board and that location contains the given symbol.
         """
-        return self.valid(row,col) and board[row][col]==symbol
+        #return self.valid(row,col) and board[row][col]==symbol
+        return 0 <= row < self.size and 0 <= col < self.size and board[row][col] == symbol
 
+    # TODO: This is O(n^2), we can cache this
     def countSymbol(self, board, symbol):
         """
         Returns the number of instances of the symbol on the board.
         """
         count = 0
-        for r in range(self.size):
-            for c in range(self.size):
-                if board[r][c] == symbol:
+        for row in board:
+            for val in row:
+                if val == symbol:
                     count += 1
         return count
 
@@ -119,7 +125,12 @@ class Konane:
         Updates the current board with the next board created by the given
         move.
         """
+        # TODO: Why are we copying the board
         self.board = self.nextBoard(self.board, player, move)
+
+    def boardCopy(self, board):
+        # NOTE: "row[:]" means copy the row into a new list
+        return [row[:] for row in board]
 
     def nextBoard(self, board, player, move):
         """
@@ -132,7 +143,7 @@ class Konane:
         c1 = move[1]
         r2 = move[2]
         c2 = move[3]
-        next = copy.deepcopy(board)
+        next = self.boardCopy(board)
         if not (self.valid(r1, c1) and self.valid(r2, c2)):
             raise KonaneError
         if next[r1][c1] != player:
@@ -148,7 +159,7 @@ class Konane:
         jumps = dist/2
         dr = (r2 - r1)/dist
         dc = (c2 - c1)/dist
-        for i in range(jumps):
+        for i in xrange(jumps):
             if next[r1+dr][c1+dc] != self.opponent(player):
                 raise KonaneError
             next[r1][c1] = "."
@@ -196,20 +207,40 @@ class Konane:
         moves.append([pos-1,pos]*2)
         return moves
 
-    def check(self, board, r, c, rd, cd, factor, opponent):
+    def check(self, board, r, c, rd, cd, factor, opponent, moves=None):
         """
         Checks whether a jump is possible starting at (r,c) and going
         in the direction determined by the row delta, rd, and the
-        column delta, cd.  The factor is used to recursively check for
+        column delta, cd.  The factor is used to check for
         multiple jumps in the same direction.  Returns all possible
         jumps in the given direction.
         """
-        if self.contains(board,r+factor*rd,c+factor*cd,opponent) and \
-           self.contains(board,r+(factor+1)*rd,c+(factor+1)*cd,'.'):
-            return [[r,c,r+(factor+1)*rd,c+(factor+1)*cd]] + \
-                   self.check(board,r,c,rd,cd,factor+2,opponent)
-        else:
-            return []
+        # NOTE: This version is no longer recursive. It maintains the old interface,
+        #       but enables a slightly faster technique - passing your current 'moves'
+        #       list in as an additional parameter makes it do the list extension for you,
+        #       and somewhat faster.
+
+        if moves is None:
+            moves = []
+
+        contains = self.contains
+        append = moves.append
+        scaledRD = factor*rd
+        scaledCD = factor*cd
+
+        nextR = r + scaledRD
+        nextC = c + scaledCD
+        while contains(board, nextR, nextC, opponent):
+            targetR = nextR + scaledRD
+            targetC = nextC + scaledCD
+            if contains(board, targetR, targetC, '.'):
+                append([r, c, targetR, targetC])
+                nextR = targetR + scaledRD
+                nextC = targetC + scaledCD
+            else:
+                break
+
+        return moves
 
     def generateMoves(self, board, player):
         """
@@ -223,16 +254,20 @@ class Konane:
                 return self.generateSecondMoves(board)
         else:
             moves = []
-            rd = [-1,0,1,0]
-            cd = [0,1,0,-1]
-            for r in range(self.size):
-                for c in range(self.size):
-                    if board[r][c] == player:
-                        for i in range(len(rd)):
-                            moves += self.check(board,r,c,rd[i],cd[i],1,
-                                                self.opponent(player))
+            mv = [(0,-1),(-1,0),(0,1),(1,0)]
+            # TODO: Optimize! Loop for pieces owned by each player, instead of looking for them
+            check = self.check
+            opponent = self.opponent(player)
+
+            # NOTE: enumerate() steps over both the indices and the values in a list
+            for r, row in enumerate(board):
+                for c, val in enumerate(row):
+                    if val == player:
+                        for mvR, mvC in mv:
+                            check(board,r,c,mvR,mvC,1,
+                                  opponent, moves)
             return moves
-        
+
     def countMovablePieces(self, board, player):
         """
         Generates and returns all legal moves for the given player
@@ -252,18 +287,11 @@ class Konane:
                     if board[r][c] == player:
                         for i in range(len(rd)):
                             if (self.check(board,r,c,rd[i],cd[i],1,
-                                self.opponent(player)) != []):
+                                           self.opponent(player)) != []):
                                 count += 1
                                 break
-            return count 
-        
-    def randomMove(self, board, player):
-        moves = self.generateMoves(board, player)
-        n = len(moves)
-        if n == 0:
-            return []
-        else:
-            return moves[random.randrange(0, n)]
+            return count
+
 
     def playOneGame(self, p1, p2, show):
         """
@@ -271,82 +299,67 @@ class Konane:
         between them.  Returns 'B' if black wins, or 'W' if
         white wins. When show is true, it will display each move
         in the game.
-
-        New feature: Allows you to limit the time each player
-        takes to make a move.  Will raise a TimedOutException
-        when the limit is exceeded.  In these cases, choose a
-        random move instead.
         """
         self.reset()
         p1.initialize('B')
         p2.initialize('W')
-        log = open(p1.name + "vs" + p2.name + ".log", "w")
-        log.write(p1.name + " vs " + p2.name +"\n")
-        print p1.name, "vs", p2.name
+        #		log = open(p1.name + "vs" + p2.name + ".log", "w")
+        log(p1.name + " vs " + p2.name +"\n")
+        #print p1.name, "vs", p2.name
         while True:
-            log.write(str(self))
-            log.write("\nplayer B's turn\n")
+            log(str(self))
+            log("\nplayer B's turn\n")
             if show:
                 print self
                 print "player B's turn"
-            # try:
-            #     move = p1.getMove(self.board)
-            # except TimedOutException:
-            #     print p1.name, "move took too long!"
-            #     move = self.randomMove(self.board, p1.side)
             move = p1.getMove(self.board)
             if move == []:
-                log.write("Game over: " + p1.name + " loses.\n")
-                print "Game over"
+                #print("Game over: " + p1.name + " loses.\n")
+                #print "Game over"
                 return 'W'
-            try: 
+            try:
                 self.makeMove('B', move)
             except KonaneError:
-                log.write("Game over: Invalid move by " + p1.name + "\n")
-                log.write(str(move) + "\n")
-                log.write(str(self))
+                log("Game over: Invalid move by " + p1.name + "\n")
+                log(str(move) + "\n")
+                log(str(self))
                 print "Game over: Invalid move by", p1.name
                 print move
                 print self
                 return 'W'
-            log.write(str(move) + "\n")
-            log.write(str(self))
-            log.write("\nplayer W's turn\n")
+            log(str(move) + "\n")
+            log(str(self))
+            log("\nplayer W's turn\n")
             if show:
                 print move
                 print
                 print self
                 print "player W's turn"
-            # try:
-            #     move = p2.getMove(self.board)
-            # except TimedOutException:
-            #     print p2.name, "move took too long!"
-            #     move = self.randomMove(self.board, p2.side)
             move = p2.getMove(self.board)
             if move == []:
-                log.write("Game over: " + p2.name + " loses.\n")
-                print "Game over"
+                #print("Game over: " + p2.name + " loses.\n")
+                #print "Game over"
                 return 'B'
             try:
                 self.makeMove('W', move)
             except KonaneError:
-                log.write("Game over: Invalid move by " + p2.name + "\n")
-                log.write(str(move) + "\n")
-                log.write(str(self))
+                log("Game over: Invalid move by " + p2.name + "\n")
+                log(str(move) + "\n")
+                log(str(self))
                 print "Game over: Invalid move by", p2.name
                 print move
                 print self
                 return 'B'
-            log.write(str(move) + "\n")
+            log(str(move) + "\n")
             if show:
                 print move
                 print
-        log.close()
+            #		log.close()
 
-    def playNGames(self, n, p1, p2, show=False):
+    def playNGames(self, n, p1, p2, show):
         """
         Will play out n games between player p1 and player p2.
-        The players alternate going first.  Prints the total
+        The players alternate going first.	Prints the total
         number of games won by each player.
         """
         first = p1
@@ -363,8 +376,6 @@ class Konane:
                 second.won()
                 print second.name, "wins"
             first, second = second, first
-        print first.results()
-        print second.results()
 
 
 class Player:
@@ -413,14 +424,7 @@ class SimplePlayer(Konane, Player):
     def initialize(self, side):
         self.side = side
         self.name = "Simple"
-    # Checks when the method below is called whether it returns within
-    # the given time limit of 1 second.  If it does not, it will raise a
-    # TimedOutException.  To test this, uncomment the delaying code below.
-    #@timed_out(1)
     def getMove(self, board):
-        #if random.random() < .1:
-        #    print "delaying..."
-        #    sleep(2)
         moves = self.generateMoves(board, self.side)
         n = len(moves)
         if n == 0:
@@ -475,5 +479,6 @@ class HumanPlayer(Konane, Player):
                 print "Invalid choice, try again."
 
 if __name__ == '__main__':
-    game = Konane(6)
-    game.playNGames(2, RandomPlayer(6), SimplePlayer(6))
+    #main()
+    import johnMinimaxEvolved
+    Konane(6).playOneGame(RandomPlayer(6), johnMinimaxEvolved.MinimaxPlayer(6, 4), False)
