@@ -1,0 +1,44 @@
+----------------------------------------
+Begin PBS Prologue Mon Jan 12 12:58:31 EST 2015 1421085511
+Job ID:		3392332.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node073
+End PBS Prologue Mon Jan 12 12:58:31 EST 2015 1421085511
+----------------------------------------
+Hit a konane error!
+State: [['.', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', '.'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', '.'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [0, 0, 0, 0]
+Traceback (most recent call last):
+  File "./EEA.py", line 219, in ?
+    eea.run()
+  File "./EEA.py", line 75, in run
+    self.testSuite.runRound()
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/TestSuite.py", line 29, in runRound
+    currTest.getResult(self.opponent)
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/EEATest.py", line 29, in getResult
+    self.result = opponent.getMove(self.state)
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/johnMinimaxEvolved.py", line 49, in getMove
+    self.alphaBeta(initialNode, -self.infinity, self.infinity)
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/johnMinimaxEvolved.py", line 134, in alphaBeta
+    children = self.successors(node)
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/johnMinimaxEvolved.py", line 75, in successors
+    nextNode = MinimaxNode(nextState, move, node.depth+1,
+UnboundLocalError: local variable 'nextState' referenced before assignment
+----------------------------------------
+Begin PBS Epilogue Mon Jan 12 12:58:42 EST 2015 1421085522
+Job ID:		3392332.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	submitEEA.sh
+Session:	24002
+Limits:		neednodes=a1,procs=1,walltime=04:00:00
+Resources:	cput=00:00:05,mem=206496kb,vmem=460824kb,walltime=00:00:06
+Queue:		dque
+Account:		
+Nodes:	node073
+Killing leftovers...
+
+End PBS Epilogue Mon Jan 12 12:58:42 EST 2015 1421085522
+----------------------------------------

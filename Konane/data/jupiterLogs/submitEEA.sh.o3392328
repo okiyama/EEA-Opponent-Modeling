@@ -1,0 +1,1764 @@
+----------------------------------------
+Begin PBS Prologue Mon Jan 12 12:57:51 EST 2015 1421085471
+Job ID:		3392328.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node073
+End PBS Prologue Mon Jan 12 12:57:51 EST 2015 1421085471
+----------------------------------------
+Fitness of current model: 0.48
+Fitness of current model: 0.48
+Fitness of current model: 0.48
+Fitness of current model: 0.48
+Fitness of current model: 0.48
+Fitness of current model: 0.48
+Fitness of current model: 0.52
+Fitness of current model: 0.48
+Fitness of current model: 0.48
+Fitness of current model: 0.48
+Best fitness of generation is: 0.52
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.52
+Fitness of current model: 0.52
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.52
+Fitness of current model: 0.52
+Fitness of current model: 0.52
+Fitness of current model: 0.52
+Fitness of current model: 0.52
+Fitness of current model: 0.506666666667
+Best fitness of generation is: 0.52
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.5
+Fitness of current model: 0.473333333333
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.5
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.506666666667
+Fitness of current model: 0.506666666667
+Best fitness of generation is: 0.506666666667
+Fitness of current model: 0.492
+Fitness of current model: 0.492
+Fitness of current model: 0.492
+Fitness of current model: 0.484
+Fitness of current model: 0.488
+Fitness of current model: 0.488
+Fitness of current model: 0.492
+Fitness of current model: 0.488
+Fitness of current model: 0.488
+Fitness of current model: 0.492
+Best fitness of generation is: 0.492
+Fitness of current model: 0.461333333333
+Fitness of current model: 0.472
+Fitness of current model: 0.466666666667
+Fitness of current model: 0.466666666667
+Fitness of current model: 0.472
+Fitness of current model: 0.472
+Fitness of current model: 0.472
+Fitness of current model: 0.466666666667
+Fitness of current model: 0.469333333333
+Fitness of current model: 0.472
+Best fitness of generation is: 0.472
+Fitness of current model: 0.451428571429
+Fitness of current model: 0.451428571429
+Fitness of current model: 0.453333333333
+Fitness of current model: 0.451428571429
+Fitness of current model: 0.453333333333
+Fitness of current model: 0.447619047619
+Fitness of current model: 0.449523809524
+Fitness of current model: 0.453333333333
+Fitness of current model: 0.453333333333
+Fitness of current model: 0.451428571429
+Best fitness of generation is: 0.453333333333
+Fitness of current model: 0.445714285714
+Fitness of current model: 0.441428571429
+Fitness of current model: 0.444285714286
+Fitness of current model: 0.445714285714
+Fitness of current model: 0.442857142857
+Fitness of current model: 0.447142857143
+Fitness of current model: 0.445714285714
+Fitness of current model: 0.442857142857
+Fitness of current model: 0.445714285714
+Fitness of current model: 0.447142857143
+Best fitness of generation is: 0.447142857143
+Fitness of current model: 0.444444444444
+Fitness of current model: 0.44
+Fitness of current model: 0.444444444444
+Fitness of current model: 0.445555555556
+Fitness of current model: 0.441111111111
+Fitness of current model: 0.438888888889
+Fitness of current model: 0.443333333333
+Fitness of current model: 0.444444444444
+Fitness of current model: 0.445555555556
+Fitness of current model: 0.444444444444
+Best fitness of generation is: 0.445555555556
+Fitness of current model: 0.440888888889
+Fitness of current model: 0.442666666667
+Fitness of current model: 0.441777777778
+Fitness of current model: 0.443555555556
+Fitness of current model: 0.44
+Fitness of current model: 0.44
+Fitness of current model: 0.441777777778
+Fitness of current model: 0.443555555556
+Fitness of current model: 0.443555555556
+Fitness of current model: 0.443555555556
+Best fitness of generation is: 0.443555555556
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444363636364
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444363636364
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.442181818182
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.442181818182
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444363636364
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.442181818182
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444363636364
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.441454545455
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.441454545455
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444363636364
+Best fitness of generation is: 0.444363636364
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.44303030303
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.440606060606
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.441818181818
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444242424242
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.442424242424
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.443636363636
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.441212121212
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.440606060606
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.44303030303
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444242424242
+Best fitness of generation is: 0.444242424242
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.441538461538
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444615384615
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.44358974359
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.441025641026
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444615384615
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444615384615
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444102564103
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444102564103
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444615384615
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444615384615
+Best fitness of generation is: 0.444615384615
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.445274725275
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.443516483516
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.443956043956
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.443516483516
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.443516483516
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.443076923077
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.443516483516
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.442637362637
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.443076923077
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.443516483516
+Best fitness of generation is: 0.445274725275
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.445333333333
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.445333333333
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.446095238095
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444952380952
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444571428571
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444571428571
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444571428571
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.444952380952
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.443428571429
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.44419047619
+Best fitness of generation is: 0.446095238095
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.448666666667
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.447333333333
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.447
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.446
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.446666666667
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.446666666667
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.447
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.445666666667
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.447
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.446333333333
+Best fitness of generation is: 0.448666666667
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.450294117647
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.449117647059
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.45
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.451764705882
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.45
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.450294117647
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.447647058824
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.449117647059
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.45
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.450294117647
+Best fitness of generation is: 0.451764705882
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.454640522876
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.452026143791
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.453333333333
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.454901960784
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.453594771242
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.451503267974
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.460130718954
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.45385620915
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.453333333333
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.45385620915
+Best fitness of generation is: 0.460130718954
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.462222222222
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.467368421053
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.465964912281
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.465263157895
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.467134502924
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.472748538012
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.467134502924
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.465964912281
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.46269005848
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.467368421053
+Best fitness of generation is: 0.472748538012
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.48
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.474105263158
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.490315789474
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.478526315789
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.488421052632
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.483157894737
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.482736842105
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.477684210526
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.487789473684
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.483157894737
+Best fitness of generation is: 0.490315789474
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.505714285714
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.491619047619
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.506095238095
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.498857142857
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.497142857143
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.489714285714
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.496571428571
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.507619047619
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.49980952381
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.507047619048
+Best fitness of generation is: 0.507619047619
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.526753246753
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.516017316017
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.522077922078
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.52380952381
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.524675324675
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.528484848485
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.517922077922
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.521904761905
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.522424242424
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.522597402597
+Best fitness of generation is: 0.528484848485
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.546561264822
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.543873517787
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.546245059289
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.548300395257
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.546245059289
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.546245059289
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.546245059289
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.546561264822
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.545138339921
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.544980237154
+Best fitness of generation is: 0.548300395257
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.559130434783
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.565507246377
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.565507246377
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.565507246377
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.565652173913
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.56652173913
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.569420289855
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.564347826087
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.566811594203
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.557246376812
+Best fitness of generation is: 0.569420289855
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.588
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.583066666667
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.5888
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.589466666667
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.5744
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.589733333333
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.588
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.585066666667
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.589333333333
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.584
+Best fitness of generation is: 0.589733333333
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.606030769231
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.609107692308
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.607630769231
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.609230769231
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.600123076923
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.607384615385
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.607384615385
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.602953846154
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.607507692308
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.606153846154
+Best fitness of generation is: 0.609230769231
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.624045584046
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.626438746439
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.630883190883
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.626438746439
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.621766381766
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.626438746439
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.626324786325
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.62415954416
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.626210826211
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.627008547009
+Best fitness of generation is: 0.630883190883
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.647407407407
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.644656084656
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.650264550265
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.650158730159
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.64962962963
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.649841269841
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.649841269841
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.649312169312
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.649523809524
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.649523809524
+Best fitness of generation is: 0.650264550265
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.667389162562
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.667783251232
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.667783251232
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.663842364532
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.667783251232
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.667783251232
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.667783251232
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.667783251232
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.666009852217
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.664532019704
+Best fitness of generation is: 0.667783251232
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.681195402299
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.68367816092
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.680827586207
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.68183908046
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.68367816092
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.685057471264
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.68367816092
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.68367816092
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.682666666667
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.683126436782
+Best fitness of generation is: 0.685057471264
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.700817204301
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.69376344086
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.693677419355
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.695225806452
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.698924731183
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.700559139785
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.700559139785
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.702537634409
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.69711827957
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.696258064516
+Best fitness of generation is: 0.702537634409
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.716129032258
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.71814516129
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.717983870968
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.71814516129
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.71814516129
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.719032258065
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.71435483871
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.71814516129
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.717258064516
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.717903225806
+Best fitness of generation is: 0.719032258065
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.728106060606
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.734318181818
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.733484848485
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.734090909091
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.733712121212
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.734090909091
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.728484848485
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.733939393939
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.733712121212
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Fitness of current model: 0.732121212121
+Best fitness of generation is: 0.734318181818
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.741889483066
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.748235294118
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.747450980392
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.745739750446
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.745739750446
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.748235294118
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.747664884135
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.743244206774
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.745882352941
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.740606060606
+Best fitness of generation is: 0.748235294118
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.75912605042
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.755159663866
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.760672268908
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.756369747899
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.760268907563
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.761008403361
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.760806722689
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.761008403361
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.759731092437
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.761008403361
+Best fitness of generation is: 0.761008403361
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.772634920635
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.771873015873
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.770285714286
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.772634920635
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.772634920635
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.767555555556
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.770984126984
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.772126984127
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.772761904762
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.772634920635
+Best fitness of generation is: 0.772761904762
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.781861861862
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.779399399399
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.780600600601
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.782102102102
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.783303303303
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.782462462462
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.782162162162
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.78024024024
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.783543543544
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.783423423423
+Best fitness of generation is: 0.783543543544
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.792204836415
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.793399715505
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.792887624467
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.791806543385
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.789701280228
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.790156472262
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.792603129445
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.789815078236
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.793513513514
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B'], ['B', 'W', 'B', 'W', '.', '.', '.', 'W'], ['W', 'B', 'W', 'B', 'W', '.', '.', 'B']]
+Player: B
+Move: [5, 5, 5, 5]
+Fitness of current model: 0.789530583215
+Best fitness of generation is: 0.793513513514
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '.', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', '.', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', '.', '.'], ['W', 'B', '.', '.', 'W', 'B', 'W', 'B']]
+Player: B
+Move: [3, 3, 3, 3]
+Hit a konane error!
+State: [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'], ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'], ['W', 'B', 'W', '----------------------------------------
+Begin PBS Epilogue Mon Jan 12 16:57:57 EST 2015 1421099877
+Job ID:		3392328.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	submitEEA.sh
+Session:	23470
+Limits:		neednodes=a1,procs=1,walltime=04:00:00
+Resources:	cput=03:59:58,mem=409468kb,vmem=663644kb,walltime=04:00:01
+Queue:		dque
+Account:		
+Nodes:	node073
+Killing leftovers...
+
+End PBS Epilogue Mon Jan 12 16:57:58 EST 2015 1421099878
+----------------------------------------

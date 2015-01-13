@@ -1,0 +1,30 @@
+----------------------------------------
+Begin PBS Prologue Mon Jan 12 13:08:01 EST 2015 1421086081
+Job ID:		3392344.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node072
+End PBS Prologue Mon Jan 12 13:08:01 EST 2015 1421086081
+----------------------------------------
+Traceback (most recent call last):
+  File "./EEA.py", line 13, in ?
+    class EEA(Konane):
+  File "./EEA.py", line 42, in EEA
+    def generateOpponent(self, side = "W", numTimesToMutate = 5, depthLimit = self.depthLimit):
+NameError: name 'self' is not defined
+----------------------------------------
+Begin PBS Epilogue Mon Jan 12 13:08:07 EST 2015 1421086087
+Job ID:		3392344.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	submitEEA.sh
+Session:	26039
+Limits:		neednodes=a1,procs=1,walltime=04:00:00
+Resources:	cput=00:00:00,mem=0kb,vmem=0kb,walltime=00:00:00
+Queue:		dque
+Account:		
+Nodes:	node072
+Killing leftovers...
+
+End PBS Epilogue Mon Jan 12 13:08:07 EST 2015 1421086087
+----------------------------------------
