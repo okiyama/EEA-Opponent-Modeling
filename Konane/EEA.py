@@ -20,7 +20,7 @@ class EEA(Konane):
         self.depthLimit = 3
         self.models = []
 
-        self.opponent = self.generateOpponent(numTimesToMutate=100)
+        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = 4) #Try it with limit 4, see if a limit 3 can model it
 
         self.incSize = 25
         self.testSuite = TestSuite(self.opponent, self.incSize)
@@ -39,7 +39,7 @@ class EEA(Konane):
             currModel.mutate()
             self.models.append(currModel)
 
-    def generateOpponent(self, side = "W", numTimesToMutate = 5):
+    def generateOpponent(self, side = "W", numTimesToMutate = 5, depthLimit = self.depthLimit):
         """
         Generates an opponent by making a default model and then mutating it numTimesToMutate times.
         Then, puts that model in an opponent with default board size and depth limit to be played against.
@@ -49,7 +49,7 @@ class EEA(Konane):
             The model is mutated more than the default values for a model's mutation.
             Just to make it a bit harder to find.
         """
-        opponent = MinimaxPlayer(self.size, self.depthLimit)
+        opponent = MinimaxPlayer(self.size, depthLimit)
         opponent.initialize(side)
         opponent.model = StaticEvalModel(self.size)
         opponent.model.chanceToMutate = 100
