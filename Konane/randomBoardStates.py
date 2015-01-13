@@ -43,18 +43,35 @@ class RandomStateGenerator:
         #TODO: If the move is of the form [A, B, A, B] Then it is invalid and should be removed.
         game = konane.Konane(self.boardSize)
         print(len(self.blackStates))
+        shouldRemove = False
         for blackState in self.blackStates:
-            if len(game.generateMoves(blackState, "B")) <= 1:
+            moves = game.generateMoves(blackState, "B")
+            if len(moves) <= 1:
                 #print("Removing black move " + str(blackState))
                 #print(str(game.generateMoves(self.blackStates[i], "B")))
+                shouldRemove = True
+            for move in moves:
+                if move[0] == move[2] and move[1] == move[3]:
+                    #Remove moves of the form [A, B, A, B] because that's impossible
+                    shouldRemove = True
+            if shouldRemove:
                 self.blackStates.remove(blackState)
+                shouldRemove = False
         print(len(self.blackStates))
 
         print(len(self.whiteStates))
         for whiteState in self.whiteStates:
-            if len(game.generateMoves(whiteState, "W")) <= 1:
+            moves = game.generateMoves(whiteState, "W")
+            if len(moves) <= 1:
                 #print("Removing white move " + str(whiteState))
+                shouldRemove = True
+            for move in moves:
+                if move[0] == move[2] and move[1] == move[3]:
+                    #Remove moves of the form [A, B, A, B] because that's impossible
+                    shouldRemove = True
+            if shouldRemove:
                 self.whiteStates.remove(whiteState)
+                shouldRemove = False
         print(len(self.whiteStates))
 
         self.updatePickleFiles()
