@@ -39,7 +39,7 @@ class EEA(Konane):
             currModel.mutate()
             self.models.append(currModel)
 
-    def generateOpponent(self, side = "W", numTimesToMutate = 5, depthLimit = self.depthLimit):
+    def generateOpponent(self, side = "W", numTimesToMutate = 5, depthLimit = 3):
         """
         Generates an opponent by making a default model and then mutating it numTimesToMutate times.
         Then, puts that model in an opponent with default board size and depth limit to be played against.
