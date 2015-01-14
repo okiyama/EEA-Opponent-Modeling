@@ -21,7 +21,9 @@ class EEA(updatedKonane.Konane):
         self.depthLimit = 3
         self.models = []
 
-        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = 3) #Try it with limit 4, see if a limit 3 can model it
+        self.opponent = updatedKonane.SimplePlayer(self.size)
+        self.opponent.initialize("W")
+        #self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = 3) #Try it with limit 4, see if a limit 3 can model it
 
         self.incSize = 25
         self.testSuite = TestSuite.TestSuite(self.incSize, self.size)
@@ -123,10 +125,15 @@ class EEA(updatedKonane.Konane):
         """
         Records relevant information about self.opponent to the attribute file.
         """
-        oppModel = self.opponent.model
         self.attrFile.write("Opponent info:\n")
-        self.attrFile.write(oppModel.dumpFeatures() + ", %depth\n")
-        self.attrFile.write(oppModel.dumpModel() + ", " + str(self.opponent.limit) + "\n")
+        self.attrFile.write("Name: " + self.opponent.name + "\n")
+        try:
+            oppModel = self.opponent.model
+            self.attrFile.write(oppModel.dumpFeatures() + ", %depth\n")
+            self.attrFile.write(oppModel.dumpModel() + ", " + str(self.opponent.limit) + "\n")
+        except AttributeError:
+            #No model found
+            pass
 
 
     def evolveModels(self):

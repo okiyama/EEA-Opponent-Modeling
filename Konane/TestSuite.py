@@ -26,6 +26,7 @@ class TestSuite:
             test.fitness = self.disagreement(test, models)
             testSet.append(test)
         #2: Evolve these tests, with fitness being disagreement.
+        #Maybe evolution crosses over puzzles from the best tests
         #3: Return the best test.
         """
         3. First, a random set of tests to run will be generated. That is to say, a set of the repre-
