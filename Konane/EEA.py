@@ -9,7 +9,6 @@ import johnMinimaxEvolved
 from time import strftime
 from copy import copy
 from datetime import datetime
-import cProfile
 
 
 class EEA(updatedKonane.Konane):
