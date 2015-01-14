@@ -1,31 +1,29 @@
-## A single Test for the EEA. This is a board state, as well as the side of that board state and
-## The resultant move from the opponent
-## Date: 1/6/15
+## A single test for the EEA. Consists of multiple puzzles as well as an overall fitness for the test
+## based on its ability to create disagreement among a set of models.
+## Date: 1/13/15
 __author__ = 'julian'
 
-from copy import copy
+import KonanePuzzle
+import random
+import randomBoardStates
 
 class EEATest:
+    def __init__(self, moveGenerator, testSize = 10, size = 8):
+        self.moveGenerator = moveGenerator
+        self.puzzles = self.genRandomPuzzles(testSize)
+        self.fitness = 0
 
-    def __init__(self, boardState, side, result = None):
-        """
-        :param boardState: the state the opponent responds to
-        :param side: what side the opponent is playing in that state
-        :param result: The resultant move from the opponent
-        :return:
-        """
-        self.state = boardState
-        self.side = side
-        self.result = result
+    def genRandomPuzzles(self, num):
+        puzzles = []
+        for i in range(num):
+            currSide = random.choice(["W", "B"])
+            currState = self.moveGenerator.getRandom(currSide)
+            currPuzzle = KonanePuzzle.KonanePuzzle(currState, currSide)
+            puzzles.append(currPuzzle)
+        return puzzles
 
-    def getResult(self, opponent):
+    def getTest(self):
         """
-        Given an opponent, gets the resultant move from them. Also sets the instance variable
-        :param opponent: A Konane Player to get the move from
-        :return: The resultant move
+        :return: The test as a set of KonanePuzzles with no responses associated with them.
         """
-        initialSide = copy(opponent.side)
-        opponent.setSide(self.side)
-        self.result = opponent.getMove(self.state)
-        opponent.setSide(initialSide)
-        return self.result
+        return self.puzzles

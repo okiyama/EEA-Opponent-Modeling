@@ -1,37 +1,53 @@
-## A test suite, contains tests which are board states with a side of the board associated with them
-## As well as the response from the opponent
-## This assumes that the board size in RandomStateGenerator and in the opponent is the same
+## A test suite, evolves a test which maximizes disagreement among models.
+## The test is given as a list of EEATests.
 ## Date: 1/6/15
 __author__ = 'julian'
 
-import EEATest
-import randomBoardStates
-import random
+import EEATest, randomBoardStates
 
 class TestSuite:
-
-    #Increment is how many new tests to create to present the opponent with for each round of tests
-    def __init__(self, opponent, increment = 5, size = 8):
+    def __init__(self, testSize = 10, size = 8):
+        self.boardSize = size
+        self.testSize = testSize
+        self.bestTest = None
+        #This is just so we can have one universal generator rather than many be made.
         self.moveGenerator = randomBoardStates.RandomStateGenerator(boardSize=size)
-        self.incSize = increment
-        self.opponent = opponent
-        self.tests = []
 
-    def runRound(self):
+    def evolve(self, models, testSetSize = 10):
         """
-        Runs one round of tests on self.incSize new random board states against self.opponent
-        :return: The updated testSuite, as a list of EEATests
+        Given a set of models, evolves a test which maximizes for disagreement among the models.
+        :param models: The models to evolve against.
+        :return: The best test from evolution, as a set of KonanePuzzles.
         """
-        for i in range(self.incSize):
-            currSide = random.choice(["W", "B"])
-            currState = self.moveGenerator.getRandom(currSide)
-            currTest = EEATest.EEATest(currState, currSide)
-            currTest.getResult(self.opponent)
-            self.tests.append(currTest)
-        return self.getSuite()
+        #1: Generate random set of tests
+        testSet = []
+        for i in range(testSetSize):
+            test = EEATest.EEATest(self.moveGenerator, testSize=self.testSize, size=self.boardSize) #initializes to random puzzles
+            test.fitness = self.disagreement(test, models)
+            testSet.append(test)
+        #2: Evolve these tests, with fitness being disagreement.
+        #3: Return the best test.
+        """
+        3. First, a random set of tests to run will be generated. That is to say, a set of the repre-
+        sentations for tests from step 1 will be created randomly. Then these representations will be evolved
+        based on the best model(s) so far and tested for fitness, storing the results. Fitness will be determined
+        by how much a particular test creates disagreement among the given set of models.
+        """
+        self.bestTest = testSet[0].getTest()
+        return self.getBestTest()
 
-    def getSuite(self):
+
+    def disagreement(self, test, models):
+        """
+        The disagreement score of a given test against the given set of models.
+        :param test: The test to measure disagreement for.
+        :param models: The models to use to determine disagreement
+        :return: The disagreement score
+        """
+        return 0.0
+
+    def getBestTest(self):
         """
         :return: the test suite as a list of EEATests
         """
-        return self.tests
+        return self.bestTest
