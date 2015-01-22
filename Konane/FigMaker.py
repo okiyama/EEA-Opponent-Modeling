@@ -1,34 +1,38 @@
-## Attempts to be as generic as possible at making figures from CSV data.
-## Aimed at working with results from a GA, but doesn't need to be with a bit of workarounds.
-## Because of the nature of this, it won't work from command line easily and will need minor code edits
-## to get exactly what you want out of it. These edits should be as minor as possible.
+## Figure generator for the data produced by EEA.py.
+## Not generic.
 ##
 ## Author: Julian Jocque
 ## Date: 10/13/14
 
-from prettyplotlib import *
+from pylab import *
+import datetime, os, re
+import numpy as np
 
 class FigMaker:
-
-    def __init__(self, folder=None, fileName):
-        self.dataFolder = folder
+    def __init__(self):
+        self.dataFolder = "data/EEA/data/"
+        self.attrFolder = "data/EEA/attr/"
         self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
+
         self.data = []
         self.timeTaken = []
-        if self.dataFolder is not None:
-            self.fileList = sorted(os.listdir(self.dataFolder))
-        else:
-            self.fileList = None
         self.maxFitness = []
+
+        if self.dataFolder is not None:
+            self.dataFileList = sorted(os.listdir(self.dataFolder))
+            self.attrFileList = sorted(os.listdir(self.attrFolder))
+        else:
+            self.dataFileList = None
+            self.attrFileList = None
 
         self.getData()
         
     def getData(self):
         """
-        Pulls the data from all of the pop data files so we can work with it.
+        Pulls the data from all of the EEA data files so we can work with it.
         """
-        for fileName in self.fileList:
-            #print fileName
+        for fileName in self.dataFileList:
+            print fileName
             dataFromFile = DataFile(self.dataFolder + fileName)
             self.data.append(dataFromFile)
             self.timeTaken.append(dataFromFile.getTimeTaken())
@@ -43,8 +47,8 @@ class FigMaker:
         Outputs the data collected to a file.
         """
         outputFile = open(self.outPutFile, "w")
-        for i in range(len(self.fileList)):
-            outputFile.write("File: " + self.fileList[i] + "\n")
+        for i in range(len(self.dataFileList)):
+            outputFile.write("File: " + self.dataFileList[i] + "\n")
             outputFile.write("Time taken to generate: " + self.timeTaken[i] + "\n")
             outputFile.write("Number of generations: " + self.data[i].getNumGenerations() + "\n")
             outputFile.write("Best fitness values: \n")
@@ -60,40 +64,41 @@ class FigMaker:
         Generates all the graph figures.
         """
         for dataFile in self.data:
-            dataFile.hackyFunction()
-#             dataFile.generateFitnessOverTrials()
-#             dataFile.generateFitnessOverTimes()
-#             dataFile.generateAvgFitnessOverTrials()
-#             dataFile.generateAvgFitnessOverTimes()
-#             dataFile.generateMaxFitnessOverTrials()
-#             dataFile.generateMaxFitnessOverTimes()
+            # dataFile.hackyFunction()
+            # dataFile.generateFitnessOverTrials()
+            # dataFile.generateFitnessOverTimes()
+            # dataFile.generateAvgFitnessOverTrials()
+            # dataFile.generateAvgFitnessOverTimes()
+            dataFile.generateMaxFitnessOverTrials()
+            # dataFile.generateMaxFitnessOverTimes()
 
 
 """
 Encapsulates the data from one pop data file.
 """
-class PopFileData():
+class DataFile:
     
     def __init__(self, fileName):
         self.genNum = []
-        self.id = []
-        self.loc1 = []
-        self.loc2 = []
-        self.loc3 = []
-        self.distance = []
         self.fitness = []
-        self.time = []
+        self.myMovesWeight = []
+        self.theirMovesWeight = []
+        self.myPiecesWeight = []
+        self.theirPiecesWeight = []
+        self.myMovableWeight = []
+        self.theirMovableWeight = []
+        self.roundEndTime = []
         self.fileName = fileName
         
         self.createData()
+        self.numDataPoints = len(self.genNum)
     
     def getDataNumber(self, i):
         """
-        Gets the ith data as a tuple in the same format as in pop data files.
-        GenerationNum, ID, Loc1, Loc2, Loc3, Distance, Fitness, Time 
+        Gets the ith data as a tuple in the same format as in EEA data files.
         """
-        return (self.genNum[i], self.id[i], self.loc1[i], self.loc2[i], self.loc3[i], self.distance[i], \
-            self.fitness[i], self.time[i])
+        return (self.genNum[i], self.fitness[i], self.myMovesWeight[i], self.theirMovesWeight[i], self.myPiecesWeight[i],
+                self.theirPiecesWeight[i], self.myMovableWeight[i], self.theirMovableWeight[i], self.roundEndTime[i])
         
     def getNMaxFitnessValues(self, N):
         """
@@ -104,8 +109,7 @@ class PopFileData():
     
     def getNMaxFitnessLines(self, N):
         """
-        Gets the full data of the N best fitness values from this file as a tuple in the format:
-        (GenerationNum, ID, Loc1, Loc2, Loc3, Distance, Fitness, Time)
+        Gets the full data of the N best fitness values from this file as a tuple.
         """
         toRet = []
         bestFitness = self.getNMaxFitnessValues(N)
@@ -125,23 +129,23 @@ class PopFileData():
         """
         Pulls the data from all of the pop data files so we can work with it.
         """
-        regex = "(.*) (.*) (.*) (.*) (.*) (.*) (.*) (.*)"
-        file = open(self.fileName, "r")
-        file.readline()
-        file.readline()
-        for line in file:
-            #print line
+        regex = "(.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*)"
+        dataFile = open(self.fileName, "r")
+        #dataFile.readline()
+        dataFile.readline()
+        for line in dataFile:
+            # print line
             matched = re.match(regex, line)
             self.appendData(matched)
         
-        file.close()
+        dataFile.close()
     
     def getTimeTaken(self):
         """
         Gets the absolute amount of time taken for this pop data file to be created
         """
         #print self.time
-        timeSorted = sorted(self.time)
+        timeSorted = sorted(self.roundEndTime)
         #print "End: " + timeSorted[-1] + ", start: " + timeSorted[0]
         return str(self.getTimeDifference(timeSorted[-1], timeSorted[0]))
 
@@ -151,9 +155,9 @@ class PopFileData():
         Hour:Minute:Second.Microseconds
         Does time1 - time2.
         """
-        format = "%H:%M:%S.%f"
-        endTime = datetime.datetime.strptime(time1, format)
-        startTime = datetime.datetime.strptime(time2, format)
+        timeFormat = "%H:%M:%S.%f"
+        endTime = datetime.datetime.strptime(time1, timeFormat)
+        startTime = datetime.datetime.strptime(time2, timeFormat)
         return endTime - startTime
                 
     def appendData(self, match):
@@ -161,19 +165,20 @@ class PopFileData():
         Appends the given regex match to the data of this.
         """
         self.genNum.append(match.group(1))
-        self.id.append(match.group(2))
-        self.loc1.append(match.group(3))
-        self.loc2.append(match.group(4))
-        self.loc3.append(match.group(5))
-        self.distance.append(match.group(6))
-        self.fitness.append(match.group(7))
-        self.time.append(match.group(8))
+        self.fitness.append(match.group(2))
+        self.myMovesWeight.append(match.group(3))
+        self.theirMovesWeight.append(match.group(4))
+        self.myPiecesWeight.append(match.group(5))
+        self.theirPiecesWeight.append(match.group(6))
+        self.myMovableWeight.append(match.group(7))
+        self.theirMovableWeight.append(match.group(8))
+        self.roundEndTime.append(match.group(9))
 
     def generateFitnessOverTrials(self):
         """
         Generates a graph of the fitness of this pop data file over the trials.
         """
-        X = np.array(self.id)
+        X = np.array(range(self.numDataPoints))
         Y = np.array(self.fitness)
         plot(X, Y)
 
@@ -198,7 +203,7 @@ class PopFileData():
                 averages.append(tempAvg)
                 break
 
-            if (self.genNum[i] != self.genNum[i+1]):
+            if self.genNum[i] != self.genNum[i+1]:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
                 tempAvg = 0
@@ -227,7 +232,7 @@ class PopFileData():
                 tempMax = []
                 break
 
-            if (self.genNum[i] != self.genNum[i+1]):
+            if self.genNum[i] != self.genNum[i+1]:
                 maxes.append(max(tempMax))
                 tempMax = []
 
@@ -255,15 +260,15 @@ class PopFileData():
             if i == len(self.genNum)-1:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
-                timeDiffs.append(self.getTimeDifference(self.time[i],self.time[0]).seconds)
+                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
                 break
 
-            if (self.genNum[i] != self.genNum[i+1]):
+            if self.genNum[i] != self.genNum[i+1]:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
                 tempAvg = 0
                 counter = 0
-                timeDiffs.append(self.getTimeDifference(self.time[i],self.time[0]).seconds)
+                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
 
         plot(timeDiffs, averages)
         #xlim([1,25])
@@ -285,13 +290,13 @@ class PopFileData():
             if i == len(self.genNum)-1:
                 maxes.append(max(tempMax))
                 tempMax = []
-                timeDiffs.append(self.getTimeDifference(self.time[i],self.time[0]).seconds)
+                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
                 break
 
-            if (self.genNum[i] != self.genNum[i+1]):
+            if self.genNum[i] != self.genNum[i+1]:
                 maxes.append(max(tempMax))
                 tempMax = []
-                timeDiffs.append(self.getTimeDifference(self.time[i],self.time[0]).seconds)
+                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
 
         plot(timeDiffs, maxes)
         #xlim([1,25])
@@ -306,8 +311,8 @@ class PopFileData():
         Generates a graph of the fitness of this pop data file over the time taken to generate it.
         """
         timeDiffs = []
-        for timeVal in self.time:
-            timeDiffs.append(self.getTimeDifference(timeVal,self.time[0]).seconds)
+        for timeVal in self.roundEndTime:
+            timeDiffs.append(self.getTimeDifference(timeVal,self.roundEndTime[0]).seconds)
         plot(timeDiffs, self.fitness)
 
         xlabel("Seconds Since Testing Began")
@@ -317,6 +322,6 @@ class PopFileData():
         show()
     
 if __name__ == "__main__":
-    maker = FigMaker(folder=argv[1])
+    maker = FigMaker()
     #analyzer.outputToFile()
     maker.generateAllGraphs()
