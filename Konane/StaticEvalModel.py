@@ -1,4 +1,4 @@
-# A model that can be evoled for a static evaluator
+# A model that can be evolved for a static evaluator
 # Julian Jocque
 # 10/3/14
 

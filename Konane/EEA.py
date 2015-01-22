@@ -10,28 +10,30 @@ from time import strftime
 from copy import copy
 from datetime import datetime
 
-
+#Evolve tests by having the fitness of a test determine the probability that a random(non-repeated?) puzzle
+#from its set of puzzles be chosen.
+#Perhaps it would be good to only use the top 5 or maybe even top 2.
+#They also mutate after being made, the same way as before. This increases diversity.
 class EEA(updatedKonane.Konane):
-
     def __init__(self):
         self.numModels = 10
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        self.depthLimit = 3
+        self.depthLimit = 1
         self.models = []
 
-        self.opponent = updatedKonane.SimplePlayer(self.size)
-        self.opponent.initialize("W")
-        #self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = 3) #Try it with limit 4, see if a limit 3 can model it
+        # self.opponent = updatedKonane.SimplePlayer(self.size)
+        # self.opponent.initialize("W")
+        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = 3) #Try it with limit 4, see if a limit 3 can model it
 
         self.incSize = 25
         self.testSuite = TestSuite.TestSuite(self.incSize, self.size)
 
         self.initModels()
         self.startTime = strftime("%Y-%m-%d %H:%M:%S")
-        self.datafile = open("data/EEA/data-" + self.startTime + ".csv", "w")
-        self.attrFile = open("data/EEA/attr-" + self.startTime + ".csv", "w")
+        self.datafile = open("data/EEA/data/data-" + self.startTime + ".csv", "w")
+        self.attrFile = open("data/EEA/attr/attr-" + self.startTime + ".csv", "w")
         self.logAttributes()
         self.initDataFile()
 
@@ -42,7 +44,7 @@ class EEA(updatedKonane.Konane):
             currModel.mutate()
             self.models.append(currModel)
 
-    def generateOpponent(self, side = "W", numTimesToMutate = 5, depthLimit = 3):
+    def generateOpponent(self, side = "W", numTimesToMutate = 25, depthLimit = 3):
         """
         Generates an opponent by making a default model and then mutating it numTimesToMutate times.
         Then, puts that model in an opponent with default board size and depth limit to be played against.
@@ -59,7 +61,6 @@ class EEA(updatedKonane.Konane):
         for i in range(numTimesToMutate):
             opponent.model.mutate()
         return opponent
-
 
     def run(self, timeToRun = None):
         """
@@ -180,7 +181,7 @@ class EEA(updatedKonane.Konane):
             move = p1.getMove(self.board)
             if move == []:
                 return p2
-            try: 
+            try:
                 self.makeMove('B', move)
             except updatedKonane.KonaneError:
                 print "Game over: Invalid move by", p1.name

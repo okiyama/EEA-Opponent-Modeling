@@ -45,6 +45,10 @@ class TestSuite:
         :param models: The models to use to determine disagreement
         :return: The disagreement score
         """
+        #So there's a test with puzzles in it, for every puzzle, check what moves each model makes.
+        #For every
+        for puzzle in test:
+            pass
         return 0.0
 
     def getBestTest(self):
