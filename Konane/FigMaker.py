@@ -10,8 +10,8 @@ import numpy as np
 
 class FigMaker:
     def __init__(self):
-        self.dataFolder = "data/EEA/data/"
-        self.attrFolder = "data/EEA/attr/"
+        self.dataFolder = "data/oldEEA/data/"
+        self.attrFolder = "data/oldEEA/attr/"
         self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
 
         self.data = []
@@ -134,7 +134,7 @@ class DataFile:
         #dataFile.readline()
         dataFile.readline()
         for line in dataFile:
-            # print line
+            print line
             matched = re.match(regex, line)
             self.appendData(matched)
         
