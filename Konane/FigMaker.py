@@ -10,11 +10,12 @@ import numpy as np
 
 class FigMaker:
     def __init__(self):
-        self.dataFolder = "data/oldEEA/data/"
-        self.attrFolder = "data/oldEEA/attr/"
+        self.dataFolder = "data/truerEEA/data/"
+        self.attrFolder = "data/truerEEA/attr/"
         self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
 
         self.data = []
+        self.attr = []
         self.timeTaken = []
         self.maxFitness = []
 
@@ -32,11 +33,23 @@ class FigMaker:
         Pulls the data from all of the EEA data files so we can work with it.
         """
         for fileName in self.dataFileList:
-            print fileName
-            dataFromFile = DataFile(self.dataFolder + fileName)
-            self.data.append(dataFromFile)
-            self.timeTaken.append(dataFromFile.getTimeTaken())
-            self.maxFitness.append(dataFromFile.getNMaxFitnessValues(5))
+            num_lines = sum(1 for line in open(self.dataFolder + fileName))
+            if num_lines > 1: #Ignore empty files
+                print fileName
+                dataFromFile = DataFile(self.dataFolder + fileName)
+                self.data.append(dataFromFile)
+                self.timeTaken.append(dataFromFile.getTimeTaken())
+                self.maxFitness.append(dataFromFile.getNMaxFitnessValues(5))
+            else:
+                print fileName + " didn't contain any data."
+
+        # for fileName in self.attrFileList:
+        #     num_lines = sum(1 for line in open(self.attrFolder + fileName))
+        #     if num_lines > 1: #Ignore empty files
+        #         attrFromFile = AttrFile(self.attrFolder + fileName)
+        #         self.attr.append(attrFromFile)
+        #     else:
+        #         print fileName + " didn't contain any data."
         
         #print self.maxFitness
         #print self.data
@@ -74,7 +87,63 @@ class FigMaker:
 
 
 """
-Encapsulates the data from one pop data file.
+Encapsulates the attributes from one EEA data file.
+"""
+class AttrFile:
+
+    def __init__(self, fileName):
+        self.numTestsPerRound = 0
+        self.modelsDepth = 0
+        self.boardSize = 0
+        self.numModels = 0
+        self.opponentName = ""
+        self.oppMyMovesWeight = 0.0
+        self.oppTheirMovesWeight = 0.0
+        self.oppMyPiecesWeight = 0.0
+        self.oppTheirPiecesWeight = 0.0
+        self.oppMyMovableWeight = 0.0
+        self.oppTheirMovableWeight = 0.0
+        self.fileName = fileName
+
+        self.createData()
+
+    def createData(self):
+        """
+        Pulls the data from one attribute file so we can work with it.
+        """
+        regex = "(.*), (.*), (.*), (.*)"
+        dataFile = open(self.fileName, "r")
+        #dataFile.readline()
+        dataFile.readline()
+        modelAttrs = dataFile.readline()
+        matched = re.match(regex, modelAttrs)
+
+        self.numTestsPerRound = matched.group(1)
+        self.modelsDepth = matched.group(2)
+        self.boardSize = matched.group(3)
+        self.numModels = matched.group(4)
+
+        regex = "Name: (.*)"
+        dataFile.readline()
+        oppName = dataFile.readline()
+        matched = re.match(regex, oppName)
+        self.opponentName = matched.group(1)
+
+        dataFile.readline()
+        opponentInfo = dataFile.readline()
+        regex = "(.*), (.*), (.*), (.*), (.*), (.*), (.*)"
+        matched = re.match(regex, opponentInfo)
+        self.oppMyMovesWeight = matched.group(1)
+        self.oppTheirMovesWeight = matched.group(2)
+        self.oppMyPiecesWeight = matched.group(3)
+        self.oppTheirPiecesWeight = matched.group(4)
+        self.oppMyMovableWeight = matched.group(5)
+        self.oppTheirMovableWeight = matched.group(6)
+
+        dataFile.close()
+
+"""
+Encapsulates the data from one EEA data file.
 """
 class DataFile:
     
@@ -134,9 +203,10 @@ class DataFile:
         #dataFile.readline()
         dataFile.readline()
         for line in dataFile:
-            print line
+            # print line
             matched = re.match(regex, line)
-            self.appendData(matched)
+            if matched:
+                self.appendData(matched)
         
         dataFile.close()
     

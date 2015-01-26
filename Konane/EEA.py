@@ -14,34 +14,38 @@ from datetime import datetime
 #from its set of puzzles be chosen.
 #Perhaps it would be good to only use the top 5 or maybe even top 2.
 #They also mutate after being made, the same way as before. This increases diversity.
+
+#Make the incSize much smaller, and make the models evolve continuously until they all have 100% agreement(and some
+#differences between them, that's later) and THEN we can add some puzzles to the test.
 class EEA(updatedKonane.Konane):
     def __init__(self):
-        self.numModels = 10
+        self.numModels = 100
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        self.depthLimit = 1
+        self.depthLimit = 2
         self.models = []
 
         # self.opponent = updatedKonane.SimplePlayer(self.size)
         # self.opponent.initialize("W")
-        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = 3) #Try it with limit 4, see if a limit 3 can model it
+        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = 2)
 
-        self.incSize = 25
+        self.incSize = 2
         self.testSuite = TestSuite.TestSuite(self.incSize, self.size)
 
-        self.initModels()
+        self.initModels(numTimesToMutate=20)
         self.startTime = strftime("%Y-%m-%d %H:%M:%S")
-        self.datafile = open("data/EEA/data/data-" + self.startTime + ".csv", "w")
-        self.attrFile = open("data/EEA/attr/attr-" + self.startTime + ".csv", "w")
+        self.datafile = open("data/truerEEA/data/data-" + self.startTime + ".csv", "w")
+        self.attrFile = open("data/truerEEA/attr/attr-" + self.startTime + ".csv", "w")
         self.logAttributes()
         self.initDataFile()
 
-    def initModels(self):
+    def initModels(self, numTimesToMutate = 5):
         """ Initializes the models that we'll evolve """
         for i in range(self.numModels):
             currModel = StaticEvalModel.StaticEvalModel(self.size)
-            currModel.mutate()
+            for _ in range(numTimesToMutate):
+                currModel.mutate()
             self.models.append(currModel)
 
     def generateOpponent(self, side = "W", numTimesToMutate = 25, depthLimit = 3):
@@ -79,8 +83,11 @@ class EEA(updatedKonane.Konane):
                 elapsedTime = (datetime.now() - startTime).seconds
                 self.testSuite.evolve(self.models)
                 self.updateModelFitness(self.testSuite)
-                self.log(self.models, roundNum, datetime.time(datetime.now()))
-                self.evolveModels()
+                while max(self.models, key = lambda x : x.getFitness()).getFitness() < 1.0:
+                    self.log(self.models, roundNum, datetime.time(datetime.now()))
+                    self.evolveModels()
+                    self.updateModelFitness(self.testSuite)
+                    print "Test suite now length: " + str(len(self.testSuite.getBestTest()))
                 roundNum += 1
         except KeyboardInterrupt:
             pass
@@ -109,6 +116,8 @@ class EEA(updatedKonane.Konane):
         dummyPlayer.initialize("W")
 
         for model in self.models:
+            model.numCorrect = 0
+            model.numTested = 0
             for puzzle in test:
                 puzzleSide = puzzle.side
                 puzzleState = puzzle.state
@@ -119,7 +128,7 @@ class EEA(updatedKonane.Konane):
                 model.numTested += 1
                 if puzzleResult == modelMove:
                     model.numCorrect += 1
-            print("Fitness of current model: " + str(model.getFitness()))
+            # print("Fitness of current model: " + str(model.getFitness()))
 
 
     def recordOpponent(self):

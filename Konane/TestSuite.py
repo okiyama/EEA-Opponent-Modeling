@@ -9,9 +9,9 @@ class TestSuite:
     def __init__(self, testSize = 10, size = 8):
         self.boardSize = size
         self.testSize = testSize
-        self.bestTest = None
         #This is just so we can have one universal generator rather than many be made.
         self.moveGenerator = randomBoardStates.RandomStateGenerator(boardSize=size)
+        self.bestTest = []
 
     def evolve(self, models, testSetSize = 10):
         """
@@ -34,7 +34,7 @@ class TestSuite:
         based on the best model(s) so far and tested for fitness, storing the results. Fitness will be determined
         by how much a particular test creates disagreement among the given set of models.
         """
-        self.bestTest = testSet[0].getTest()
+        self.bestTest.extend(testSet[0].getTest())
         return self.getBestTest()
 
 
@@ -47,6 +47,7 @@ class TestSuite:
         """
         #So there's a test with puzzles in it, for every puzzle, check what moves each model makes.
         #For every
+        test = []
         for puzzle in test:
             pass
         return 0.0
