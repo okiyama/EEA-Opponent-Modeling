@@ -32,24 +32,27 @@ class FigMaker:
         """
         Pulls the data from all of the EEA data files so we can work with it.
         """
-        for fileName in self.dataFileList:
+        for fileName in self.attrFileList:
+            num_lines = sum(1 for line in open(self.attrFolder + fileName))
+            if num_lines > 1: #Ignore empty files
+                attrFromFile = AttrFile(self.attrFolder + fileName)
+                self.attr.append(attrFromFile)
+            else:
+                print fileName + " didn't contain any data."
+
+        for i in range(len(self.dataFileList)):
+            fileName = self.dataFileList[i]
             num_lines = sum(1 for line in open(self.dataFolder + fileName))
             if num_lines > 1: #Ignore empty files
                 print fileName
-                dataFromFile = DataFile(self.dataFolder + fileName)
+                dataFromFile = DataFile(self.dataFolder + fileName, self.attr[i])
                 self.data.append(dataFromFile)
                 self.timeTaken.append(dataFromFile.getTimeTaken())
                 self.maxFitness.append(dataFromFile.getNMaxFitnessValues(5))
             else:
                 print fileName + " didn't contain any data."
 
-        # for fileName in self.attrFileList:
-        #     num_lines = sum(1 for line in open(self.attrFolder + fileName))
-        #     if num_lines > 1: #Ignore empty files
-        #         attrFromFile = AttrFile(self.attrFolder + fileName)
-        #         self.attr.append(attrFromFile)
-        #     else:
-        #         print fileName + " didn't contain any data."
+
         
         #print self.maxFitness
         #print self.data
@@ -80,7 +83,7 @@ class FigMaker:
             # dataFile.hackyFunction()
             # dataFile.generateFitnessOverTrials()
             # dataFile.generateFitnessOverTimes()
-            # dataFile.generateAvgFitnessOverTrials()
+            dataFile.generateAvgFitnessOverTrials()
             # dataFile.generateAvgFitnessOverTimes()
             dataFile.generateMaxFitnessOverTrials()
             # dataFile.generateMaxFitnessOverTimes()
@@ -147,7 +150,7 @@ Encapsulates the data from one EEA data file.
 """
 class DataFile:
     
-    def __init__(self, fileName):
+    def __init__(self, fileName, attrFile):
         self.genNum = []
         self.fitness = []
         self.myMovesWeight = []
@@ -157,6 +160,7 @@ class DataFile:
         self.myMovableWeight = []
         self.theirMovableWeight = []
         self.roundEndTime = []
+        self.attrs = attrFile
         self.fileName = fileName
         
         self.createData()
@@ -312,7 +316,7 @@ class DataFile:
         xlim([1,self.getNumGenerations()])
         xlabel("Generation Number")
         ylabel("Generation's Maximum Fitness")
-        suptitle("Generational Maximum Fitness versus Generation Number")
+        suptitle("Generational Maximum Fitness versus Generation Number Versus " + self.attrs.opponentName)
 
         show()
 
@@ -344,7 +348,7 @@ class DataFile:
         #xlim([1,25])
         xlabel("Seconds Since Testing Began")
         ylabel("Generation's Average Fitness")
-        suptitle("Generational Average Fitness versus Time")
+        suptitle("Generational Average Fitness versus Time Versus " + self.attrs.opponentName)
 
         show()
 
@@ -372,7 +376,7 @@ class DataFile:
         #xlim([1,25])
         xlabel("Seconds Since Testing Began")
         ylabel("Generation's Maximum Fitness")
-        suptitle("Generational Maximum Fitness versus Time")
+        suptitle("Generational Maximum Fitness versus Time Versus " + self.attrs.opponentName)
 
         show()
 
