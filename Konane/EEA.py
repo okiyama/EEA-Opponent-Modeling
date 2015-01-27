@@ -20,7 +20,7 @@ from datetime import datetime
 
 #Disagreement is sum squared mean error between the moves the different models pick for a puzzle
 #Need to ratchet up mutation and crossover to reach a population which all agrees on the moves for the current test
-
+#
 class EEA(updatedKonane.Konane):
     def __init__(self):
         self.numModels = 10
