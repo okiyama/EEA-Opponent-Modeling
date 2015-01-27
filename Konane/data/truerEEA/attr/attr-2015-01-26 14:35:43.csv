@@ -1,0 +1,6 @@
+%numTestsPerRound, %depth, %boardSize, %numModels
+2, 2, 6, 10
+Opponent info:
+Name: MinimaxDepth2
+%myMovesWeight, %theirMovesWeight, %myPiecesWeight, %theirMovesWeight, %myMovableWeight, %theirMovableWeight, %depth
+-1.47494065227, -1.35677295749, 1.02114867308, -1.35677295749, 1.42986497417, -1.8089788892, 2
