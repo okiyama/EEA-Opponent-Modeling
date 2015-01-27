@@ -27,3 +27,9 @@ class EEATest:
         :return: The test as a set of KonanePuzzles with no responses associated with them.
         """
         return self.puzzles
+
+    def getFitness(self):
+        """
+        :return: The fitness of this test.
+        """
+        return self.fitness

@@ -17,9 +17,13 @@ from datetime import datetime
 
 #Make the incSize much smaller, and make the models evolve continuously until they all have 100% agreement(and some
 #differences between them, that's later) and THEN we can add some puzzles to the test.
+
+#Disagreement is sum squared mean error between the moves the different models pick for a puzzle
+#Need to ratchet up mutation and crossover to reach a population which all agrees on the moves for the current test
+
 class EEA(updatedKonane.Konane):
     def __init__(self):
-        self.numModels = 100
+        self.numModels = 10
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
@@ -81,9 +85,9 @@ class EEA(updatedKonane.Konane):
         try:
             while timeToRun is None or elapsedTime < timeToRun:
                 elapsedTime = (datetime.now() - startTime).seconds
-                self.testSuite.evolve(self.models)
+                self.testSuite.evolve(self.models, testSetSize=self.incSize)
                 self.updateModelFitness(self.testSuite)
-                while max(self.models, key = lambda x : x.getFitness()).getFitness() < 1.0:
+                while any([model.getFitness() < 1.0 for model in self.models]):
                     self.log(self.models, roundNum, datetime.time(datetime.now()))
                     self.evolveModels()
                     self.updateModelFitness(self.testSuite)
