@@ -14,6 +14,7 @@ from datetime import datetime
 #from its set of puzzles be chosen.
 #Perhaps it would be good to only use the top 5 or maybe even top 2.
 #They also mutate after being made, the same way as before. This increases diversity.
+#
 class EEA(updatedKonane.Konane):
     def __init__(self):
         self.numModels = 10
