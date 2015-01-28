@@ -258,7 +258,7 @@ class DataFile:
 
         xlabel("Trial Number")
         ylabel("Fitness Value")
-        suptitle("Fitness Value of Each Trial")
+        suptitle("Fitness Value of Each Trial Versus " + self.attrs.opponentName)
 
         show()
 
@@ -289,7 +289,7 @@ class DataFile:
         xlim([1,self.getNumGenerations()])
         xlabel("Generation Number")
         ylabel("Generation's Average Fitness")
-        suptitle("Generational Average Fitness versus Generation Number")
+        suptitle("Generational Average Fitness versus Generation Number Versus " + self.attrs.opponentName)
 
         show()
 
@@ -391,7 +391,7 @@ class DataFile:
 
         xlabel("Seconds Since Testing Began")
         ylabel("Fitness of Trial")
-        title("Fitness of Trials Versus Time Since Testing Began")
+        title("Fitness of Trials Versus Time Since Testing Began Versus " + self.attrs.opponentName)
 
         show()
     
