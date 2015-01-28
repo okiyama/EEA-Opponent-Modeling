@@ -43,7 +43,7 @@ class StaticEvalModel(updatedKonane.Konane):
     #         - (len(self.generateMoves(node.state, self.opponent(node.player))) * self.theirMovesWeight)
 
     def crossOver(self, other):
-        pass
+        return self
 
     def mutate(self):
         for featureName in ["myMovesWeight", "theirMovesWeight", "myPiecesWeight", "theirPiecesWeight", 

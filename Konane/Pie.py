@@ -3,8 +3,9 @@
 # Date: 1/26/15
 __author__ = 'julian'
 
-from random import random
+import random
 from bisect import bisect
+from copy import copy
 
 class Pie:
     def __init__(self, individuals):
@@ -28,20 +29,28 @@ class Pie:
         These individuals are weighted such that the higher the fitness of an individual, the higher probability
         that they will appear in the pair. Pairs contain two unique individuals.
         """
-        #Modified from: http://stackoverflow.com/questions/3679694/a-weighted-version-of-random-choice
-        total = 0
-        cumulative_fitness = []
-        for f in self.fitnesses:
-            total += f
-            cumulative_fitness.append(total)
-        x = random() * total
-        in1 = self.individuals[bisect(cumulative_fitness, x)]
-        in2 = None
-        while in2 is None or in1 == in2:
-            x = random() * total
-            in2 = self.individuals[bisect(cumulative_fitness, x)]
-        print str(in1.getFitness()) + ", " + str(in2.getFitness())
+        indivs = copy(self.individuals)
+        fits = copy(self.fitnesses)
+        in1 = self.weightedChoice(indivs, fits)
+        fits.pop(indivs.index(in1))
+        indivs.remove(in1)
+        in2 = self.weightedChoice(indivs, fits)
+        # print str(in1.getFitness()) + ", " + str(in2.getFitness())
         return (in1, in2)
+
+    def weightedChoice(self, individuals, fitnesses):
+        #Modified from: http://stackoverflow.com/questions/3679694/a-weighted-version-of-random-choice
+        total = sum(fitnesses)
+        r = random.uniform(0, total)
+        upto = 0
+        for i in range(len(individuals)):
+            c = individuals[i]
+            weight = fitnesses[i]
+            if upto + weight > r:
+                return c
+            upto += weight
+        assert False, "Shouldn't get here"
+
 
 
 if __name__ == "__main__":
