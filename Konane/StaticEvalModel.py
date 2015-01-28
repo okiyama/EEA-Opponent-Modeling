@@ -17,7 +17,8 @@ class StaticEvalModel(updatedKonane.Konane):
         self.theirMovableWeight = 1.0
         self.featuresNameList = ["myMovesWeight", "theirMovesWeight", "myPiecesWeight", "theirPiecesWeight",
                                     "myMovableWeight", "theirMovableWeight"]
-        self.chanceToMutate = 30 #as a percent
+        self.chanceToMutate = 50 #as a percent
+        self.mutateAmount = 2.0
         self.numCorrect = 0
         self.numTested = 0
         #self.fitness = 0 #Fitness should be win rate of past X games?
@@ -66,7 +67,8 @@ class StaticEvalModel(updatedKonane.Konane):
         """
         for featureName in self.featuresNameList:
             if random.randint(0, 100) <= self.chanceToMutate:
-                setattr(self, featureName, getattr(self, featureName) + random.uniform(-0.5, 0.5))
+                setattr(self, featureName, getattr(self, featureName) +
+                        random.uniform(-1.0 * (self.mutateAmount / 2.0), (self.mutateAmount / 2.00)))
 
     def dumpModel(self):
         """ Dumps out the model as a string in the format:

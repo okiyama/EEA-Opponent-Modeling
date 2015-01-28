@@ -22,14 +22,13 @@ from datetime import datetime
 
 #Disagreement is sum squared mean error between the moves the different models pick for a puzzle
 #Need to ratchet up mutation and crossover to reach a population which all agrees on the moves for the current test
-#
 class EEA(updatedKonane.Konane):
     def __init__(self):
         self.numModels = 10
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        self.depthLimit = 2
+        self.depthLimit = 3
         self.models = []
 
         # self.opponent = updatedKonane.SimplePlayer(self.size)
@@ -100,7 +99,6 @@ class EEA(updatedKonane.Konane):
             pass
         self.datafile.close()
 
-
         ## Generate a set of N random board states, randomizing the sides would be good.
         ### This will eventually be evolved to maximize disagreement among the existing models.
         ### A bit annoying to implement because we'd need to ask for moves from different sides from opponent.
@@ -137,7 +135,6 @@ class EEA(updatedKonane.Konane):
                     model.numCorrect += 1
             # print("Fitness of current model: " + str(model.getFitness()))
 
-
     def recordOpponent(self):
         """
         Records relevant information about self.opponent to the attribute file.
@@ -151,7 +148,6 @@ class EEA(updatedKonane.Konane):
         except AttributeError:
             #No model found
             pass
-
 
     def evolveModels(self, numModelsToKeep = 5):
         """
@@ -177,7 +173,6 @@ class EEA(updatedKonane.Konane):
         self.models[0] = fitnessSortedModels[0] #Hang onto the best model, so we hypothetically never get worse
 
         return self.models
-
 
     def playOneGame(self, p1, p2):
         """
