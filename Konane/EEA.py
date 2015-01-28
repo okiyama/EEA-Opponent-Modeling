@@ -7,6 +7,7 @@ import updatedKonane
 import TestSuite
 import johnMinimaxEvolved
 import Pie
+import random
 from python27Defs import *
 from time import strftime
 from copy import copy
@@ -28,12 +29,13 @@ class EEA(updatedKonane.Konane):
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        self.depthLimit = 3
+        self.depthLimit = 2
         self.models = []
 
         # self.opponent = updatedKonane.SimplePlayer(self.size)
         # self.opponent.initialize("W")
-        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = 2)
+        depth = random.randint(1,5) #randomize depth
+        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
 
         self.incSize = 2
         self.testSuite = TestSuite.TestSuite(self.incSize, self.size)
