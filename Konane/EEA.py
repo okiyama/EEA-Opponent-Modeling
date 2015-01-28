@@ -239,6 +239,6 @@ class EEA(updatedKonane.Konane):
 
 if __name__ == "__main__":
     eea = EEA()
-    eea.run()
-    # import cProfile
-    # cProfile.run('eea.run()', sort="cumtime")
+    # eea.run()
+    import cProfile
+    cProfile.run('eea.run()', sort="cumtime")

@@ -4,6 +4,7 @@
 
 import random
 import updatedKonane
+from copy import copy
 
 class StaticEvalModel(updatedKonane.Konane):
     def __init__(self, size):
@@ -14,6 +15,8 @@ class StaticEvalModel(updatedKonane.Konane):
         self.theirPiecesWeight = 1.0
         self.myMovableWeight = 1.0
         self.theirMovableWeight = 1.0
+        self.featuresNameList = ["myMovesWeight", "theirMovesWeight", "myPiecesWeight", "theirPiecesWeight",
+                                    "myMovableWeight", "theirMovableWeight"]
         self.chanceToMutate = 30 #as a percent
         self.numCorrect = 0
         self.numTested = 0
@@ -43,11 +46,25 @@ class StaticEvalModel(updatedKonane.Konane):
     #         - (len(self.generateMoves(node.state, self.opponent(node.player))) * self.theirMovesWeight)
 
     def crossOver(self, other):
-        return self
+        """
+        Crosses over self with the other model to generate a child. Crosses over by having a 50/50 chance
+        of child getting each feature from either parent.
+        :param other: The other model to use as a parent.
+        :return: The generated child.
+        """
+        copiedSelf = copy(self)
+        for featureName in self.featuresNameList:
+            useOtherModel = bool(random.getrandbits(1)) #Gets a random bool quickly from
+                # http://stackoverflow.com/questions/6824681/get-a-random-boolean-in-python
+            if useOtherModel:
+                setattr(copiedSelf, featureName, getattr(other, featureName)) #Sets the current feature to be that of other
+        return copiedSelf
 
     def mutate(self):
-        for featureName in ["myMovesWeight", "theirMovesWeight", "myPiecesWeight", "theirPiecesWeight", 
-                        "myMovableWeight", "theirMovableWeight"]:
+        """
+        Mutates this model by randomly changing some of the values by a small value.
+        """
+        for featureName in self.featuresNameList:
             if random.randint(0, 100) <= self.chanceToMutate:
                 setattr(self, featureName, getattr(self, featureName) + random.uniform(-0.5, 0.5))
 

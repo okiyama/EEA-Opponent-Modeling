@@ -85,7 +85,7 @@ class FigMaker:
             # dataFile.generateFitnessOverTimes()
             dataFile.generateAvgFitnessOverTrials()
             # dataFile.generateAvgFitnessOverTimes()
-            dataFile.generateMaxFitnessOverTrials()
+            # dataFile.generateMaxFitnessOverTrials()
             # dataFile.generateMaxFitnessOverTimes()
 
 
