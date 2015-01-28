@@ -7,6 +7,7 @@ import updatedKonane
 import TestSuite
 import johnMinimaxEvolved
 import Pie
+from python27Defs import *
 from time import strftime
 from copy import copy
 from datetime import datetime
@@ -239,6 +240,6 @@ class EEA(updatedKonane.Konane):
 
 if __name__ == "__main__":
     eea = EEA()
-    # eea.run()
-    import cProfile
-    cProfile.run('eea.run()', sort="cumtime")
+    eea.run()
+    # import cProfile
+    # cProfile.run('eea.run()', sort="cumtime")
