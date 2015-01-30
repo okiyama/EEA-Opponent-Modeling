@@ -46,7 +46,7 @@ class Pie:
         for i in range(len(individuals)):
             c = individuals[i]
             weight = fitnesses[i]
-            if upto + weight > r:
+            if upto + weight >= r:
                 return c
             upto += weight
         assert False, "Shouldn't get here"
