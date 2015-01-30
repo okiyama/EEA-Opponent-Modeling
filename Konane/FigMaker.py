@@ -10,8 +10,9 @@ import numpy as np
 
 class FigMaker:
     def __init__(self):
-        self.dataFolder = "data/truerEEA/data/"
-        self.attrFolder = "data/truerEEA/attr/"
+        self.USING_ATTR = False
+        self.dataFolder = "data/currEEA/data/"
+        self.attrFolder = "data/currEEA/attr/"
         self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
 
         self.data = []
@@ -32,20 +33,24 @@ class FigMaker:
         """
         Pulls the data from all of the EEA data files so we can work with it.
         """
-        for fileName in self.attrFileList:
-            num_lines = sum(1 for line in open(self.attrFolder + fileName))
-            if num_lines > 1: #Ignore empty files
-                attrFromFile = AttrFile(self.attrFolder + fileName)
-                self.attr.append(attrFromFile)
-            else:
-                print fileName + " didn't contain any data."
+        if self.USING_ATTR:
+            for fileName in self.attrFileList:
+                num_lines = sum(1 for line in open(self.attrFolder + fileName))
+                if num_lines > 1: #Ignore empty files
+                    attrFromFile = AttrFile(self.attrFolder + fileName)
+                    self.attr.append(attrFromFile)
+                else:
+                    print fileName + " didn't contain any data."
 
         for i in range(len(self.dataFileList)):
             fileName = self.dataFileList[i]
             num_lines = sum(1 for line in open(self.dataFolder + fileName))
             if num_lines > 1: #Ignore empty files
                 print fileName
-                dataFromFile = DataFile(self.dataFolder + fileName, self.attr[i])
+                if self.USING_ATTR:
+                    dataFromFile = DataFile(self.dataFolder + fileName, self.attr[i])
+                else:
+                    dataFromFile = DataFile(self.dataFolder + fileName, None)
                 self.data.append(dataFromFile)
                 self.timeTaken.append(dataFromFile.getTimeTaken())
                 self.maxFitness.append(dataFromFile.getNMaxFitnessValues(5))
@@ -289,7 +294,10 @@ class DataFile:
         xlim([1,self.getNumGenerations()])
         xlabel("Generation Number")
         ylabel("Generation's Average Fitness")
-        suptitle("Generational Average Fitness versus Generation Number Versus " + self.attrs.opponentName)
+        if self.attrs:
+            suptitle("Generational Average Fitness versus Generation Number Versus " + self.attrs.opponentName)
+        else:
+            suptitle("Generational Average Fitness versus Generation Number")
 
         show()
 

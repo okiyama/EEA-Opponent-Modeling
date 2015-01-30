@@ -29,21 +29,23 @@ class EEA(updatedKonane.Konane):
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        self.depthLimit = 2
+        self.depthLimit = 4
         self.models = []
 
-        # self.opponent = updatedKonane.SimplePlayer(self.size)
-        # self.opponent.initialize("W")
-        depth = random.randint(1,5) #randomize depth
-        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
+        self.opponent = updatedKonane.HumanPlayer(self.size)
+        self.opponent.initialize("W")
+        # depth = random.randint(1,4) #randomize depth
+        # depth = 4
+        # print "opponent depth is " + str(depth)
+        # self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
 
         self.incSize = 2
         self.testSuite = TestSuite.TestSuite(self.incSize, self.size)
 
         self.initModels(numTimesToMutate=20)
         self.startTime = strftime("%Y-%m-%d %H:%M:%S")
-        self.datafile = open("data/truerEEA/data/data-" + self.startTime + ".csv", "w")
-        self.attrFile = open("data/truerEEA/attr/attr-" + self.startTime + ".csv", "w")
+        self.datafile = open("data/truerEEA/data/data-" + self.startTime + ".csv", "w+")
+        self.attrFile = open("data/truerEEA/attr/attr-" + self.startTime + ".csv", "w+")
         self.logAttributes()
         self.initDataFile()
 
@@ -122,17 +124,34 @@ class EEA(updatedKonane.Konane):
         dummyPlayer = johnMinimaxEvolved.MinimaxPlayer(self.size, self.depthLimit)
         dummyPlayer.initialize("W")
 
+        #Get the opponent's responses to the test once
+        for puzzle in test:
+            puzzle.getResult(self.opponent)
+
+        #For ever model, see if they get the same move as the opponent. If they do, they are more fit
+        #If not, they are less fit. Uses previously acquired moves from the opponent for the test
         for model in self.models:
             model.numCorrect = 0
             model.numTested = 0
             for puzzle in test:
                 puzzleSide = puzzle.side
                 puzzleState = puzzle.state
-                puzzleResult = puzzle.getResult(self.opponent)
+                puzzleResult = puzzle.result
                 dummyPlayer.model = model
                 dummyPlayer.setSide(puzzleSide)
                 modelMove = dummyPlayer.getMove(puzzleState)
                 model.numTested += 1
+                # print "model move " + str(modelMove)
+                # print "opponent move " + str(puzzleResult)
+                # print "possible moves " + str(self.opponent.generateMoves(puzzleState, puzzleSide))
+                # print "Num possible moves: " + str(len(self.opponent.generateMoves(puzzleState, puzzleSide)))
+                # if modelMove not in self.opponent.generateMoves(puzzleState, puzzleSide):
+                #     print "Model move was not in the possible moves for the opponent!"
+                #     print self.opponent.generateMoves(puzzleState, puzzleSide)
+                #     print "model move " + str(modelMove)
+                #     print "puzzle size " + str(puzzleSide)
+                #     print "opponent move " + str(puzzleResult)
+
                 if puzzleResult == modelMove:
                     model.numCorrect += 1
             # print("Fitness of current model: " + str(model.getFitness()))
@@ -151,6 +170,8 @@ class EEA(updatedKonane.Konane):
             #No model found
             pass
 
+        self.attrFile.close() #This may need to move in the future
+
     def evolveModels(self, numModelsToKeep = 5):
         """
         Evolves the models by choosing the best one yet and mutating it to generate children
@@ -165,6 +186,7 @@ class EEA(updatedKonane.Konane):
         """
         fitnessSortedModels = sorted(self.models, key= lambda x: x.getFitness(), reverse=True)
         print("Best fitness of generation is: " + str(fitnessSortedModels[0].getFitness()))
+        # print("Fitness of generation is: " + str([model.getFitness() for model in fitnessSortedModels]))
 
         pie = Pie.Pie(fitnessSortedModels[0:numModelsToKeep])
         for i in range(len(self.models)):
@@ -239,4 +261,4 @@ if __name__ == "__main__":
     eea = EEA()
     eea.run()
     # import cProfile
-    # cProfile.run('eea.run()', sort="cumtime")
+    # cProfile.run('eea.run(120)', sort="ncalls")

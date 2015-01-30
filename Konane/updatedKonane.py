@@ -459,10 +459,20 @@ class HumanPlayer(Konane, Player):
         Player.__init__(self)
     def initialize(self, side):
         self.side = side
-        self.name = "Human"
+        self.name = self.getPlayerName()
+    def getPlayerName(self):
+        name = ""
+        while name == "":
+            name = raw_input("Please enter your name")
+        return name
     def getMove(self, board):
         moves = self.generateMoves(board, self.side)
         while True:
+            for i in range(len(board[0])):
+                print "  " + str(i) + " ",
+            print
+            for i in range(len(board)):
+                print str(i) + str(board[i])
             print "Possible moves:", moves
             n = len(moves)
             if n == 0:
