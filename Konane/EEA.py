@@ -29,15 +29,15 @@ class EEA(updatedKonane.Konane):
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        self.depthLimit = 4
+        self.depthLimit = 3
         self.models = []
 
-        self.opponent = updatedKonane.HumanPlayer(self.size)
-        self.opponent.initialize("W")
+        # self.opponent = updatedKonane.HumanPlayer(self.size)
+        # self.opponent.initialize("W")
         # depth = random.randint(1,4) #randomize depth
-        # depth = 4
-        # print "opponent depth is " + str(depth)
-        # self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
+        depth = 3
+        print "opponent depth is " + str(depth)
+        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
 
         self.incSize = 2
         self.testSuite = TestSuite.TestSuite(self.incSize, self.size)
@@ -126,7 +126,10 @@ class EEA(updatedKonane.Konane):
 
         #Get the opponent's responses to the test once
         for puzzle in test:
-            puzzle.getResult(self.opponent)
+            #Only need to get a result for a puzzle in the tests if it is not set yet
+            #This assumes an opponent will always give the same answer to the same puzzle
+            if not puzzle.result:
+                puzzle.getResult(self.opponent)
 
         #For ever model, see if they get the same move as the opponent. If they do, they are more fit
         #If not, they are less fit. Uses previously acquired moves from the opponent for the test

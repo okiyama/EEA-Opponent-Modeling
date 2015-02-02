@@ -18,7 +18,7 @@ class StaticEvalModel(updatedKonane.Konane):
         self.featuresNameList = ["myMovesWeight", "theirMovesWeight", "myPiecesWeight", "theirPiecesWeight",
                                     "myMovableWeight", "theirMovableWeight"]
         self.chanceToMutate = 50 #as a percent
-        self.mutateAmount = 2.0
+        self.mutateAmount = 3.0
         self.numCorrect = 0
         self.numTested = 0
         #self.fitness = 0 #Fitness should be win rate of past X games?
