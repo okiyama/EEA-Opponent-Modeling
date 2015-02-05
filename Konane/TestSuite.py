@@ -3,10 +3,11 @@
 ## Date: 1/6/15
 __author__ = 'julian'
 
-import EEATest, randomBoardStates
+import EEATest, randomBoardStates, johnMinimaxEvolved
 
 class TestSuite:
-    def __init__(self, testSize = 10, size = 8):
+    def __init__(self, dummyPlayer, testSize = 10, size = 8):
+        self.dummyPlayer = dummyPlayer #this is the player we'll use to get moves from the models.
         self.boardSize = size
         self.testSize = testSize
         #This is just so we can have one universal generator rather than many be made.
@@ -41,15 +42,37 @@ class TestSuite:
     def disagreement(self, test, models):
         """
         The disagreement score of a given test against the given set of models.
+        Assumes all models use a Minimax player that has self.boardSize size
+        and also that they all have the same depth. Can be easily modified to use
+        models of different depths, but it'll be less efficient.
         :param test: The test to measure disagreement for.
         :param models: The models to use to determine disagreement
         :return: The disagreement score
         """
-        #So there's a test with puzzles in it, for every puzzle, check what moves each model makes.
-        #For every
-        test = []
-        for puzzle in test:
-            pass
+        """
+        I'm thinking of just counting the number of unique moves that a test causes among the set of models
+        and dividing by (size of test * num models)
+        So if I have a test with 2 board states in it and my 5 models predict moves like:
+        [(0, 1), (1, 2), (1, 2), (3, 4), (1, 1)]
+        Then the only unique moves predicted are The 0 from the first tuple and the 3 and 4.
+        So that's 3 / (2 * 5) = 0.3 disagreement.
+        """
+        diagreement = 0.0
+        results = [] #This will be a 2D list where every entry is a list of the models responses to each puzzle in the test
+                     #These are in order, so results[i][0] corresponds to results[j][0]
+        for model in models:
+            currModelResults = []
+            for puzzle in test.getTest():
+                self.dummyPlayer.model = model
+                result = puzzle.getResult(self.dummyPlayer)
+                currModelResults.append(result)
+            results.append(currModelResults)
+
+        for i in range(len(results[0])):
+            for j in range(len(results)):
+                pass
+
+
         return 0.0
 
     def getBestTest(self):
