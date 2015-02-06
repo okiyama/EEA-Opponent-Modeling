@@ -23,6 +23,15 @@ from datetime import datetime
 
 #Disagreement is sum squared mean error between the moves the different models pick for a puzzle
 #Need to ratchet up mutation and crossover to reach a population which all agrees on the moves for the current test
+
+#TODO:
+#   Change logging so it keeps track of both EEA round number and generation number for the models
+#   Test my disagreement function to see if it works.
+#   Evolve tests to maximize disagreement
+#   Add a diversity function that calculates how far a model is from the other models in 6-dimensional space. Log this.
+#   Update the FigMaker to deal with generation numbers as well as round numbers.
+#       It could also show diversity over time. That would be cool.
+#   Then we can start doing cool science with differing depths and stuff.
 class EEA(updatedKonane.Konane):
     def __init__(self):
         self.numModels = 10
@@ -39,7 +48,6 @@ class EEA(updatedKonane.Konane):
         # self.opponent.initialize("W")
         # depth = random.randint(1,4) #randomize depth
         depth = 3
-        print "opponent depth is " + str(depth)
         self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
 
         self.incSize = 3
@@ -82,8 +90,6 @@ class EEA(updatedKonane.Konane):
         """
         Runs the EEA, trying to determine the static evaluator of self.opponent
         """
-        # Generate random model (static evaluator). This can be subbed in for any given opponent. DONE - self.opponent
-        ## Therefore, better to have it be a KonanePlayer or whatever, for subbing in easily.
         # Record the opponent's evaluator to a file, for starters.
         self.recordOpponent()
 
@@ -105,17 +111,6 @@ class EEA(updatedKonane.Konane):
         except KeyboardInterrupt:
             pass
         self.datafile.close()
-
-        ## Generate a set of N random board states, randomizing the sides would be good.
-        ### This will eventually be evolved to maximize disagreement among the existing models.
-        ### A bit annoying to implement because we'd need to ask for moves from different sides from opponent.
-        ### Not awful though, it might just be opponent.side = state.side, opponent.getMove(state.board)
-        ## Get the moves the opponent responds with and store them internally.
-        ### Keep track of the sides, so there is a self.whiteOpponentResponses and self.blackOpponentResponses
-        ### OR it could be (initial board, whose turn it is from that board, resulting move) tuples.
-        ## Evolve the models
-        ### Fitness is what percent of the test suite that it correctly predicts the outcome for
-        ### Might need a notion of diversity eventually
 
     def updateModelFitness(self, testSuite):
         """

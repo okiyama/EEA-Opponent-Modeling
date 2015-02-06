@@ -35,7 +35,7 @@ class TestSuite:
         based on the best model(s) so far and tested for fitness, storing the results. Fitness will be determined
         by how much a particular test creates disagreement among the given set of models.
         """
-        self.bestTest.extend(testSet[0].getTest())
+        self.bestTest.extend(max(testSet, key= lambda x: x.fitness).getTest())
         return self.getBestTest()
 
 
@@ -57,7 +57,7 @@ class TestSuite:
         Then the only unique moves predicted are The 0 from the first tuple and the 3 and 4.
         So that's 3 / (2 * 5) = 0.3 disagreement.
         """
-        diagreement = 0.0
+        disagreement = 0.0
         results = [] #This will be a 2D list where every entry is a list of the models responses to each puzzle in the test
                      #These are in order, so results[i][0] corresponds to results[j][0]
         for model in models:
@@ -68,12 +68,17 @@ class TestSuite:
                 currModelResults.append(result)
             results.append(currModelResults)
 
+        # Computes the disagreement.
+        # Disagreement is +1 for every time two of the models don't agree on what move to make.
+        # Then divided by the number of moves that are considered.
         for i in range(len(results[0])):
-            for j in range(len(results)):
-                pass
+            for j in range(len(results) - 1):
+                if results[j][i] != results[j+1][i]:
+                    disagreement += 1.0
+        disagreement /= (float(len(results[0])) * len(result))
+        print "Disagreement score: " + str(disagreement)
 
-
-        return 0.0
+        return disagreement
 
     def getBestTest(self):
         """
