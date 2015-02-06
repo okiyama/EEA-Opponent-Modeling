@@ -26,7 +26,6 @@ from datetime import datetime
 
 #TODO:
 #   Change logging so it keeps track of both EEA round number and generation number for the models
-#   Test my disagreement function to see if it works.
 #   Evolve tests to maximize disagreement
 #   Add a diversity function that calculates how far a model is from the other models in 6-dimensional space. Log this.
 #   Update the FigMaker to deal with generation numbers as well as round numbers.
