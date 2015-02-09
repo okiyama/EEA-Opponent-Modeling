@@ -3,7 +3,7 @@
 ## Date: 1/6/15
 __author__ = 'julian'
 
-import EEATest, randomBoardStates, johnMinimaxEvolved
+import EEATest, randomBoardStates, johnMinimaxEvolved, Pie
 
 class TestSuite:
     def __init__(self, dummyPlayer, testSize = 10, size = 8):
@@ -26,8 +26,18 @@ class TestSuite:
             test = EEATest.EEATest(self.moveGenerator, testSize=self.testSize, size=self.boardSize) #initializes to random puzzles
             test.fitness = self.disagreement(test, models)
             testSet.append(test)
+
         #2: Evolve these tests, with fitness being disagreement.
         #Maybe evolution crosses over puzzles from the best tests
+
+        evolvedTests = []
+        pie = Pie.Pie(testSet)
+        for i in range(len(testSet)):
+            in1, in2 = pie.getTwo()
+            curr = in1.crossOver(in2)
+            curr.mutate()
+            evolvedTests.append(curr)
+        evolvedTests.append(max(testSet, key= lambda x: x.getFitness())) #Hang onto the best test, so we hypothetically never get worse
         #3: Return the best test.
         """
         3. First, a random set of tests to run will be generated. That is to say, a set of the repre-
@@ -35,9 +45,8 @@ class TestSuite:
         based on the best model(s) so far and tested for fitness, storing the results. Fitness will be determined
         by how much a particular test creates disagreement among the given set of models.
         """
-        self.bestTest.extend(max(testSet, key= lambda x: x.fitness).getTest())
+        self.bestTest.extend(max(evolvedTests, key= lambda x: x.getFitness()).getTest())
         return self.getBestTest()
-
 
     def disagreement(self, test, models):
         """

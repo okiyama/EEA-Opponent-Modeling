@@ -26,8 +26,7 @@ from datetime import datetime
 
 #TODO:
 #   Change logging so it keeps track of both EEA round number and generation number for the models
-#   Evolve tests to maximize disagreement
-#   Add a diversity function that calculates how far a model is from the other models in 6-dimensional space. Log this.
+#       Also should track the diversity of the models.
 #   Update the FigMaker to deal with generation numbers as well as round numbers.
 #       It could also show diversity over time. That would be cool.
 #   Then we can start doing cool science with differing depths and stuff.
@@ -237,10 +236,10 @@ class EEA(updatedKonane.Konane):
         %numTestsPerRound, %depth, %boardSize, %numModels
         """
         #Print out the attributes, for safety sake. The attrfile seems to not save correctly sometimes
-        print "%numTestsPerRound, %depth, %boardSize, %numModels\n" + \
+        print "%numTestsPerGeneration, %depth, %boardSize, %numModels\n" + \
             str(self.incSize) + ", " + str(self.depthLimit) + ", " + \
             str(self.size) + ", " + str(self.numModels)
-        self.attrFile.write("%numTestsPerRound, %depth, %boardSize, %numModels\n")
+        self.attrFile.write("%numTestsPerGeneration, %depth, %boardSize, %numModels\n")
         self.attrFile.write(str(self.incSize) + ", "
             + str(self.depthLimit) + ", " + str(self.size) + ", " + str(self.numModels) + "\n")
 
@@ -250,18 +249,19 @@ class EEA(updatedKonane.Konane):
         :return: None
         """
         dummyModel = StaticEvalModel.StaticEvalModel(self.size)
-        self.datafile.write("%roundNum, %fitness, " + dummyModel.dumpFeatures() + ", %roundEndTime\n")
+        self.datafile.write("%roundNum, %fitness, " + dummyModel.dumpFeatures() + \
+                            ", %generationEndTime, %modelsGenerationNum\n")
 
-    def log(self, models, roundNum, roundEndTime):
+    def log(self, models, roundNum, generationEndTime, generationNum):
         """ 
         Logs the results of one round of the EEA to the log file.
         Each line is this format:
         %roundNum, %fitness, %myMovesWeight, %theirMovesWeight, %myPiecesWeight, %theirPiecesWeight,
-         %myMovableWeight , %theirMovableWeight, %roundEndTime
+         %myMovableWeight , %theirMovableWeight, %generationEndTime
         """
         for model in models:
             self.datafile.write(str(roundNum) + ", " + str(model.getFitness())
-                + ", " + model.dumpModel() + ", " + str(roundEndTime) + "\n")
+                + ", " + model.dumpModel() + ", " + str(generationEndTime) + ", " + str(generationNum) + "\n")
 
 if __name__ == "__main__":
     eea = EEA()
