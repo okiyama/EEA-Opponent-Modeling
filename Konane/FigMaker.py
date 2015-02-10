@@ -156,7 +156,7 @@ Encapsulates the data from one EEA data file.
 class DataFile:
     
     def __init__(self, fileName, attrFile):
-        self.genNum = []
+        self.roundName = []
         self.fitness = []
         self.myMovesWeight = []
         self.theirMovesWeight = []
@@ -165,18 +165,21 @@ class DataFile:
         self.myMovableWeight = []
         self.theirMovableWeight = []
         self.roundEndTime = []
+        self.generationNum = []
+        self.diversity = []
         self.attrs = attrFile
         self.fileName = fileName
         
         self.createData()
-        self.numDataPoints = len(self.genNum)
+        self.numDataPoints = len(self.roundName)
     
     def getDataNumber(self, i):
         """
         Gets the ith data as a tuple in the same format as in EEA data files.
         """
-        return (self.genNum[i], self.fitness[i], self.myMovesWeight[i], self.theirMovesWeight[i], self.myPiecesWeight[i],
-                self.theirPiecesWeight[i], self.myMovableWeight[i], self.theirMovableWeight[i], self.roundEndTime[i])
+        return (self.roundName[i], self.fitness[i], self.myMovesWeight[i], self.theirMovesWeight[i], self.myPiecesWeight[i],
+                self.theirPiecesWeight[i], self.myMovableWeight[i], self.theirMovableWeight[i],
+                self.roundEndTime[i], self.generationNum[i], self.diversity[i])
         
     def getNMaxFitnessValues(self, N):
         """
@@ -201,13 +204,13 @@ class DataFile:
         """
         Gives the number of generations that this pop data file contains.
         """
-        return int(self.genNum[-1])
+        return int(self.roundName[-1])
     
     def createData(self):
         """
         Pulls the data from all of the pop data files so we can work with it.
         """
-        regex = "(.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*)"
+        regex = "(.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*)"
         dataFile = open(self.fileName, "r")
         #dataFile.readline()
         dataFile.readline()
@@ -243,7 +246,7 @@ class DataFile:
         """
         Appends the given regex match to the data of this.
         """
-        self.genNum.append(match.group(1))
+        self.roundName.append(match.group(1))
         self.fitness.append(match.group(2))
         self.myMovesWeight.append(match.group(3))
         self.theirMovesWeight.append(match.group(4))
@@ -252,6 +255,8 @@ class DataFile:
         self.myMovableWeight.append(match.group(7))
         self.theirMovableWeight.append(match.group(8))
         self.roundEndTime.append(match.group(9))
+        self.generationNum.append(match.group(10))
+        self.diversity.append(match.group(11))
 
     def generateFitnessOverTrials(self):
         """
@@ -274,15 +279,15 @@ class DataFile:
         averages = []
         tempAvg = 0.0
         counter = 0
-        for i in range(len(self.genNum)):
+        for i in range(len(self.roundName)):
             tempAvg += float(self.fitness[i])
             counter += 1
-            if i == len(self.genNum)-1:
+            if i == len(self.roundName)-1:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
                 break
 
-            if self.genNum[i] != self.genNum[i+1]:
+            if self.roundName[i] != self.roundName[i+1]:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
                 tempAvg = 0
@@ -307,14 +312,14 @@ class DataFile:
         """
         maxes = []
         tempMax = []
-        for i in range(len(self.genNum)):
+        for i in range(len(self.roundName)):
             tempMax.append(float(self.fitness[i]))
-            if i == len(self.genNum)-1:
+            if i == len(self.roundName)-1:
                 maxes.append(max(tempMax))
                 tempMax = []
                 break
 
-            if self.genNum[i] != self.genNum[i+1]:
+            if self.roundName[i] != self.roundName[i+1]:
                 maxes.append(max(tempMax))
                 tempMax = []
 
@@ -336,16 +341,16 @@ class DataFile:
         averages = []
         tempAvg = 0.0
         counter = 0
-        for i in range(len(self.genNum)):
+        for i in range(len(self.roundName)):
             tempAvg += float(self.fitness[i])
             counter += 1
-            if i == len(self.genNum)-1:
+            if i == len(self.roundName)-1:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
                 timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
                 break
 
-            if self.genNum[i] != self.genNum[i+1]:
+            if self.roundName[i] != self.roundName[i+1]:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
                 tempAvg = 0
@@ -367,15 +372,15 @@ class DataFile:
         timeDiffs = []
         maxes = []
         tempMax = []
-        for i in range(len(self.genNum)):
+        for i in range(len(self.roundName)):
             tempMax.append(float(self.fitness[i]))
-            if i == len(self.genNum)-1:
+            if i == len(self.roundName)-1:
                 maxes.append(max(tempMax))
                 tempMax = []
                 timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
                 break
 
-            if self.genNum[i] != self.genNum[i+1]:
+            if self.roundName[i] != self.roundName[i+1]:
                 maxes.append(max(tempMax))
                 tempMax = []
                 timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)

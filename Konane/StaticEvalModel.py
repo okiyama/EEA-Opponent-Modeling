@@ -21,6 +21,7 @@ class StaticEvalModel(updatedKonane.Konane):
         self.mutateAmount = 3.0
         self.numCorrect = 0
         self.numTested = 0
+        self.diversity = 0.0 #The diversity of this versus the current population
         #self.fitness = 0 #Fitness should be win rate of past X games?
 
 

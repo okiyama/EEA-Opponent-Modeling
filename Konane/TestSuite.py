@@ -46,6 +46,7 @@ class TestSuite:
         by how much a particular test creates disagreement among the given set of models.
         """
         self.bestTest.extend(max(evolvedTests, key= lambda x: x.getFitness()).getTest())
+        print "Disagreement score of best after evolution: " + str(max(evolvedTests, key= lambda x: x.getFitness()).getFitness())
         return self.getBestTest()
 
     def disagreement(self, test, models):

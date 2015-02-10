@@ -32,7 +32,7 @@ from datetime import datetime
 #   Then we can start doing cool science with differing depths and stuff.
 class EEA(updatedKonane.Konane):
     def __init__(self):
-        self.numModels = 10
+        self.numModels = 25
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
@@ -94,16 +94,20 @@ class EEA(updatedKonane.Konane):
         startTime = datetime.now()
         elapsedTime = 0
         roundNum = 1
+        generationNum = 1
         try:
             while timeToRun is None or elapsedTime < timeToRun:
                 elapsedTime = (datetime.now() - startTime).seconds
                 self.testSuite.evolve(self.models, testSetSize=self.incSize)
                 self.updateModelFitness(self.testSuite)
+                self.updateModelDiversity()
                 while any([model.getFitness() < 1.0 for model in self.models]):
-                    self.log(self.models, roundNum, datetime.time(datetime.now()))
+                    self.log(self.models, roundNum, datetime.time(datetime.now()), generationNum)
                     self.evolveModels()
                     self.updateModelFitness(self.testSuite)
+                    self.updateModelDiversity()
                     print "Test suite now length: " + str(len(self.testSuite.getBestTest()))
+                    generationNum += 1
                 print("Had a good generation, moving on.")
                 roundNum += 1
         except KeyboardInterrupt:
@@ -152,6 +156,46 @@ class EEA(updatedKonane.Konane):
                 if puzzleResult == modelMove:
                     model.numCorrect += 1
             # print("Fitness of current model: " + str(model.getFitness()))
+
+    def updateModelDiversity(self):
+        """
+        For every model in self.models, sets it's diversity variable to be how diverse that model is
+        versus the rest of the models.
+        :return: The models with updated diversity variables.
+        Used this link to help understand MSE:
+        http://www.ehow.com/how_8464173_calculate-mse.html
+        """
+        for model in self.models:
+            # List of values for each feature of the model
+            featureVector = self.getModelFeatureVector(model)
+            # List of mean square errors for this versus each other model
+            MSE = []
+
+            #Calculate the MSE for this versus each other model
+            for otherModel in self.models:
+                if otherModel is model:
+                    continue
+                differences = []
+                otherFeatureVector = self.getModelFeatureVector(otherModel)
+                for i in range(len(featureVector)):
+                    differences.append(otherFeatureVector[i] - featureVector[i]) # Error
+                    differences[i] = differences[i] ** 2 #Squared error
+                MSE.append(float(sum(differences)) / len(featureVector)) #Mean squared error
+
+            modelDiversity = float(sum(MSE)) / len(MSE) #Mean of all the MSEs with all other models
+            model.diversity = modelDiversity
+            # print "Diversity of model: " + str(model.diversity)
+
+        return self.models
+
+
+    def getModelFeatureVector(self, model):
+        """
+        Gets a list of the values for each feature of the model
+        :param model: To get features from
+        :return: The list of values
+        """
+        return [getattr(model, featureName) for featureName in model.featuresNameList]
 
     def recordOpponent(self):
         """
@@ -250,7 +294,7 @@ class EEA(updatedKonane.Konane):
         """
         dummyModel = StaticEvalModel.StaticEvalModel(self.size)
         self.datafile.write("%roundNum, %fitness, " + dummyModel.dumpFeatures() + \
-                            ", %generationEndTime, %modelsGenerationNum\n")
+                            ", %generationEndTime, %modelsGenerationNum, %modelDiversity\n")
 
     def log(self, models, roundNum, generationEndTime, generationNum):
         """ 
@@ -261,7 +305,8 @@ class EEA(updatedKonane.Konane):
         """
         for model in models:
             self.datafile.write(str(roundNum) + ", " + str(model.getFitness())
-                + ", " + model.dumpModel() + ", " + str(generationEndTime) + ", " + str(generationNum) + "\n")
+                + ", " + model.dumpModel() + ", " + str(generationEndTime)
+                + ", " + str(generationNum) + ", " + str(model.diversity) + "\n")
 
 if __name__ == "__main__":
     eea = EEA()
