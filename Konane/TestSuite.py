@@ -86,7 +86,7 @@ class TestSuite:
                 if results[j][i] != results[j+1][i]:
                     disagreement += 1.0
         disagreement /= (float(len(results[0])) * len(result))
-        print "Disagreement score: " + str(disagreement)
+        # print "Disagreement score: " + str(disagreement)
 
         return disagreement
 
