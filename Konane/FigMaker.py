@@ -10,7 +10,7 @@ import numpy as np
 
 class FigMaker:
     def __init__(self):
-        self.USING_ATTR = False
+        self.USING_ATTR = True
         self.dataFolder = "data/currEEA/data/"
         self.attrFolder = "data/currEEA/attr/"
         self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
@@ -28,7 +28,7 @@ class FigMaker:
             self.attrFileList = None
 
         self.getData()
-        
+
     def getData(self):
         """
         Pulls the data from all of the EEA data files so we can work with it.
@@ -58,11 +58,11 @@ class FigMaker:
                 print fileName + " didn't contain any data."
 
 
-        
+
         #print self.maxFitness
         #print self.data
         #print self.timeTaken
-        
+
     def outputToFile(self):
         """
         Outputs the data collected to a file.
@@ -76,7 +76,7 @@ class FigMaker:
             for value in self.data[i].getNMaxFitnessLines(5):
                 outputFile.write("\t" + str(value) + "\n")
             outputFile.write("\n\n\n")
-        
+
         outputFile.close()
         print "Outputted analysis to: " + self.outPutFile
 
@@ -85,20 +85,25 @@ class FigMaker:
         Generates all the graph figures.
         """
         for dataFile in self.data:
-            # dataFile.hackyFunction()
             # dataFile.generateFitnessOverTrials()
             # dataFile.generateFitnessOverTimes()
             dataFile.generateAvgFitnessOverTrials()
             # dataFile.generateAvgFitnessOverTimes()
+            # dataFile.generateAvgFitnessOverRounds()
             # dataFile.generateMaxFitnessOverTrials()
             # dataFile.generateMaxFitnessOverTimes()
+            # dataFile.generateMaxFitnessOverRounds()
+            # dataFile.generateDiversityOverTrials()
+            dataFile.generateMaxDiversityOverTrials()
+            # dataFile.generateMaxDiversityOverRounds()
+            # dataFile.generateAvgDiversityOverTrials()
+            # dataFile.generateAvgDiversityOverRounds()
 
 
 """
 Encapsulates the attributes from one EEA data file.
 """
 class AttrFile:
-
     def __init__(self, fileName):
         self.numTestsPerRound = 0
         self.modelsDepth = 0
@@ -154,9 +159,9 @@ class AttrFile:
 Encapsulates the data from one EEA data file.
 """
 class DataFile:
-    
+
     def __init__(self, fileName, attrFile):
-        self.roundName = []
+        self.roundNum = []
         self.fitness = []
         self.myMovesWeight = []
         self.theirMovesWeight = []
@@ -169,25 +174,25 @@ class DataFile:
         self.diversity = []
         self.attrs = attrFile
         self.fileName = fileName
-        
+
         self.createData()
-        self.numDataPoints = len(self.roundName)
-    
+        self.numDataPoints = len(self.roundNum)
+
     def getDataNumber(self, i):
         """
         Gets the ith data as a tuple in the same format as in EEA data files.
         """
-        return (self.roundName[i], self.fitness[i], self.myMovesWeight[i], self.theirMovesWeight[i], self.myPiecesWeight[i],
+        return (self.roundNum[i], self.fitness[i], self.myMovesWeight[i], self.theirMovesWeight[i], self.myPiecesWeight[i],
                 self.theirPiecesWeight[i], self.myMovableWeight[i], self.theirMovableWeight[i],
                 self.roundEndTime[i], self.generationNum[i], self.diversity[i])
-        
+
     def getNMaxFitnessValues(self, N):
         """
         Gets the N max fitness values
         """
         #print sorted(self.fitness)[:-N:-1]
         return sorted(self.fitness)[:-N-1:-1]
-    
+
     def getNMaxFitnessLines(self, N):
         """
         Gets the full data of the N best fitness values from this file as a tuple.
@@ -197,15 +202,15 @@ class DataFile:
         for i in range(len(bestFitness)):
             currIndex = self.fitness.index(bestFitness[i])
             toRet.append(self.getDataNumber(currIndex))
-        
+
         return toRet
-        
+
     def getNumGenerations(self):
         """
         Gives the number of generations that this pop data file contains.
         """
-        return int(self.roundName[-1])
-    
+        return int(self.roundNum[-1])
+
     def createData(self):
         """
         Pulls the data from all of the pop data files so we can work with it.
@@ -219,9 +224,25 @@ class DataFile:
             matched = re.match(regex, line)
             if matched:
                 self.appendData(matched)
-        
+
         dataFile.close()
-    
+
+    def appendData(self, match):
+        """
+        Appends the given regex match to the data of this.
+        """
+        self.roundNum.append(int(match.group(1)))
+        self.fitness.append(float(match.group(2)))
+        self.myMovesWeight.append(float(match.group(3)))
+        self.theirMovesWeight.append(float(match.group(4)))
+        self.myPiecesWeight.append(float(match.group(5)))
+        self.theirPiecesWeight.append(float(match.group(6)))
+        self.myMovableWeight.append(float(match.group(7)))
+        self.theirMovableWeight.append(float(match.group(8)))
+        self.roundEndTime.append(match.group(9))
+        self.generationNum.append(int(match.group(10)))
+        self.diversity.append(float(match.group(11)))
+
     def getTimeTaken(self):
         """
         Gets the absolute amount of time taken for this pop data file to be created
@@ -241,53 +262,42 @@ class DataFile:
         endTime = datetime.datetime.strptime(time1, timeFormat)
         startTime = datetime.datetime.strptime(time2, timeFormat)
         return endTime - startTime
-                
-    def appendData(self, match):
-        """
-        Appends the given regex match to the data of this.
-        """
-        self.roundName.append(match.group(1))
-        self.fitness.append(match.group(2))
-        self.myMovesWeight.append(match.group(3))
-        self.theirMovesWeight.append(match.group(4))
-        self.myPiecesWeight.append(match.group(5))
-        self.theirPiecesWeight.append(match.group(6))
-        self.myMovableWeight.append(match.group(7))
-        self.theirMovableWeight.append(match.group(8))
-        self.roundEndTime.append(match.group(9))
-        self.generationNum.append(match.group(10))
-        self.diversity.append(match.group(11))
 
-    def generateFitnessOverTrials(self):
+    def generateFeatureOverX(self, feature, xAxis, xLabel, yLabel, title):
         """
-        Generates a graph of the fitness of this pop data file over the trials.
+        Generates a graph of the given feature, using the given variable for the xAxis.
+        xAxis will be generationNum, roundNum or time.
         """
-        X = np.array(range(self.numDataPoints))
-        Y = np.array(self.fitness)
+        X = np.array(range(len(xAxis)))
+        Y = np.array(feature)
         plot(X, Y)
 
-        xlabel("Trial Number")
-        ylabel("Fitness Value")
-        suptitle("Fitness Value of Each Trial Versus " + self.attrs.opponentName)
+        xlabel(xLabel)
+        ylabel(yLabel)
+        if self.attrs:
+            title = title + " versus " + self.attrs.opponentName
+        suptitle(title)
 
         show()
 
-    def generateAvgFitnessOverTrials(self):
+    def generateAvgFeatureOverX(self, feature, xAxis, xLabel, yLabel, title):
         """
-        Generates a graph of the average fitness of a generation over the trials.
+        Generates a graph of the average for the given feature over the given xAxis.
+        xAxis is something like self.generationNum, self.roundNum
+        fature is something like self.fitness
         """
         averages = []
         tempAvg = 0.0
         counter = 0
-        for i in range(len(self.roundName)):
-            tempAvg += float(self.fitness[i])
+        for i in range(len(xAxis)):
+            tempAvg += float(feature[i])
             counter += 1
-            if i == len(self.roundName)-1:
+            if i == len(xAxis)-1:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
                 break
 
-            if self.roundName[i] != self.roundName[i+1]:
+            if xAxis[i] != xAxis[i+1]:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
                 tempAvg = 0
@@ -296,42 +306,85 @@ class DataFile:
         #print averages
 
         plot(range(len(averages)+1)[1:], averages)
-        xlim([1,self.getNumGenerations()])
-        xlabel("Generation Number")
-        ylabel("Generation's Average Fitness")
+        print xAxis[-1]
+        xlim([1,xAxis[-1]])
+        xlabel(xLabel)
+        ylabel(yLabel)
+
         if self.attrs:
-            suptitle("Generational Average Fitness versus Generation Number Versus " + self.attrs.opponentName)
-        else:
-            suptitle("Generational Average Fitness versus Generation Number")
+            title += " versus " + self.attrs.opponentName
+        suptitle(title)
 
         show()
 
-    def generateMaxFitnessOverTrials(self):
+    def generateMaxFeatureOverX(self, feature, xAxis, xLabel, yLabel, title):
         """
-        Generates a graph of the maximum fitness of a generation over the trials.
+        Generates a graph of the maximum of the given feature over the given xAxis feature.
+        xAxis is something like self.generationNum, self.roundNum
+        fature is something like self.fitness
         """
         maxes = []
         tempMax = []
-        for i in range(len(self.roundName)):
-            tempMax.append(float(self.fitness[i]))
-            if i == len(self.roundName)-1:
+        for i in range(len(xAxis)):
+            tempMax.append(float(feature[i]))
+            if i == len(xAxis)-1:
                 maxes.append(max(tempMax))
                 tempMax = []
                 break
 
-            if self.roundName[i] != self.roundName[i+1]:
+            if xAxis[i] != xAxis[i+1]:
                 maxes.append(max(tempMax))
                 tempMax = []
 
         #print averages
 
         plot(range(len(maxes)+1)[1:], maxes)
-        xlim([1,self.getNumGenerations()])
-        xlabel("Generation Number")
-        ylabel("Generation's Maximum Fitness")
-        suptitle("Generational Maximum Fitness versus Generation Number Versus " + self.attrs.opponentName)
+        xlim([1,xAxis[-1]])
+        xlabel(xLabel)
+        ylabel(yLabel)
+
+        if self.attrs:
+            title += " " + self.attrs.opponentName
+        suptitle(title)
 
         show()
+
+    def generateFitnessOverTrials(self):
+        """
+        Generates a graph of the fitness of this pop data file over the trials.
+        """
+        self.generateFeatureOverX(self.fitness, self.roundNum,
+                                  "Model number", "Fitness value", "Individual model fitness throughout experiment")
+
+    def generateAvgFitnessOverTrials(self):
+        """
+        Generates a graph of the average fitness of a generation over the trials.
+        """
+        self.generateAvgFeatureOverX(self.fitness, self.generationNum,
+                                     "Generation Number", "Average Fitness", "Average fitness of each generation")
+
+    def generateAvgFitnessOverRounds(self):
+        """
+        Generates a graph of the average fitness of a round over the trials.
+        """
+        self.generateAvgFeatureOverX(self.fitness, self.roundNum,
+                                     "Round Number", "Average Fitness", "Average fitness of each round")
+
+    def generateMaxFitnessOverTrials(self):
+        """
+        Generates a graph of the maximum fitness of a generation over the trials.
+        """
+        self.generateMaxFeatureOverX(self.fitness, self.generationNum,
+                                     "Generation Number", "Generation Max Fitness",
+                                     "Generation Max Fitness for each generation")
+
+    def generateMaxFitnessOverRounds(self):
+        """
+        Generates a graph of the maximum fitness of a generation over the trials.
+        """
+        self.generateMaxFeatureOverX(self.fitness, self.roundNum,
+                                     "Round Number", "Round Max Fitness",
+                                     "Round Max Fitness for each generation")
 
     def generateAvgFitnessOverTimes(self):
         """
@@ -341,16 +394,16 @@ class DataFile:
         averages = []
         tempAvg = 0.0
         counter = 0
-        for i in range(len(self.roundName)):
+        for i in range(len(self.roundNum)):
             tempAvg += float(self.fitness[i])
             counter += 1
-            if i == len(self.roundName)-1:
+            if i == len(self.roundNum)-1:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
                 timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
                 break
 
-            if self.roundName[i] != self.roundName[i+1]:
+            if self.roundNum[i] != self.roundNum[i+1]:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
                 tempAvg = 0
@@ -361,7 +414,11 @@ class DataFile:
         #xlim([1,25])
         xlabel("Seconds Since Testing Began")
         ylabel("Generation's Average Fitness")
-        suptitle("Generational Average Fitness versus Time Versus " + self.attrs.opponentName)
+
+        title = "Generational Average Fitness versus Time"
+        if self.attrs:
+            title += " versus " + self.attrs.opponentName
+        suptitle(title)
 
         show()
 
@@ -372,15 +429,15 @@ class DataFile:
         timeDiffs = []
         maxes = []
         tempMax = []
-        for i in range(len(self.roundName)):
+        for i in range(len(self.roundNum)):
             tempMax.append(float(self.fitness[i]))
-            if i == len(self.roundName)-1:
+            if i == len(self.roundNum)-1:
                 maxes.append(max(tempMax))
                 tempMax = []
                 timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
                 break
 
-            if self.roundName[i] != self.roundName[i+1]:
+            if self.roundNum[i] != self.roundNum[i+1]:
                 maxes.append(max(tempMax))
                 tempMax = []
                 timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
@@ -389,7 +446,12 @@ class DataFile:
         #xlim([1,25])
         xlabel("Seconds Since Testing Began")
         ylabel("Generation's Maximum Fitness")
-        suptitle("Generational Maximum Fitness versus Time Versus " + self.attrs.opponentName)
+
+        title = "Generational Maximum Fitness versus Time"
+        if self.attrs:
+            title += " versus " + self.attrs.opponentName
+
+        suptitle(title)
 
         show()
 
@@ -404,10 +466,52 @@ class DataFile:
 
         xlabel("Seconds Since Testing Began")
         ylabel("Fitness of Trial")
-        title("Fitness of Trials Versus Time Since Testing Began Versus " + self.attrs.opponentName)
+
+        title = "Fitness of Trials Versus Time Since Testing Began"
+        if self.attrs:
+            title += " versus " + self.attrs.opponentName
+
+        suptitle(title)
 
         show()
-    
+
+    def generateDiversityOverTrials(self):
+        """
+        Generates a graph of the diversity of this pop data file over the trials.
+        """
+        self.generateFeatureOverX(self.diversity, self.roundNum,
+                                  "Model number", "Diversity Value", "Individual model diversity throughout experiment")
+
+    def generateAvgDiversityOverTrials(self):
+        """
+        Generates a graph of the average diversity of the models of a generation over the trials.
+        """
+        self.generateAvgFeatureOverX(self.diversity, self.generationNum,
+                                     "Generation Number", "Average Diversity", "Average diversity of each generation")
+
+    def generateAvgDiversityOverRounds(self):
+        """
+        Generates a graph of the average diversity of the models of a round over the trials.
+        """
+        self.generateAvgFeatureOverX(self.diversity, self.roundNum,
+                                     "Round Number", "Average Diversity", "Average diversity of each round")
+
+    def generateMaxDiversityOverTrials(self):
+        """
+        Generates a graph of the maximum fitness of a generation over the trials.
+        """
+        self.generateMaxFeatureOverX(self.diversity, self.generationNum,
+                                     "Generation Number", "Generation Max Diversity",
+                                     "Generation Max Diversity for each generation")
+
+    def generateMaxDiversityOverRounds(self):
+        """
+        Generates a graph of the maximum fitness of a generation over the trials.
+        """
+        self.generateMaxFeatureOverX(self.diversity, self.roundNum,
+                                     "Round Number", "Round Max Diversity",
+                                     "Round Max Diversity for each generation")
+
 if __name__ == "__main__":
     maker = FigMaker()
     #analyzer.outputToFile()
