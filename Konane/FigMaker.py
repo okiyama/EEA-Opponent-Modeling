@@ -8,6 +8,8 @@ from pylab import *
 import datetime, os, re
 import numpy as np
 
+#TODO:
+# Make it show a line where a new round starts on the generations graphs
 class FigMaker:
     def __init__(self):
         self.USING_ATTR = True
