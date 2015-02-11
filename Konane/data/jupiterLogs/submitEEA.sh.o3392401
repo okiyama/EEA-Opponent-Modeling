@@ -1,0 +1,37 @@
+----------------------------------------
+Begin PBS Prologue Tue Jan 27 22:45:07 EST 2015 1422416707
+Job ID:		3392401.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node084
+End PBS Prologue Tue Jan 27 22:45:07 EST 2015 1422416707
+----------------------------------------
+Best fitness of generation is: 0.5
+Traceback (most recent call last):
+  File "./EEA.py", line 240, in ?
+    eea.run()
+  File "./EEA.py", line 95, in run
+    self.evolveModels()
+  File "./EEA.py", line 171, in evolveModels
+    in1, in2 = pie.getTwo()
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/Pie.py", line 37, in getTwo
+    in2 = self.weightedChoice(indivs, fits)
+  File "/home/jocquej/EEA-Opponent-Modeling/Konane/Pie.py", line 52, in weightedChoice
+    assert False, "Shouldn't get here"
+AssertionError: Shouldn't get here
+----------------------------------------
+Begin PBS Epilogue Tue Jan 27 22:45:17 EST 2015 1422416717
+Job ID:		3392401.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	submitEEA.sh
+Session:	7074
+Limits:		neednodes=a1,procs=1,walltime=08:00:00
+Resources:	cput=00:00:04,mem=0kb,vmem=0kb,walltime=00:00:05
+Queue:		dque
+Account:		
+Nodes:	node084
+Killing leftovers...
+
+End PBS Epilogue Tue Jan 27 22:45:18 EST 2015 1422416718
+----------------------------------------

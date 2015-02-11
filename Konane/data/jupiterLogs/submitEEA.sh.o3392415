@@ -1,0 +1,865 @@
+----------------------------------------
+Begin PBS Prologue Thu Jan 29 16:30:33 EST 2015 1422567033
+Job ID:		3392415.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Nodes:		node084
+End PBS Prologue Thu Jan 29 16:30:33 EST 2015 1422567033
+----------------------------------------
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Best fitness of generation is: 1.0
+Test suite now length: 2
+Had a good generation, moving on.
+Best fitness of generation is: 1.0
+Test suite now length: 4
+Best fitness of generation is: 1.0
+Test suite now length: 4
+Best fitness of generation is: 1.0
+Test suite now length: 4
+Had a good generation, moving on.
+Best fitness of generation is: 1.0
+Test suite now length: 6
+Best fitness of generation is: 1.0
+Test suite now length: 6
+Had a good generation, moving on.
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Best fitness of generation is: 1.0
+Test suite now length: 8
+Had a good generation, moving on.
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Best fitness of generation is: 1.0
+Test suite now length: 10
+Had a good generation, moving on.
+Had a good generation, moving on.
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 0.928571428571
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now length: 14
+Best fitness of generation is: 1.0
+Test suite now lengt----------------------------------------
+Begin PBS Epilogue Thu Jan 29 18:30:38 EST 2015 1422574238
+Job ID:		3392415.jupiter-mgt2
+Username:	jocquej
+Group:		users
+Job Name:	submitEEA.sh
+Session:	8482
+Limits:		neednodes=a1,procs=1,walltime=02:00:00
+Resources:	cput=01:59:58,mem=179648kb,vmem=435808kb,walltime=02:00:01
+Queue:		dque
+Account:		
+Nodes:	node084
+Killing leftovers...
+
+End PBS Epilogue Thu Jan 29 18:30:38 EST 2015 1422574238
+----------------------------------------
