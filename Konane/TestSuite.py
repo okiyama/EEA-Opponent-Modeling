@@ -4,6 +4,7 @@
 __author__ = 'julian'
 
 import EEATest, randomBoardStates, johnMinimaxEvolved, Pie
+from python27Defs import *
 
 class TestSuite:
     def __init__(self, dummyPlayer, testSize = 10, size = 8):
