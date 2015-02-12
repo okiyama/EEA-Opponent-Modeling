@@ -308,7 +308,7 @@ class DataFile:
         #print averages
 
         plot(range(len(averages)+1)[1:], averages)
-        print xAxis[-1]
+        # print xAxis[-1]
         xlim([1,xAxis[-1]])
         xlabel(xLabel)
         ylabel(yLabel)
