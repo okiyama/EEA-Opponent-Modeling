@@ -100,6 +100,7 @@ class FigMaker:
             # dataFile.generateMaxDiversityOverRounds()
             # dataFile.generateAvgDiversityOverTrials()
             # dataFile.generateAvgDiversityOverRounds()
+            dataFile.generateAvgPercentCorrectOverTrials()
 
 
 """
@@ -174,6 +175,7 @@ class DataFile:
         self.roundEndTime = []
         self.generationNum = []
         self.diversity = []
+        self.percentCorrect = []
         self.attrs = attrFile
         self.fileName = fileName
 
@@ -217,7 +219,7 @@ class DataFile:
         """
         Pulls the data from all of the pop data files so we can work with it.
         """
-        regex = "(.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*)"
+        regex = "(.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*)"
         dataFile = open(self.fileName, "r")
         #dataFile.readline()
         dataFile.readline()
@@ -244,6 +246,7 @@ class DataFile:
         self.roundEndTime.append(match.group(9))
         self.generationNum.append(int(match.group(10)))
         self.diversity.append(float(match.group(11)))
+        self.percentCorrect.append(float(match.group(12)))
 
     def getTimeTaken(self):
         """
@@ -513,6 +516,43 @@ class DataFile:
         self.generateMaxFeatureOverX(self.diversity, self.roundNum,
                                      "Round Number", "Round Max Diversity",
                                      "Round Max Diversity for each generation")
+
+    def generatePercentCorrectOverTrials(self):
+        """
+        Generates a graph of the percent correct of this pop data file over the trials.
+        """
+        self.generateFeatureOverX(self.percentCorrect, self.roundNum,
+                                  "Model number", "Percent Correct", "Individual model percent correct throughout experiment")
+
+    def generateAvgPercentCorrectOverTrials(self):
+        """
+        Generates a graph of the average percent correct of the models of a generation over the trials.
+        """
+        self.generateAvgFeatureOverX(self.percentCorrect, self.generationNum,
+                                     "Generation Number", "Average Percent Correct", "Average percent correct of each generation")
+
+    def generateAvgPercentCorrectOverRounds(self):
+        """
+        Generates a graph of the average percent of the models of a round over the trials.
+        """
+        self.generateAvgFeatureOverX(self.percentCorrect, self.roundNum,
+                                     "Round Number", "Average Percent Correct", "Average percent correct of each round")
+
+    def generateMaxPercentCorrectOverTrials(self):
+        """
+        Generates a graph of the maximum percent correct of a generation over the trials.
+        """
+        self.generateMaxFeatureOverX(self.percentCorrect, self.generationNum,
+                                     "Generation Number", "Generation Max Percent Correct",
+                                     "Generation Max percent correct for each generation")
+
+    def generateMaxPercentCorrectOverRounds(self):
+        """
+        Generates a graph of the maximum percent correct of a generation over the trials.
+        """
+        self.generateMaxFeatureOverX(self.percentCorrect, self.roundNum,
+                                     "Round Number", "Round Max Percent Correct",
+                                     "Round Max Percent Correct for each generation")
 
 if __name__ == "__main__":
     maker = FigMaker()

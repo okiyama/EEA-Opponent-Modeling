@@ -13,6 +13,7 @@ class TestSuite:
         self.testSize = testSize
         #This is just so we can have one universal generator rather than many be made.
         self.moveGenerator = randomBoardStates.RandomStateGenerator(boardSize=size)
+        self.disagreementReqToContinue = 0.5
         self.bestTest = []
 
     def evolve(self, models, testSetSize = 10):
@@ -20,6 +21,12 @@ class TestSuite:
         Given a set of models, evolves a test which maximizes for disagreement among the models.
         :param models: The models to evolve against.
         :return: The best test from evolution, as a set of KonanePuzzles.
+        """
+        """
+        3. First, a random set of tests to run will be generated. That is to say, a set of the repre-
+        sentations for tests from step 1 will be created randomly. Then these representations will be evolved
+        based on the best model(s) so far and tested for fitness, storing the results. Fitness will be determined
+        by how much a particular test creates disagreement among the given set of models.
         """
         #1: Generate random set of tests
         testSet = []
@@ -31,22 +38,36 @@ class TestSuite:
         #2: Evolve these tests, with fitness being disagreement.
         #Maybe evolution crosses over puzzles from the best tests
 
+        #Wait until we find a test that totally maximizes disagreement
+        # evolvedTests = testSet[:] #copy array
+        # print "Evolving tests now"
+        # while not any([evolvingTest.getFitness() > self.disagreementReqToContinue for evolvingTest in evolvedTests]):
+        #     currTests = []
+        #     pie = Pie.Pie(evolvedTests)
+        #     for i in range(len(evolvedTests)):
+        #         in1, in2 = pie.getTwo()
+        #         curr = in1.crossOver(in2)
+        #         curr.mutate()
+        #         curr.fitness = self.disagreement(curr, models)
+        #         currTests.append(curr)
+        #     # currTests.append(max(evolvedTests, key= lambda x: x.getFitness())) #Hang onto the best test, so we hypothetically never get worse
+        #     evolvedTests = currTests
+        #     # print [test.getFitness() for test in evolvedTests]
+
+        #Do just one round of evolution
         evolvedTests = []
         pie = Pie.Pie(testSet)
         for i in range(len(testSet)):
             in1, in2 = pie.getTwo()
             curr = in1.crossOver(in2)
             curr.mutate()
+            curr.fitness = self.disagreement(curr, models)
             evolvedTests.append(curr)
         evolvedTests.append(max(testSet, key= lambda x: x.getFitness())) #Hang onto the best test, so we hypothetically never get worse
+
         #3: Return the best test.
-        """
-        3. First, a random set of tests to run will be generated. That is to say, a set of the repre-
-        sentations for tests from step 1 will be created randomly. Then these representations will be evolved
-        based on the best model(s) so far and tested for fitness, storing the results. Fitness will be determined
-        by how much a particular test creates disagreement among the given set of models.
-        """
         self.bestTest.extend(max(evolvedTests, key= lambda x: x.getFitness()).getTest())
+
         print "Disagreement score of best after evolution: " + str(max(evolvedTests, key= lambda x: x.getFitness()).getFitness())
         return self.getBestTest()
 
@@ -86,7 +107,7 @@ class TestSuite:
             for j in range(len(results) - 1):
                 if results[j][i] != results[j+1][i]:
                     disagreement += 1.0
-        disagreement /= (float(len(results[0])) * len(result))
+        disagreement /= (float(len(results[0])) * len(results))
         # print "Disagreement score: " + str(disagreement)
 
         return disagreement

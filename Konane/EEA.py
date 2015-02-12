@@ -85,13 +85,13 @@ class EEA(updatedKonane.Konane):
             while timeToRun is None or elapsedTime < timeToRun:
                 elapsedTime = (datetime.now() - startTime).seconds
                 self.testSuite.evolve(self.models, testSetSize=self.incSize)
-                self.updateModelFitness(self.testSuite)
+                self.updateModelPercentCorrect(self.testSuite)
                 self.updateModelDiversity()
                 fitnessSortedModels = sorted(self.models, key= lambda x: x.getFitness())
                 while any([model.getCorrectPercent() < 1.0 for model in fitnessSortedModels[0:self.numModelParents]]):
                     self.log(self.models, roundNum, datetime.time(datetime.now()), generationNum)
                     self.evolveModels()
-                    self.updateModelFitness(self.testSuite)
+                    self.updateModelPercentCorrect(self.testSuite)
                     self.updateModelDiversity()
                     fitnessSortedModels = sorted(self.models, key= lambda x: x.getFitness())
                     generationNum += 1
@@ -102,9 +102,9 @@ class EEA(updatedKonane.Konane):
             pass
         self.datafile.close()
 
-    def updateModelFitness(self, testSuite):
+    def updateModelPercentCorrect(self, testSuite):
         """
-        Updates the fitnesses of the models in self.models given the current testSuite
+        Updates the percent correct of the models in self.models given the current testSuite
         :param testSuite: The recently updated suite used to update the model's fitnesses
         :return: The models as a list of StaticEvalModels
         """
@@ -282,7 +282,7 @@ class EEA(updatedKonane.Konane):
         """
         dummyModel = StaticEvalModel.StaticEvalModel(self.size)
         self.datafile.write("%roundNum, %fitness, " + dummyModel.dumpFeatures() + \
-                            ", %generationEndTime, %modelsGenerationNum, %modelDiversity\n")
+                            ", %generationEndTime, %modelsGenerationNum, %modelDiversity, %percentCorrect\n")
 
     def log(self, models, roundNum, generationEndTime, generationNum):
         """ 
@@ -294,7 +294,8 @@ class EEA(updatedKonane.Konane):
         for model in models:
             self.datafile.write(str(roundNum) + ", " + str(model.getFitness())
                 + ", " + model.dumpModel() + ", " + str(generationEndTime)
-                + ", " + str(generationNum) + ", " + str(model.diversity) + "\n")
+                + ", " + str(generationNum) + ", " + str(model.diversity)
+                + ", " + str(model.getCorrectPercent()) + "\n")
 
 if __name__ == "__main__":
     eea = EEA()
