@@ -13,17 +13,6 @@ from time import strftime
 from copy import copy
 from datetime import datetime
 
-#Evolve tests by having the fitness of a test determine the probability that a random(non-repeated?) puzzle
-#from its set of puzzles be chosen.
-#Perhaps it would be good to only use the top 5 or maybe even top 2.
-#They also mutate after being made, the same way as before. This increases diversity.
-
-#Make the incSize much smaller, and make the models evolve continuously until they all have 100% agreement(and some
-#differences between them, that's later) and THEN we can add some puzzles to the test.
-
-#Disagreement is sum squared mean error between the moves the different models pick for a puzzle
-#Need to ratchet up mutation and crossover to reach a population which all agrees on the moves for the current test
-
 #TODO:
 #   Still getting stuck, look closer into how the parents are doing.
 #   Then we can start doing cool science with differing depths and stuff.
@@ -35,7 +24,7 @@ class EEA(updatedKonane.Konane):
                       # Must also do similar stuff for initializing TestSuite
         self.depthLimit = 3
         self.models = []
-        self.numModelParents = self.numModels / 2
+        self.numModelParents = self.numModels / 4
         self.modelsPlayer = johnMinimaxEvolved.MinimaxPlayer(self.size, self.depthLimit)
         self.modelsPlayer.initialize("W")
 
@@ -98,13 +87,15 @@ class EEA(updatedKonane.Konane):
                 self.testSuite.evolve(self.models, testSetSize=self.incSize)
                 self.updateModelFitness(self.testSuite)
                 self.updateModelDiversity()
-                while any([model.getFitness() < 1.0 for model in self.models]):
+                fitnessSortedModels = sorted(self.models, key= lambda x: x.getFitness())
+                while any([model.getCorrectPercent() < 1.0 for model in fitnessSortedModels[0:self.numModelParents]]):
                     self.log(self.models, roundNum, datetime.time(datetime.now()), generationNum)
                     self.evolveModels()
                     self.updateModelFitness(self.testSuite)
                     self.updateModelDiversity()
-                    print "Test suite now length: " + str(len(self.testSuite.getBestTest()))
+                    fitnessSortedModels = sorted(self.models, key= lambda x: x.getFitness())
                     generationNum += 1
+                    print "Test suite now length: " + str(len(self.testSuite.getBestTest()))
                 print("Had a good generation, moving on.")
                 roundNum += 1
         except KeyboardInterrupt:

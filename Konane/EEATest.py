@@ -13,7 +13,7 @@ class EEATest:
         self.moveGenerator = moveGenerator
         self.puzzles = self.genRandomPuzzles(testSize)
         self.fitness = 0
-        self.mutatePercent = 50
+        self.mutatePercent = 30
 
     def genRandomPuzzle(self):
         """

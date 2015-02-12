@@ -83,6 +83,14 @@ class StaticEvalModel(updatedKonane.Konane):
                 + "%myPiecesWeight" + ", " + "%theirMovesWeight" + ", " \
                 + "%myMovableWeight" + ", " + "%theirMovableWeight"
 
+    def getCorrectPercent(self):
+        """
+        :return: The percentage of time this model correctly predicted the opponent.
+        """
+        return float(self.numCorrect) / self.numTested
+
     def getFitness(self):
         """ Gets the fitness as a win percentage for this model. """
-        return float(self.numCorrect) / self.numTested #Need to cast division to float
+        fitness = self.getCorrectPercent()
+        fitness += (self.diversity / 10.0)
+        return fitness
