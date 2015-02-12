@@ -25,10 +25,7 @@ from datetime import datetime
 #Need to ratchet up mutation and crossover to reach a population which all agrees on the moves for the current test
 
 #TODO:
-#   Change logging so it keeps track of both EEA round number and generation number for the models
-#       Also should track the diversity of the models.
-#   Update the FigMaker to deal with generation numbers as well as round numbers.
-#       It could also show diversity over time. That would be cool.
+#   Still getting stuck, look closer into how the parents are doing.
 #   Then we can start doing cool science with differing depths and stuff.
 class EEA(updatedKonane.Konane):
     def __init__(self):
