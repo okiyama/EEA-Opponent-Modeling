@@ -356,18 +356,27 @@ class DataFile:
 
         show()
 
-    def generateMinMaxMedianFeatureOverX(self, feature, xAxis, xLabel, yLabel, title):
+    def generateMinMaxMedianFeatureOverX(self, feature, xAxis, xLabel, yLabel, title, showRoundBreaks = True):
         """
         Generates a graph of the maximum, minimum and median of the given feature over the given xAxis feature.
         xAxis is something like self.generationNum, self.roundNum
         feature is something like self.fitness, self.diversity, self.percentCorrect
         """
+
+        absoluteMax = max(feature)
         maxes = []
         mins = []
         medians = []
         currGen = []
+        currGenNum = 1
+        roundBreaks = self.getRoundBreaks()
+        breakPlots = []
         for i in range(len(xAxis)):
             currGen.append(feature[i])
+
+            if showRoundBreaks and i in roundBreaks:
+                breakPlots.append([currGenNum, currGenNum])
+                breakPlots.append([0, absoluteMax])
 
             if i == len(xAxis)-1:
                 sortedGen = sorted(currGen)
@@ -375,6 +384,7 @@ class DataFile:
                 mins.append(sortedGen[0])
                 medians.append(sortedGen[len(sortedGen) / 2])
                 currGen = []
+                currGenNum += 1
                 break
 
             if xAxis[i] != xAxis[i+1]:
@@ -383,12 +393,21 @@ class DataFile:
                 mins.append(sortedGen[0])
                 medians.append(sortedGen[len(sortedGen) / 2])
                 currGen = []
+                currGenNum += 1
 
         xMax = range(len(maxes)+1)[1:]
         plot(xMax, maxes, "r", label="Max")
         plot(xMax, mins, "b", label="Min")
         plot(xMax, medians, "g", label="Median")
+
+        if breakPlots != []:
+            plot(breakPlots[0], breakPlots[1], "k-", lw=2, label="New EEA Round Begins")
+
+        for i in range(2, len(breakPlots), 2):
+            plot(breakPlots[i], breakPlots[i+1], "k-", lw=2)
+
         xlim([1,xAxis[-1]])
+        ylim([0, absoluteMax])
         xlabel(xLabel)
         ylabel(yLabel)
         legend()
@@ -398,6 +417,19 @@ class DataFile:
         suptitle(title)
 
         show()
+
+    def getRoundBreaks(self):
+        """
+        Returns what indices are the start of a new round.
+        """
+        breaks = []
+        for i in range(len(self.roundNum) - 1):
+            if self.roundNum[i + 1] != self.roundNum[i]:
+                breaks.append(i + 1)
+
+        print "num rounds: " + str(self.roundNum[-1])
+        print breaks
+        return breaks
 
     def generateFitnessOverTrials(self):
         """
