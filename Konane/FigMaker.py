@@ -89,7 +89,9 @@ class FigMaker:
         Generates all the graph figures.
         """
         for dataFile in self.data:
-            dataFile.generateMinMaxMedianFitnessOverTrials()
+            dataFile.generateMinMaxMedianFitnessOverTrials(showRoundBreaks = True)
+            dataFile.generateMinMaxMedianDiversityOverTrials(showRoundBreaks = True)
+            dataFile.generateMinMaxMedianPercentCorrectOverTrials(showRoundBreaks = True)
             # dataFile.generateFitnessOverTrials()
             # dataFile.generateFitnessOverTimes()
             # dataFile.generateAvgFitnessOverTrials()
@@ -407,7 +409,8 @@ class DataFile:
             plot(breakPlots[i], breakPlots[i+1], "k-", lw=2)
 
         xlim([1,xAxis[-1]])
-        ylim([0, absoluteMax])
+        if showRoundBreaks:
+            ylim([0, absoluteMax])
         xlabel(xLabel)
         ylabel(yLabel)
         legend()
@@ -474,15 +477,15 @@ class DataFile:
         """
         self.generateMinMaxMedianFeatureOverX(self.fitness, self.generationNum,
                                      "Generation Number", "Generation Max Fitness",
-                                     "Generation Max Fitness for each generation")
+                                     "Fitness for each generation")
 
     def generateMinMaxMedianFitnessOverRounds(self):
         """
         Generates a graph of the maximum fitness of a generation over the trials.
         """
         self.generateMinMaxMedianFeatureOverX(self.fitness, self.roundNum,
-                                     "Round Number", "Round Max Fitness",
-                                     "Round Max Fitness for each generation")
+                                     "Round Number", "Fitness",
+                                     "Fitness for each round")
 
     def generateAvgFitnessOverTimes(self):
         """
@@ -610,6 +613,22 @@ class DataFile:
                                      "Round Number", "Round Max Diversity",
                                      "Round Max Diversity for each generation")
 
+    def generateMinMaxMedianDiversityOverTrials(self):
+        """
+        Generates a graph of the min/max/median fitness of a generation over the trials.
+        """
+        self.generateMinMaxMedianFeatureOverX(self.diversity, self.generationNum,
+                                     "Generation Number", "Diversity",
+                                     "Diversity for each generation")
+
+    def generateMinMaxMedianDiversityOverRounds(self):
+        """
+        Generates a graph of the min/max/median of a generation over the trials.
+        """
+        self.generateMinMaxMedianFeatureOverX(self.diversity, self.roundNum,
+                                     "Round Number", "Diversity",
+                                     "Diversity for each round")
+
     def generatePercentCorrectOverTrials(self):
         """
         Generates a graph of the percent correct of this pop data file over the trials.
@@ -646,6 +665,22 @@ class DataFile:
         self.generateMaxFeatureOverX(self.percentCorrect, self.roundNum,
                                      "Round Number", "Round Max Percent Correct",
                                      "Round Max Percent Correct for each generation")
+
+    def generateMinMaxMedianPercentCorrectOverTrials(self):
+        """
+        Generates a graph of the min/max/median percent correct of a generation over the trials.
+        """
+        self.generateMinMaxMedianFeatureOverX(self.percentCorrect, self.generationNum,
+                                     "Generation Number", "Percent Correct",
+                                     "Generation percent correct for each generation")
+
+    def generateMinMaxMedianPercentCorrectOverRounds(self):
+        """
+        Generates a graph of the min/max/median percent correct of a generation over the trials.
+        """
+        self.generateMinMaxMedianFeatureOverX(self.percentCorrect, self.roundNum,
+                                     "Round Number", "Percent Correct",
+                                     "Round Percent Correct for each generation")
 
 if __name__ == "__main__":
     maker = FigMaker()
