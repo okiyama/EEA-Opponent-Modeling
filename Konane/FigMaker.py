@@ -5,6 +5,8 @@
 ## Date: 10/13/14
 
 from pylab import *
+import matplotlib.lines as mlines
+import seaborn as sns
 import datetime, os, re
 import numpy as np
 
@@ -87,20 +89,21 @@ class FigMaker:
         Generates all the graph figures.
         """
         for dataFile in self.data:
+            dataFile.generateMinMaxMedianFitnessOverTrials()
             # dataFile.generateFitnessOverTrials()
             # dataFile.generateFitnessOverTimes()
-            dataFile.generateAvgFitnessOverTrials()
+            # dataFile.generateAvgFitnessOverTrials()
             # dataFile.generateAvgFitnessOverTimes()
             # dataFile.generateAvgFitnessOverRounds()
             # dataFile.generateMaxFitnessOverTrials()
             # dataFile.generateMaxFitnessOverTimes()
             # dataFile.generateMaxFitnessOverRounds()
             # dataFile.generateDiversityOverTrials()
-            dataFile.generateMaxDiversityOverTrials()
+            # dataFile.generateMaxDiversityOverTrials()
             # dataFile.generateMaxDiversityOverRounds()
             # dataFile.generateAvgDiversityOverTrials()
             # dataFile.generateAvgDiversityOverRounds()
-            dataFile.generateAvgPercentCorrectOverTrials()
+            # dataFile.generateAvgPercentCorrectOverTrials()
 
 
 """
@@ -162,7 +165,6 @@ class AttrFile:
 Encapsulates the data from one EEA data file.
 """
 class DataFile:
-
     def __init__(self, fileName, attrFile):
         self.roundNum = []
         self.fitness = []
@@ -354,6 +356,49 @@ class DataFile:
 
         show()
 
+    def generateMinMaxMedianFeatureOverX(self, feature, xAxis, xLabel, yLabel, title):
+        """
+        Generates a graph of the maximum, minimum and median of the given feature over the given xAxis feature.
+        xAxis is something like self.generationNum, self.roundNum
+        feature is something like self.fitness, self.diversity, self.percentCorrect
+        """
+        maxes = []
+        mins = []
+        medians = []
+        currGen = []
+        for i in range(len(xAxis)):
+            currGen.append(feature[i])
+
+            if i == len(xAxis)-1:
+                sortedGen = sorted(currGen)
+                maxes.append(sortedGen[-1])
+                mins.append(sortedGen[0])
+                medians.append(sortedGen[len(sortedGen) / 2])
+                currGen = []
+                break
+
+            if xAxis[i] != xAxis[i+1]:
+                sortedGen = sorted(currGen)
+                maxes.append(sortedGen[-1])
+                mins.append(sortedGen[0])
+                medians.append(sortedGen[len(sortedGen) / 2])
+                currGen = []
+
+        xMax = range(len(maxes)+1)[1:]
+        plot(xMax, maxes, "r", label="Max")
+        plot(xMax, mins, "b", label="Min")
+        plot(xMax, medians, "g", label="Median")
+        xlim([1,xAxis[-1]])
+        xlabel(xLabel)
+        ylabel(yLabel)
+        legend()
+
+        if self.attrs:
+            title += " " + self.attrs.opponentName
+        suptitle(title)
+
+        show()
+
     def generateFitnessOverTrials(self):
         """
         Generates a graph of the fitness of this pop data file over the trials.
@@ -388,6 +433,22 @@ class DataFile:
         Generates a graph of the maximum fitness of a generation over the trials.
         """
         self.generateMaxFeatureOverX(self.fitness, self.roundNum,
+                                     "Round Number", "Round Max Fitness",
+                                     "Round Max Fitness for each generation")
+
+    def generateMinMaxMedianFitnessOverTrials(self):
+        """
+        Generates a graph of the maximum fitness of a generation over the trials.
+        """
+        self.generateMinMaxMedianFeatureOverX(self.fitness, self.generationNum,
+                                     "Generation Number", "Generation Max Fitness",
+                                     "Generation Max Fitness for each generation")
+
+    def generateMinMaxMedianFitnessOverRounds(self):
+        """
+        Generates a graph of the maximum fitness of a generation over the trials.
+        """
+        self.generateMinMaxMedianFeatureOverX(self.fitness, self.roundNum,
                                      "Round Number", "Round Max Fitness",
                                      "Round Max Fitness for each generation")
 
