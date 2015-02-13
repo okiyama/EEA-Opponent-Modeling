@@ -15,6 +15,8 @@ from datetime import datetime
 
 #TODO:
 #   Still getting stuck, look closer into how the parents are doing.
+#   Weight diversity to be low, percent correct to be high
+#   Plot min/max and median, not average all on same graph
 #   Then we can start doing cool science with differing depths and stuff.
 class EEA(updatedKonane.Konane):
     def __init__(self):
@@ -23,6 +25,7 @@ class EEA(updatedKonane.Konane):
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
         self.depthLimit = 3
+
         self.models = []
         self.numModelParents = self.numModels / 4
         self.modelsPlayer = johnMinimaxEvolved.MinimaxPlayer(self.size, self.depthLimit)

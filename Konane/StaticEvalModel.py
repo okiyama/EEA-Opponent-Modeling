@@ -8,6 +8,9 @@ from copy import copy
 
 class StaticEvalModel(updatedKonane.Konane):
     def __init__(self, size):
+        self.CORRECTNESS_WEIGHT = 10.0
+        self.DIVERSITY_WEIGHT = 0.05
+
         self.size = size
         self.myMovesWeight = 1.0
         self.theirMovesWeight = 1.0
@@ -90,7 +93,10 @@ class StaticEvalModel(updatedKonane.Konane):
         return float(self.numCorrect) / self.numTested
 
     def getFitness(self):
-        """ Gets the fitness as a win percentage for this model. """
-        fitness = self.getCorrectPercent()
-        fitness += (self.diversity / 10.0)
+        """
+        Gets the fitness as a win percentage for this model.
+        Assumes that both the diversity and the correctness have been updated prior to this being run.
+        """
+        fitness = (self.getCorrectPercent() * self.CORRECTNESS_WEIGHT)
+        fitness += (self.diversity * self.DIVERSITY_WEIGHT)
         return fitness
