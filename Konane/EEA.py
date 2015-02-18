@@ -20,21 +20,21 @@ from datetime import datetime
 #   Then we can start doing cool science with differing depths and stuff.
 class EEA(updatedKonane.Konane):
     def __init__(self):
-        self.numModels = 25
+        self.numModels = 20
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        self.depthLimit = 3
+        self.depthLimit = 4
 
         self.models = []
-        self.numModelParents = self.numModels / 4
+        self.numModelParents = self.numModels / 2
         self.modelsPlayer = johnMinimaxEvolved.MinimaxPlayer(self.size, self.depthLimit)
         self.modelsPlayer.initialize("W")
 
         # self.opponent = updatedKonane.HumanPlayer(self.size)
         # self.opponent.initialize("W")
-        # depth = random.randint(1,4) #randomize depth
-        depth = 3
+        depth = random.randint(1,4) #randomize depth
+        # depth = 3
         self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
 
         self.incSize = 3
@@ -92,6 +92,7 @@ class EEA(updatedKonane.Konane):
                 self.updateModelDiversity()
                 fitnessSortedModels = sorted(self.models, key= lambda x: x.getFitness())
                 while any([model.getCorrectPercent() < 1.0 for model in fitnessSortedModels[0:self.numModelParents]]):
+                    # print [model.getCorrectPercent() for model in fitnessSortedModels[0:self.numModelParents]]
                     self.log(self.models, roundNum, datetime.time(datetime.now()), generationNum)
                     self.evolveModels()
                     self.updateModelPercentCorrect(self.testSuite)
