@@ -24,7 +24,7 @@ class EEA(updatedKonane.Konane):
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        self.depthLimit = 4
+        self.depthLimit = 3
 
         self.models = []
         self.numModelParents = self.numModels / 2
@@ -33,8 +33,8 @@ class EEA(updatedKonane.Konane):
 
         # self.opponent = updatedKonane.HumanPlayer(self.size)
         # self.opponent.initialize("W")
-        depth = random.randint(1,4) #randomize depth
-        # depth = 3
+        # depth = random.randint(1,4) #randomize depth
+        depth = 3
         self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
 
         self.incSize = 3
@@ -226,12 +226,12 @@ class EEA(updatedKonane.Konane):
         # print("Fitness of generation is: " + str([model.getFitness() for model in fitnessSortedModels]))
 
         pie = Pie.Pie(fitnessSortedModels[0:self.numModelParents])
-        for i in range(len(self.models)):
+        for i in range(len(self.models) - 1):
             in1, in2 = pie.getTwo()
             curr = in1.crossOver(in2)
             curr.mutate()
             self.models[i] = curr
-        self.models[0] = fitnessSortedModels[0] #Hang onto the best model, so we hypothetically never get worse
+        self.models[-1] = fitnessSortedModels[0] #Hang onto the best model, so we hypothetically never get worse
 
         return self.models
 

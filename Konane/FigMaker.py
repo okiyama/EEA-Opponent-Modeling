@@ -14,7 +14,7 @@ import numpy as np
 # Make it show a line where a new round starts on the generations graphs
 class FigMaker:
     def __init__(self):
-        self.USING_ATTR = False
+        self.USING_ATTR = True
         self.dataFolder = "data/currEEA/data/"
         self.attrFolder = "data/currEEA/attr/"
         self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
