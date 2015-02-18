@@ -14,7 +14,7 @@ import numpy as np
 # Make it show a line where a new round starts on the generations graphs
 class FigMaker:
     def __init__(self):
-        self.USING_ATTR = True
+        self.USING_ATTR = False
         self.dataFolder = "data/currEEA/data/"
         self.attrFolder = "data/currEEA/attr/"
         self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
@@ -105,7 +105,7 @@ class FigMaker:
             # dataFile.generateMaxDiversityOverRounds()
             # dataFile.generateAvgDiversityOverTrials()
             # dataFile.generateAvgDiversityOverRounds()
-            # dataFile.generateAvgPercentCorrectOverTrials()
+            dataFile.generateAvgPercentCorrectOverTrials(showRoundBreaks = True)
 
 
 """
@@ -289,21 +289,31 @@ class DataFile:
 
         show()
 
-    def generateAvgFeatureOverX(self, feature, xAxis, xLabel, yLabel, title):
+    def generateAvgFeatureOverX(self, feature, xAxis, xLabel, yLabel, title, showRoundBreaks = True):
         """
         Generates a graph of the average for the given feature over the given xAxis.
         xAxis is something like self.generationNum, self.roundNum
         fature is something like self.fitness
         """
         averages = []
+        absoluteMax = max(feature)
+        roundBreaks = self.getRoundBreaks()
+        breakPlots = []
         tempAvg = 0.0
+        currGenNum = 1
         counter = 0
         for i in range(len(xAxis)):
             tempAvg += float(feature[i])
             counter += 1
+
+            if showRoundBreaks and i in roundBreaks:
+                breakPlots.append([currGenNum, currGenNum])
+                breakPlots.append([0, absoluteMax])
+
             if i == len(xAxis)-1:
                 tempAvg = tempAvg / counter
                 averages.append(tempAvg)
+                currGenNum += 1
                 break
 
             if xAxis[i] != xAxis[i+1]:
@@ -311,14 +321,24 @@ class DataFile:
                 averages.append(tempAvg)
                 tempAvg = 0
                 counter = 0
+                currGenNum += 1
 
         #print averages
 
         plot(range(len(averages)+1)[1:], averages)
+
+        if breakPlots != []:
+            print "plotting" + str(breakPlots)
+            plot(breakPlots[0], breakPlots[1], "k-", lw=2, label="New EEA Round Begins")
+
+            for i in range(2, len(breakPlots), 2):
+                plot(breakPlots[i], breakPlots[i+1], "k-", lw=2)
+
         # print xAxis[-1]
         xlim([1,xAxis[-1]])
         xlabel(xLabel)
         ylabel(yLabel)
+        legend()
 
         if self.attrs:
             title += " versus " + self.attrs.opponentName
@@ -398,15 +418,15 @@ class DataFile:
                 currGenNum += 1
 
         xMax = range(len(maxes)+1)[1:]
-        plot(xMax, maxes, "r", label="Max")
-        plot(xMax, mins, "b", label="Min")
-        plot(xMax, medians, "g", label="Median")
+        plot(xMax, medians, label="Median")
+        plot(xMax, mins, label="Min")
+        plot(xMax, maxes, label="Max")
 
         if breakPlots != []:
             plot(breakPlots[0], breakPlots[1], "k-", lw=2, label="New EEA Round Begins")
 
-        for i in range(2, len(breakPlots), 2):
-            plot(breakPlots[i], breakPlots[i+1], "k-", lw=2)
+            for i in range(2, len(breakPlots), 2):
+                plot(breakPlots[i], breakPlots[i+1], "k-", lw=2)
 
         xlim([1,xAxis[-1]])
         if showRoundBreaks:
@@ -471,21 +491,21 @@ class DataFile:
                                      "Round Number", "Round Max Fitness",
                                      "Round Max Fitness for each generation")
 
-    def generateMinMaxMedianFitnessOverTrials(self):
+    def generateMinMaxMedianFitnessOverTrials(self, showRoundBreaks = True):
         """
         Generates a graph of the maximum fitness of a generation over the trials.
         """
         self.generateMinMaxMedianFeatureOverX(self.fitness, self.generationNum,
                                      "Generation Number", "Generation Max Fitness",
-                                     "Fitness for each generation")
+                                     "Fitness for each generation", showRoundBreaks)
 
-    def generateMinMaxMedianFitnessOverRounds(self):
+    def generateMinMaxMedianFitnessOverRounds(self, showRoundBreaks = True):
         """
         Generates a graph of the maximum fitness of a generation over the trials.
         """
         self.generateMinMaxMedianFeatureOverX(self.fitness, self.roundNum,
                                      "Round Number", "Fitness",
-                                     "Fitness for each round")
+                                     "Fitness for each round", showRoundBreaks)
 
     def generateAvgFitnessOverTimes(self):
         """
@@ -613,21 +633,21 @@ class DataFile:
                                      "Round Number", "Round Max Diversity",
                                      "Round Max Diversity for each generation")
 
-    def generateMinMaxMedianDiversityOverTrials(self):
+    def generateMinMaxMedianDiversityOverTrials(self, showRoundBreaks = True):
         """
         Generates a graph of the min/max/median fitness of a generation over the trials.
         """
         self.generateMinMaxMedianFeatureOverX(self.diversity, self.generationNum,
                                      "Generation Number", "Diversity",
-                                     "Diversity for each generation")
+                                     "Diversity for each generation", showRoundBreaks)
 
-    def generateMinMaxMedianDiversityOverRounds(self):
+    def generateMinMaxMedianDiversityOverRounds(self, showRoundBreaks = True):
         """
         Generates a graph of the min/max/median of a generation over the trials.
         """
         self.generateMinMaxMedianFeatureOverX(self.diversity, self.roundNum,
                                      "Round Number", "Diversity",
-                                     "Diversity for each round")
+                                     "Diversity for each round", showRoundBreaks)
 
     def generatePercentCorrectOverTrials(self):
         """
@@ -636,27 +656,29 @@ class DataFile:
         self.generateFeatureOverX(self.percentCorrect, self.roundNum,
                                   "Model number", "Percent Correct", "Individual model percent correct throughout experiment")
 
-    def generateAvgPercentCorrectOverTrials(self):
+    def generateAvgPercentCorrectOverTrials(self, showRoundBreaks = True):
         """
         Generates a graph of the average percent correct of the models of a generation over the trials.
         """
         self.generateAvgFeatureOverX(self.percentCorrect, self.generationNum,
-                                     "Generation Number", "Average Percent Correct", "Average percent correct of each generation")
+                                     "Generation Number", "Average Percent Correct",
+                                     "Average percent correct of each generation", showRoundBreaks)
 
-    def generateAvgPercentCorrectOverRounds(self):
+    def generateAvgPercentCorrectOverRounds(self, showRoundBreaks = True):
         """
         Generates a graph of the average percent of the models of a round over the trials.
         """
         self.generateAvgFeatureOverX(self.percentCorrect, self.roundNum,
-                                     "Round Number", "Average Percent Correct", "Average percent correct of each round")
+                                     "Round Number", "Average Percent Correct",
+                                     "Average percent correct of each round", showRoundBreaks)
 
-    def generateMaxPercentCorrectOverTrials(self):
+    def generateMaxPercentCorrectOverTrials(self, showRoundBreaks = True):
         """
         Generates a graph of the maximum percent correct of a generation over the trials.
         """
         self.generateMaxFeatureOverX(self.percentCorrect, self.generationNum,
                                      "Generation Number", "Generation Max Percent Correct",
-                                     "Generation Max percent correct for each generation")
+                                     "Generation Max percent correct for each generation", showRoundBreaks)
 
     def generateMaxPercentCorrectOverRounds(self):
         """
@@ -666,21 +688,21 @@ class DataFile:
                                      "Round Number", "Round Max Percent Correct",
                                      "Round Max Percent Correct for each generation")
 
-    def generateMinMaxMedianPercentCorrectOverTrials(self):
+    def generateMinMaxMedianPercentCorrectOverTrials(self, showRoundBreaks = True):
         """
         Generates a graph of the min/max/median percent correct of a generation over the trials.
         """
         self.generateMinMaxMedianFeatureOverX(self.percentCorrect, self.generationNum,
                                      "Generation Number", "Percent Correct",
-                                     "Generation percent correct for each generation")
+                                     "Generation percent correct for each generation", showRoundBreaks)
 
-    def generateMinMaxMedianPercentCorrectOverRounds(self):
+    def generateMinMaxMedianPercentCorrectOverRounds(self, showRoundBreaks = True):
         """
         Generates a graph of the min/max/median percent correct of a generation over the trials.
         """
         self.generateMinMaxMedianFeatureOverX(self.percentCorrect, self.roundNum,
                                      "Round Number", "Percent Correct",
-                                     "Round Percent Correct for each generation")
+                                     "Round Percent Correct for each generation", showRoundBreaks)
 
 if __name__ == "__main__":
     maker = FigMaker()
