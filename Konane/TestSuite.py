@@ -28,6 +28,7 @@ class TestSuite:
         based on the best model(s) so far and tested for fitness, storing the results. Fitness will be determined
         by how much a particular test creates disagreement among the given set of models.
         """
+        NUM_GENS_BEFORE_GIVING_UP = 100
         #1: Generate random set of tests
         testSet = []
         for i in range(testSetSize):
@@ -38,22 +39,6 @@ class TestSuite:
         #2: Evolve these tests, with fitness being disagreement.
         #Maybe evolution crosses over puzzles from the best tests
 
-        #Wait until we find a test that totally maximizes disagreement
-        # evolvedTests = testSet[:] #copy array
-        # print "Evolving tests now"
-        # while not any([evolvingTest.getFitness() > self.disagreementReqToContinue for evolvingTest in evolvedTests]):
-        #     currTests = []
-        #     pie = Pie.Pie(evolvedTests)
-        #     for i in range(len(evolvedTests)):
-        #         in1, in2 = pie.getTwo()
-        #         curr = in1.crossOver(in2)
-        #         curr.mutate()
-        #         curr.fitness = self.disagreement(curr, models)
-        #         currTests.append(curr)
-        #     # currTests.append(max(evolvedTests, key= lambda x: x.getFitness())) #Hang onto the best test, so we hypothetically never get worse
-        #     evolvedTests = currTests
-        #     # print [test.getFitness() for test in evolvedTests]
-
         #Do just one round of evolution
         evolvedTests = []
         pie = Pie.Pie(testSet)
@@ -63,6 +48,24 @@ class TestSuite:
             curr.mutate()
             curr.fitness = self.disagreement(curr, models)
             evolvedTests.append(curr)
+
+        #Wait until we find a test that reaches a particular desired disagreement value
+        print "Evolving tests now"
+        numGenerations = 0
+        while not any([evolvingTest.getFitness() > self.disagreementReqToContinue for evolvingTest in evolvedTests])\
+                and numGenerations < NUM_GENS_BEFORE_GIVING_UP:
+            currTests = []
+            pie = Pie.Pie(evolvedTests)
+            for i in range(len(evolvedTests)):
+                in1, in2 = pie.getTwo()
+                curr = in1.crossOver(in2)
+                curr.mutate()
+                curr.fitness = self.disagreement(curr, models)
+                currTests.append(curr)
+            evolvedTests = currTests
+            numGenerations += 1
+            # print [test.getFitness() for test in evolvedTests]
+
         evolvedTests.append(max(testSet, key= lambda x: x.getFitness())) #Hang onto the best test, so we hypothetically never get worse
 
         #3: Return the best test.
@@ -109,6 +112,10 @@ class TestSuite:
                     disagreement += 1.0
         disagreement /= (float(len(results[0])) * len(results))
         # print "Disagreement score: " + str(disagreement)
+
+        #Need to clear the results of the test so that we correctly ask opponent for a move later
+        for puzzle in test.getTest():
+            puzzle.result = None
 
         return disagreement
 
