@@ -8,6 +8,7 @@ import TestSuite
 import johnMinimaxEvolved
 import Pie
 import random
+import gakonane
 from python27Defs import *
 from time import strftime
 from copy import copy
@@ -18,13 +19,15 @@ from datetime import datetime
 #   Weight diversity to be low, percent correct to be high
 #   Plot min/max and median, not average all on same graph
 #   Then we can start doing cool science with differing depths and stuff.
+#   Divide each diversity by max of that round!
+#   Do number correct not percent
 class EEA(updatedKonane.Konane):
     def __init__(self):
         self.numModels = 20
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        self.depthLimit = 3
+        self.depthLimit = 4
 
         self.models = []
         self.numModelParents = self.numModels / 2
@@ -35,9 +38,11 @@ class EEA(updatedKonane.Konane):
         # self.opponent.initialize("W")
         # depth = random.randint(1,4) #randomize depth
         depth = 3
-        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
+        # self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
+        self.opponent = gakonane.KOnane(self.size, depth)
+        self.opponent.initialize("W")
 
-        self.incSize = 3
+        self.incSize = 2
         self.testSuite = TestSuite.TestSuite(self.modelsPlayer, self.incSize, self.size)
 
         self.initModels(numTimesToMutate=20)
@@ -177,6 +182,8 @@ class EEA(updatedKonane.Konane):
             modelDiversity = float(sum(MSE)) / len(MSE) #Mean of all the MSEs with all other models
             model.diversity = modelDiversity
             # print "Diversity of model: " + str(model.diversity)
+
+        #Model diversity
 
         return self.models
 
