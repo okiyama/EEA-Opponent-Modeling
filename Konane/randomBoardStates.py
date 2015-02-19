@@ -2,7 +2,6 @@
 ## The generation can take as long as wanted, and will store to
 ## "radomStates<board size>.p" which is a pickle file 
 ## containing a list of the states.
-## Board size will usually be 8, since that is the size used in actual Konane
 
 ## Author: Julian Jocque
 ## Date: 10/30/14 (spooky!)

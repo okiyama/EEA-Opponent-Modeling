@@ -7,14 +7,14 @@
 from pylab import *
 import matplotlib.lines as mlines
 import seaborn as sns
-import datetime, os, re
+import datetime, os, re, sys
 import numpy as np
 
 #TODO:
 # Make it show a line where a new round starts on the generations graphs
 class FigMaker:
     def __init__(self):
-        self.USING_ATTR = True
+        self.USING_ATTR = False
         self.dataFolder = "data/currEEA/data/"
         self.attrFolder = "data/currEEA/attr/"
         self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
@@ -124,6 +124,7 @@ class AttrFile:
         self.oppTheirPiecesWeight = 0.0
         self.oppMyMovableWeight = 0.0
         self.oppTheirMovableWeight = 0.0
+        self.oppDepth = 0
         self.fileName = fileName
 
         self.createData()
@@ -139,10 +140,10 @@ class AttrFile:
         modelAttrs = dataFile.readline()
         matched = re.match(regex, modelAttrs)
 
-        self.numTestsPerRound = matched.group(1)
-        self.modelsDepth = matched.group(2)
-        self.boardSize = matched.group(3)
-        self.numModels = matched.group(4)
+        self.numTestsPerRound = int(matched.group(1))
+        self.modelsDepth = int(matched.group(2))
+        self.boardSize = int(matched.group(3))
+        self.numModels = int(matched.group(4))
 
         regex = "Name: (.*)"
         dataFile.readline()
@@ -154,12 +155,13 @@ class AttrFile:
         opponentInfo = dataFile.readline()
         regex = "(.*), (.*), (.*), (.*), (.*), (.*), (.*)"
         matched = re.match(regex, opponentInfo)
-        self.oppMyMovesWeight = matched.group(1)
-        self.oppTheirMovesWeight = matched.group(2)
-        self.oppMyPiecesWeight = matched.group(3)
-        self.oppTheirPiecesWeight = matched.group(4)
-        self.oppMyMovableWeight = matched.group(5)
-        self.oppTheirMovableWeight = matched.group(6)
+        self.oppMyMovesWeight = float(matched.group(1))
+        self.oppTheirMovesWeight = float(matched.group(2))
+        self.oppMyPiecesWeight = float(matched.group(3))
+        self.oppTheirPiecesWeight = float(matched.group(4))
+        self.oppMyMovableWeight = float(matched.group(5))
+        self.oppTheirMovableWeight = float(matched.group(6))
+        self.oppDepth = int(matched.group(7))
 
         dataFile.close()
 
@@ -239,18 +241,22 @@ class DataFile:
         """
         Appends the given regex match to the data of this.
         """
-        self.roundNum.append(int(match.group(1)))
-        self.fitness.append(float(match.group(2)))
-        self.myMovesWeight.append(float(match.group(3)))
-        self.theirMovesWeight.append(float(match.group(4)))
-        self.myPiecesWeight.append(float(match.group(5)))
-        self.theirPiecesWeight.append(float(match.group(6)))
-        self.myMovableWeight.append(float(match.group(7)))
-        self.theirMovableWeight.append(float(match.group(8)))
-        self.roundEndTime.append(match.group(9))
-        self.generationNum.append(int(match.group(10)))
-        self.diversity.append(float(match.group(11)))
-        self.percentCorrect.append(float(match.group(12)))
+        try:
+            self.roundNum.append(int(match.group(1)))
+            self.fitness.append(float(match.group(2)))
+            self.myMovesWeight.append(float(match.group(3)))
+            self.theirMovesWeight.append(float(match.group(4)))
+            self.myPiecesWeight.append(float(match.group(5)))
+            self.theirPiecesWeight.append(float(match.group(6)))
+            self.myMovableWeight.append(float(match.group(7)))
+            self.theirMovableWeight.append(float(match.group(8)))
+            self.roundEndTime.append(match.group(9))
+            self.generationNum.append(int(match.group(10)))
+            self.diversity.append(float(match.group(11)))
+            self.percentCorrect.append(float(match.group(12)))
+        except:
+            print match.groups()
+            sys.exit(0)
 
     def getTimeTaken(self):
         """
