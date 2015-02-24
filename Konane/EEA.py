@@ -16,9 +16,6 @@ from datetime import datetime
 
 #TODO:
 #   Still getting stuck, look closer into how the parents are doing.
-#   Weight diversity to be low, percent correct to be high
-#   Plot min/max and median, not average all on same graph
-#   Then we can start doing cool science with differing depths and stuff.
 #   Divide each diversity by max of that round!
 #   Do number correct not percent
 class EEA(updatedKonane.Konane):
@@ -27,7 +24,8 @@ class EEA(updatedKonane.Konane):
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        self.depthLimit = 4
+        myDepth = random.randint(2,4) #randomize depth
+        self.depthLimit = myDepth
 
         self.models = []
         self.numModelParents = self.numModels / 2
@@ -36,13 +34,13 @@ class EEA(updatedKonane.Konane):
 
         # self.opponent = updatedKonane.HumanPlayer(self.size)
         # self.opponent.initialize("W")
-        # depth = random.randint(1,4) #randomize depth
-        depth = 3
-        # self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
-        self.opponent = gakonane.KOnane(self.size, depth)
-        self.opponent.initialize("W")
+        depth = random.randint(2,4) #randomize depth
+        # depth = 3
+        self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
+        # self.opponent = gakonane.KOnane(self.size, depth)
+        # self.opponent.initialize("W")
 
-        self.incSize = 2
+        self.incSize = 3
         self.testSuite = TestSuite.TestSuite(self.modelsPlayer, self.incSize, self.size)
 
         self.initModels(numTimesToMutate=20)

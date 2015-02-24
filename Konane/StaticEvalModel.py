@@ -94,10 +94,10 @@ class StaticEvalModel(updatedKonane.Konane):
 
     def getFitness(self):
         """
-        Gets the fitness as a win percentage for this model.
+        Gets the fitness for this model.
         Assumes that both the diversity and the correctness have been updated prior to this being run.
         """
-        fitness = (self.getCorrectPercent() * self.CORRECTNESS_WEIGHT)
+        fitness = (self.numCorrect * self.CORRECTNESS_WEIGHT)
         fitness += (self.diversity * self.DIVERSITY_WEIGHT)
         return fitness
 
