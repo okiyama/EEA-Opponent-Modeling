@@ -4,11 +4,14 @@
 ## Author: Julian Jocque
 ## Date: 10/13/14
 
-from pylab import *
-import matplotlib.lines as mlines
-import seaborn as sns
+try:
+    from pylab import *
+    import matplotlib.lines as mlines
+    import seaborn as sns
+    import numpy as np
+except:
+    print "Unable to import things in FigMaker! Probably a pypy issue."
 import datetime, os, re, sys
-import numpy as np
 
 #TODO:
 # Make it show a line where a new round starts on the generations graphs
@@ -155,13 +158,14 @@ class AttrFile:
         opponentInfo = dataFile.readline()
         regex = "(.*), (.*), (.*), (.*), (.*), (.*), (.*)"
         matched = re.match(regex, opponentInfo)
-        self.oppMyMovesWeight = float(matched.group(1))
-        self.oppTheirMovesWeight = float(matched.group(2))
-        self.oppMyPiecesWeight = float(matched.group(3))
-        self.oppTheirPiecesWeight = float(matched.group(4))
-        self.oppMyMovableWeight = float(matched.group(5))
-        self.oppTheirMovableWeight = float(matched.group(6))
-        self.oppDepth = int(matched.group(7))
+        if matched:
+            self.oppMyMovesWeight = float(matched.group(1))
+            self.oppTheirMovesWeight = float(matched.group(2))
+            self.oppMyPiecesWeight = float(matched.group(3))
+            self.oppTheirPiecesWeight = float(matched.group(4))
+            self.oppMyMovableWeight = float(matched.group(5))
+            self.oppTheirMovableWeight = float(matched.group(6))
+            self.oppDepth = int(matched.group(7))
 
         dataFile.close()
 

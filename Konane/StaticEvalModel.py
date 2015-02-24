@@ -100,3 +100,6 @@ class StaticEvalModel(updatedKonane.Konane):
         fitness = (self.getCorrectPercent() * self.CORRECTNESS_WEIGHT)
         fitness += (self.diversity * self.DIVERSITY_WEIGHT)
         return fitness
+
+    def __str__(self):
+        return self.dumpFeatures() + "\n" + self.dumpModel()

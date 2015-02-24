@@ -6,9 +6,10 @@
 __author__ = 'julian'
 
 import FigMaker, johnMinimaxEvolved, randomBoardStates, random, StaticEvalModel, os
+import gakonane
 
 class ModelAnalyzer:
-    def __init__(self, attrFileName, dataFileName, opponent):
+    def __init__(self, attrFileName, dataFileName, opponent, generator = None):
         self.attrFile = FigMaker.AttrFile(attrFileName)
         self.dataFile = FigMaker.DataFile(dataFileName, self.attrFile)
         self.modelPlayer = johnMinimaxEvolved.MinimaxPlayer(self.attrFile.boardSize, self.attrFile.modelsDepth)
@@ -16,7 +17,10 @@ class ModelAnalyzer:
         self.modelPlayer.model = self.getModelFromDataFile(self.dataFile)
 
         self.opponent = opponent
-        self.moveGenerator = randomBoardStates.RandomStateGenerator(boardSize=self.attrFile.boardSize)
+        if generator is not None:
+            self.moveGenerator = generator
+        else:
+            self.moveGenerator = randomBoardStates.RandomStateGenerator(boardSize=self.attrFile.boardSize)
 
     def getModelFromDataFile(self, dataFile):
         """
@@ -46,6 +50,35 @@ class ModelAnalyzer:
 
         return modelToRet
 
+    def getBestModelsFromDataFile(self, dataFile):
+        """
+        Gets the best models from the given dataFile.
+        Best means that they have the highest percent correct out of the last EEA round in the file.
+        :return: StaticEvalModels with best model from the given dataFile
+        """
+        models = []
+        numRounds = dataFile.getNumGenerations()
+        start = dataFile.roundNum.index(numRounds)
+        percentCorrects = []
+        for i in range(start, len(dataFile.roundNum)):
+            percentCorrects.append(dataFile.percentCorrect[i])
+
+        correctMax = max(percentCorrects)
+        curr = len(percentCorrects) - 1
+        while dataFile.roundNum[curr] == dataFile.roundNum[curr - 1]:
+            if percentCorrects[curr] == correctMax:
+                modelToAdd = StaticEvalModel.StaticEvalModel(self.attrFile.boardSize)
+                modelToAdd.myMovesWeight = dataFile.myMovesWeight[curr]
+                modelToAdd.theirMovesWeight = dataFile.theirMovesWeight[curr]
+                modelToAdd.myPiecesWeight = dataFile.myPiecesWeight[curr]
+                modelToAdd.theirPiecesWeight = dataFile.theirPiecesWeight[curr]
+                modelToAdd.myMovableWeight = dataFile.myMovableWeight[curr]
+                modelToAdd.theirMovableWeight = dataFile.theirMovableWeight[curr]
+                models.append(modelToAdd)
+            curr -= 1
+
+        return models
+
     def analyze(self, N):
         """
         Analyzes self.modelPlayer versus self.opponent by trying many random puzzles and seeing how much
@@ -65,41 +98,62 @@ class ModelAnalyzer:
                     self.modelPlayer.setSide(side)
                     modelMove = self.modelPlayer.getMove(board)
                     self.modelPlayer.model.numTested += 1
-                    # print "model move " + str(modelMove)
-                    # print "opponent move " + str(puzzleResult)
-                    # print "possible moves " + str(self.opponent.generateMoves(puzzleState, puzzleSide))
-                    # print "Num possible moves: " + str(len(self.opponent.generateMoves(puzzleState, puzzleSide)))
-                    # if modelMove not in self.opponent.generateMoves(puzzleState, puzzleSide):
-                    #     print "Model move was not in the possible moves for the opponent!"
-                    #     print self.opponent.generateMoves(puzzleState, puzzleSide)
-                    #     print "model move " + str(modelMove)
-                    #     print "puzzle size " + str(puzzleSide)
-                    #     print "opponent move " + str(puzzleResult)
 
                     if oppMove == modelMove:
                         self.modelPlayer.model.numCorrect += 1
-                    if self.modelPlayer.model.numTested % 100 == 0:
-                        print "Just tested " + str(self.modelPlayer.model.numTested)
-                        print str(self.modelPlayer.model.getCorrectPercent() * 100.0) + " % correct!"
+                    # if self.modelPlayer.model.numTested % 100 == 0:
+                    #     print "Just tested " + str(self.modelPlayer.model.numTested)
+                    #     print str(self.modelPlayer.model.getCorrectPercent() * 100.0) + " % correct!"
                 count += 1
         except KeyboardInterrupt:
             pass
         print "Tested " + str(self.modelPlayer.model.numTested) + " puzzles"
         print str(self.modelPlayer.model.getCorrectPercent() * 100.0) + " % correct!"
 
+        return self.modelPlayer.model.getCorrectPercent() * 100.0
+
 def folderAnalyzer(folderName):
     dataFileList = sorted(os.listdir(folderName + "/data/"))
     attrFileList = sorted(os.listdir(folderName + "/attr/"))
+    moveGen = randomBoardStates.RandomStateGenerator(boardSize=6)
 
     for i in range(len(dataFileList)):
+        modelsPercentCorrects = {}
         print "Now on " + str(i) + ": " + str(dataFileList[i])
         attrFileName = folderName + "attr/" + attrFileList[i]
         dataFileName = folderName + "data/" + dataFileList[i]
         attrFile= FigMaker.AttrFile(attrFileName)
         opponent = getOpponentFromAttrFile(attrFile)
-        analyzer = ModelAnalyzer(attrFileName, dataFileName, opponent)
+        analyzer = ModelAnalyzer(attrFileName, dataFileName, opponent, generator=moveGen)
+        bestModels = analyzer.getBestModelsFromDataFile(analyzer.dataFile)
+        print str(len(bestModels)) + " models to analyze for this file."
+        for model in bestModels:
+            analyzer.modelPlayer.model = model
 
-        analyzer.analyze(1000)
+            percentCorrect = analyzer.analyze(250)
+            modelsPercentCorrects[model] = percentCorrect
+
+        bestEntry = max(modelsPercentCorrects.items(), key = lambda x: x[1])
+        print "Best model for the file was: " + str(bestEntry[0])
+        print "Percent was: " + str(bestEntry[1])
+
+
+def analyzeInternetPlayer():
+    dataFileName = "data/fromInternet/data/data-2015-02-18 19_53_31.csv"
+    attrFileName = "data/fromInternet/attr/attr-2015-02-18 19_53_31.csv"
+
+    # attrFile = FigMaker.AttrFile(attrFileName)
+
+    opponent = getOpponentFromOnlineAttrFile()
+    analyzer = ModelAnalyzer(attrFileName, dataFileName, opponent)
+
+    analyzer.analyze(1000)
+
+def getOpponentFromOnlineAttrFile():
+    opponent = gakonane.KOnane(6, 3)
+    opponent.initialize("W")
+
+    return opponent
 
 def getOpponentFromAttrFile(attrFile):
     opponent = johnMinimaxEvolved.MinimaxPlayer(attrFile.boardSize, attrFile.oppDepth)
@@ -117,3 +171,4 @@ def getOpponentFromAttrFile(attrFile):
 
 if __name__ == "__main__":
     folderAnalyzer("data/currEEA/")
+    # analyzeInternetPlayer()
