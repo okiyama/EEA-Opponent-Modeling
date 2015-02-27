@@ -24,7 +24,8 @@ class EEA(updatedKonane.Konane):
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
-        myDepth = random.randint(2,4) #randomize depth
+        # myDepth = random.randint(2,4) #randomize depth
+        myDepth = 3
         self.depthLimit = myDepth
 
         self.models = []
@@ -34,8 +35,8 @@ class EEA(updatedKonane.Konane):
 
         # self.opponent = updatedKonane.HumanPlayer(self.size)
         # self.opponent.initialize("W")
-        depth = random.randint(2,4) #randomize depth
-        # depth = 3
+        # depth = random.randint(2,4) #randomize depth
+        depth = 3
         self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
         # self.opponent = gakonane.KOnane(self.size, depth)
         # self.opponent.initialize("W")

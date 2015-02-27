@@ -8,8 +8,8 @@ from copy import copy
 
 class StaticEvalModel(updatedKonane.Konane):
     def __init__(self, size):
-        self.CORRECTNESS_WEIGHT = 1000000.0
-        self.DIVERSITY_WEIGHT = 1.0
+        self.CORRECTNESS_WEIGHT = 100.0
+        self.DIVERSITY_WEIGHT = 0.0001
 
         self.size = size
         self.myMovesWeight = 1.0
