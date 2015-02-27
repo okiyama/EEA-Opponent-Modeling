@@ -28,6 +28,8 @@ class FigMaker:
         self.maxFitness = []
 
         if self.dataFolder is not None:
+            # self.dataFileList = [sorted(os.listdir(self.dataFolder))[-1]]
+            # self.attrFileList = [sorted(os.listdir(self.attrFolder))[-1]]
             self.dataFileList = sorted(os.listdir(self.dataFolder))
             self.attrFileList = sorted(os.listdir(self.attrFolder))
         else:
@@ -443,7 +445,7 @@ class DataFile:
             ylim([0, absoluteMax])
         xlabel(xLabel)
         ylabel(yLabel)
-        legend()
+        legend(loc=4)
 
         if self.attrs:
             title += " " + self.attrs.opponentName
@@ -506,7 +508,7 @@ class DataFile:
         Generates a graph of the maximum fitness of a generation over the trials.
         """
         self.generateMinMaxMedianFeatureOverX(self.fitness, self.generationNum,
-                                     "Generation Number", "Generation Max Fitness",
+                                     "Generation Number", "Fitness",
                                      "Fitness for each generation", showRoundBreaks)
 
     def generateMinMaxMedianFitnessOverRounds(self, showRoundBreaks = True):
@@ -517,94 +519,7 @@ class DataFile:
                                      "Round Number", "Fitness",
                                      "Fitness for each round", showRoundBreaks)
 
-    def generateAvgFitnessOverTimes(self):
-        """
-        Generates a graph of the average fitness of a generation over time.
-        """
-        timeDiffs = []
-        averages = []
-        tempAvg = 0.0
-        counter = 0
-        for i in range(len(self.roundNum)):
-            tempAvg += float(self.fitness[i])
-            counter += 1
-            if i == len(self.roundNum)-1:
-                tempAvg = tempAvg / counter
-                averages.append(tempAvg)
-                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
-                break
 
-            if self.roundNum[i] != self.roundNum[i+1]:
-                tempAvg = tempAvg / counter
-                averages.append(tempAvg)
-                tempAvg = 0
-                counter = 0
-                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
-
-        plot(timeDiffs, averages)
-        #xlim([1,25])
-        xlabel("Seconds Since Testing Began")
-        ylabel("Generation's Average Fitness")
-
-        title = "Generational Average Fitness versus Time"
-        if self.attrs:
-            title += " versus " + self.attrs.opponentName
-        suptitle(title)
-
-        show()
-
-    def generateMaxFitnessOverTimes(self):
-        """
-        Generates a graph of the maximum fitness of a generation over time.
-        """
-        timeDiffs = []
-        maxes = []
-        tempMax = []
-        for i in range(len(self.roundNum)):
-            tempMax.append(float(self.fitness[i]))
-            if i == len(self.roundNum)-1:
-                maxes.append(max(tempMax))
-                tempMax = []
-                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
-                break
-
-            if self.roundNum[i] != self.roundNum[i+1]:
-                maxes.append(max(tempMax))
-                tempMax = []
-                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
-
-        plot(timeDiffs, maxes)
-        #xlim([1,25])
-        xlabel("Seconds Since Testing Began")
-        ylabel("Generation's Maximum Fitness")
-
-        title = "Generational Maximum Fitness versus Time"
-        if self.attrs:
-            title += " versus " + self.attrs.opponentName
-
-        suptitle(title)
-
-        show()
-
-    def generateFitnessOverTimes(self):
-        """
-        Generates a graph of the fitness of this pop data file over the time taken to generate it.
-        """
-        timeDiffs = []
-        for timeVal in self.roundEndTime:
-            timeDiffs.append(self.getTimeDifference(timeVal,self.roundEndTime[0]).seconds)
-        plot(timeDiffs, self.fitness)
-
-        xlabel("Seconds Since Testing Began")
-        ylabel("Fitness of Trial")
-
-        title = "Fitness of Trials Versus Time Since Testing Began"
-        if self.attrs:
-            title += " versus " + self.attrs.opponentName
-
-        suptitle(title)
-
-        show()
 
     def generateDiversityOverTrials(self):
         """
@@ -713,6 +628,95 @@ class DataFile:
         self.generateMinMaxMedianFeatureOverX(self.percentCorrect, self.roundNum,
                                      "Round Number", "Percent Correct",
                                      "Round Percent Correct for each generation", showRoundBreaks)
+
+    def generateAvgFitnessOverTimes(self):
+        """
+        Generates a graph of the average fitness of a generation over time.
+        """
+        timeDiffs = []
+        averages = []
+        tempAvg = 0.0
+        counter = 0
+        for i in range(len(self.roundNum)):
+            tempAvg += float(self.fitness[i])
+            counter += 1
+            if i == len(self.roundNum)-1:
+                tempAvg = tempAvg / counter
+                averages.append(tempAvg)
+                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
+                break
+
+            if self.roundNum[i] != self.roundNum[i+1]:
+                tempAvg = tempAvg / counter
+                averages.append(tempAvg)
+                tempAvg = 0
+                counter = 0
+                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
+
+        plot(timeDiffs, averages)
+        #xlim([1,25])
+        xlabel("Seconds Since Testing Began")
+        ylabel("Generation's Average Fitness")
+
+        title = "Generational Average Fitness versus Time"
+        if self.attrs:
+            title += " versus " + self.attrs.opponentName
+        suptitle(title)
+
+        show()
+
+    def generateMaxFitnessOverTimes(self):
+        """
+        Generates a graph of the maximum fitness of a generation over time.
+        """
+        timeDiffs = []
+        maxes = []
+        tempMax = []
+        for i in range(len(self.roundNum)):
+            tempMax.append(float(self.fitness[i]))
+            if i == len(self.roundNum)-1:
+                maxes.append(max(tempMax))
+                tempMax = []
+                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
+                break
+
+            if self.roundNum[i] != self.roundNum[i+1]:
+                maxes.append(max(tempMax))
+                tempMax = []
+                timeDiffs.append(self.getTimeDifference(self.roundEndTime[i],self.roundEndTime[0]).seconds)
+
+        plot(timeDiffs, maxes)
+        #xlim([1,25])
+        xlabel("Seconds Since Testing Began")
+        ylabel("Generation's Maximum Fitness")
+
+        title = "Generational Maximum Fitness versus Time"
+        if self.attrs:
+            title += " versus " + self.attrs.opponentName
+
+        suptitle(title)
+
+        show()
+
+    def generateFitnessOverTimes(self):
+        """
+        Generates a graph of the fitness of this pop data file over the time taken to generate it.
+        """
+        timeDiffs = []
+        for timeVal in self.roundEndTime:
+            timeDiffs.append(self.getTimeDifference(timeVal,self.roundEndTime[0]).seconds)
+        plot(timeDiffs, self.fitness)
+
+        xlabel("Seconds Since Testing Began")
+        ylabel("Fitness of Trial")
+
+        title = "Fitness of Trials Versus Time Since Testing Began"
+        if self.attrs:
+            title += " versus " + self.attrs.opponentName
+
+        suptitle(title)
+
+        show()
 
 if __name__ == "__main__":
     maker = FigMaker()
