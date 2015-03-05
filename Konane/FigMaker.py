@@ -94,7 +94,7 @@ class FigMaker:
         Generates all the graph figures.
         """
         for dataFile in self.data:
-            dataFile.generateMinMaxMedianFitnessOverTrials(showRoundBreaks = True)
+            dataFile.generateMinMaxMedianFitnessOverTrials(showRoundBreaks = False)
             dataFile.generateMinMaxMedianDiversityOverTrials(showRoundBreaks = True)
             dataFile.generateMinMaxMedianPercentCorrectOverTrials(showRoundBreaks = True)
             # dataFile.generateFitnessOverTrials()

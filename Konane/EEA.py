@@ -9,6 +9,7 @@ import johnMinimaxEvolved
 import Pie
 import random
 import gakonane
+import sys
 from python27Defs import *
 from time import strftime
 from copy import copy
@@ -19,13 +20,13 @@ from datetime import datetime
 #   Divide each diversity by max of that round!
 #   Do number correct not percent
 class EEA(updatedKonane.Konane):
-    def __init__(self):
+    def __init__(self, modelDepth = None, opponentDepth = None):
         self.numModels = 20
         self.size = 6 # If you want to change this, you need to generate new random states and specify the new file
                       # in the call for the RandomStateGenerator
                       # Must also do similar stuff for initializing TestSuite
         # myDepth = random.randint(2,4) #randomize depth
-        myDepth = 3
+        myDepth = 3 if modelDepth is None else modelDepth
         self.depthLimit = myDepth
 
         self.models = []
@@ -36,7 +37,7 @@ class EEA(updatedKonane.Konane):
         # self.opponent = updatedKonane.HumanPlayer(self.size)
         # self.opponent.initialize("W")
         # depth = random.randint(2,4) #randomize depth
-        depth = 3
+        depth = 3 if opponentDepth is None else opponentDepth
         self.opponent = self.generateOpponent(numTimesToMutate=100, depthLimit = depth)
         # self.opponent = gakonane.KOnane(self.size, depth)
         # self.opponent.initialize("W")
@@ -308,7 +309,10 @@ class EEA(updatedKonane.Konane):
                 + ", " + str(model.getCorrectPercent()) + "\n")
 
 if __name__ == "__main__":
-    eea = EEA()
+    try:
+        eea = EEA(modelDepth=int(sys.argv[1]), opponentDepth=int(sys.argv[2]))
+    except IndexError:
+        eea = EEA()
     eea.run()
     # import cProfile
     # cProfile.run('eea.run(120)', sort="ncalls")
