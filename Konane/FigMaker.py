@@ -18,8 +18,8 @@ import datetime, os, re, sys
 class FigMaker:
     def __init__(self):
         self.USING_ATTR = False
-        self.dataFolder = "data/currEEA/data/"
-        self.attrFolder = "data/currEEA/attr/"
+        self.dataFolder = "data/CLA/data/"
+        self.attrFolder = "data/CLA/attr/"
         self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
 
         self.data = []
@@ -97,19 +97,19 @@ class FigMaker:
             dataFile.generateMinMaxMedianFitnessOverTrials(showRoundBreaks = False)
             dataFile.generateMinMaxMedianDiversityOverTrials(showRoundBreaks = True)
             dataFile.generateMinMaxMedianPercentCorrectOverTrials(showRoundBreaks = True)
-            # dataFile.generateFitnessOverTrials()
+            dataFile.generateFitnessOverTrials()
             # dataFile.generateFitnessOverTimes()
-            # dataFile.generateAvgFitnessOverTrials()
+            dataFile.generateAvgFitnessOverTrials()
             # dataFile.generateAvgFitnessOverTimes()
-            # dataFile.generateAvgFitnessOverRounds()
-            # dataFile.generateMaxFitnessOverTrials()
+            dataFile.generateAvgFitnessOverRounds()
+            dataFile.generateMaxFitnessOverTrials()
             # dataFile.generateMaxFitnessOverTimes()
-            # dataFile.generateMaxFitnessOverRounds()
-            # dataFile.generateDiversityOverTrials()
-            # dataFile.generateMaxDiversityOverTrials()
-            # dataFile.generateMaxDiversityOverRounds()
-            # dataFile.generateAvgDiversityOverTrials()
-            # dataFile.generateAvgDiversityOverRounds()
+            dataFile.generateMaxFitnessOverRounds()
+            dataFile.generateDiversityOverTrials()
+            dataFile.generateMaxDiversityOverTrials()
+            dataFile.generateMaxDiversityOverRounds()
+            dataFile.generateAvgDiversityOverTrials()
+            dataFile.generateAvgDiversityOverRounds()
             dataFile.generateAvgPercentCorrectOverTrials(showRoundBreaks = True)
 
 
@@ -190,7 +190,7 @@ class DataFile:
         self.percentCorrect = []
         self.attrs = attrFile
         self.fileName = fileName
-        self.figFolder = "figures/currEEA/"
+        self.figFolder = "figures/CLA/"
         self.outputToFile = outputToFile
 
         self.createData()
@@ -490,7 +490,7 @@ class DataFile:
         """
         self.generateFeatureOverX(self.fitness, self.roundNum,
                                   "Model number", "Fitness value", "Individual model fitness throughout experiment"
-                                  ,"fitnessOverTrials")
+                                  ,filename="fitnessOverTrials")
 
     def generateAvgFitnessOverTrials(self):
         """
@@ -498,7 +498,7 @@ class DataFile:
         """
         self.generateAvgFeatureOverX(self.fitness, self.generationNum,
                                      "Generation Number", "Average Fitness", "Average fitness of each generation",
-                                     "avgFitnessOverTrials")
+                                     filename="avgFitnessOverTrials")
 
     def generateAvgFitnessOverRounds(self):
         """
@@ -506,7 +506,7 @@ class DataFile:
         """
         self.generateAvgFeatureOverX(self.fitness, self.roundNum,
                                      "Round Number", "Average Fitness", "Average fitness of each round",
-                                     "avgFitnessOverRounds")
+                                     filename="avgFitnessOverRounds")
 
     def generateMaxFitnessOverTrials(self):
         """
@@ -515,7 +515,7 @@ class DataFile:
         self.generateMaxFeatureOverX(self.fitness, self.generationNum,
                                      "Generation Number", "Generation Max Fitness",
                                      "Generation Max Fitness for each generation",
-                                     "maxFitnessOverTrials")
+                                     filename="maxFitnessOverTrials")
 
     def generateMaxFitnessOverRounds(self):
         """
@@ -524,7 +524,7 @@ class DataFile:
         self.generateMaxFeatureOverX(self.fitness, self.roundNum,
                                      "Round Number", "Round Max Fitness",
                                      "Round Max Fitness for each generation",
-                                     "maxFitnessOverRounds")
+                                     filename="maxFitnessOverRounds")
 
     def generateMinMaxMedianFitnessOverTrials(self, showRoundBreaks = True):
         """
@@ -533,7 +533,7 @@ class DataFile:
         self.generateMinMaxMedianFeatureOverX(self.fitness, self.generationNum,
                                               "Generation Number", "Fitness",
                                               "Fitness for each generation", showRoundBreaks,
-                                              "minMaxMedFitnessOverTrials")
+                                              filename="minMaxMedFitnessOverTrials")
 
     def generateMinMaxMedianFitnessOverRounds(self, showRoundBreaks = True):
         """
@@ -542,7 +542,7 @@ class DataFile:
         self.generateMinMaxMedianFeatureOverX(self.fitness, self.roundNum,
                                               "Round Number", "Fitness",
                                               "Fitness for each round", showRoundBreaks,
-                                              "minMaxMedFitnessOverRounds")
+                                              filename="minMaxMedFitnessOverRounds")
 
     def generateDiversityOverTrials(self):
         """
