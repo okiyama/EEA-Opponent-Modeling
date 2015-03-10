@@ -61,12 +61,11 @@ class FigMaker:
                 else:
                     dataFromFile = DataFile(self.dataFolder + fileName, None)
                 self.data.append(dataFromFile)
+                self.generateOneGraph(dataFromFile)
                 self.timeTaken.append(dataFromFile.getTimeTaken())
                 self.maxFitness.append(dataFromFile.getNMaxFitnessValues(5))
             else:
                 print fileName + " didn't contain any data."
-
-
 
                 #print self.maxFitness
                 #print self.data
@@ -94,23 +93,26 @@ class FigMaker:
         Generates all the graph figures.
         """
         for dataFile in self.data:
-            dataFile.generateMinMaxMedianFitnessOverTrials(showRoundBreaks = False)
-            dataFile.generateMinMaxMedianDiversityOverTrials(showRoundBreaks = True)
-            dataFile.generateMinMaxMedianPercentCorrectOverTrials(showRoundBreaks = True)
-            dataFile.generateFitnessOverTrials()
-            # dataFile.generateFitnessOverTimes()
-            dataFile.generateAvgFitnessOverTrials()
-            # dataFile.generateAvgFitnessOverTimes()
-            dataFile.generateAvgFitnessOverRounds()
-            dataFile.generateMaxFitnessOverTrials()
-            # dataFile.generateMaxFitnessOverTimes()
-            dataFile.generateMaxFitnessOverRounds()
-            dataFile.generateDiversityOverTrials()
-            dataFile.generateMaxDiversityOverTrials()
-            dataFile.generateMaxDiversityOverRounds()
-            dataFile.generateAvgDiversityOverTrials()
-            dataFile.generateAvgDiversityOverRounds()
-            dataFile.generateAvgPercentCorrectOverTrials(showRoundBreaks = True)
+            self.generateOneGraph(dataFile)
+
+    def generateOneGraph(self, dataFile):
+        dataFile.generateMinMaxMedianFitnessOverTrials(showRoundBreaks = False)
+        dataFile.generateMinMaxMedianDiversityOverTrials(showRoundBreaks = True)
+        dataFile.generateMinMaxMedianPercentCorrectOverTrials(showRoundBreaks = True)
+        dataFile.generateFitnessOverTrials()
+        # dataFile.generateFitnessOverTimes()
+        dataFile.generateAvgFitnessOverTrials()
+        # dataFile.generateAvgFitnessOverTimes()
+        dataFile.generateAvgFitnessOverRounds()
+        dataFile.generateMaxFitnessOverTrials()
+        # dataFile.generateMaxFitnessOverTimes()
+        dataFile.generateMaxFitnessOverRounds()
+        dataFile.generateDiversityOverTrials()
+        dataFile.generateMaxDiversityOverTrials()
+        dataFile.generateMaxDiversityOverRounds()
+        dataFile.generateAvgDiversityOverTrials()
+        dataFile.generateAvgDiversityOverRounds()
+        dataFile.generateAvgPercentCorrectOverTrials(showRoundBreaks = True)
 
 
 """
@@ -767,4 +769,4 @@ class DataFile:
 if __name__ == "__main__":
     maker = FigMaker()
     #analyzer.outputToFile()
-    maker.generateAllGraphs()
+    #maker.generateAllGraphs()
