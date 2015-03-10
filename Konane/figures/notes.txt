@@ -1,0 +1,6 @@
+Everything up to 14 is:
+	require self.numModels before continuing
+	test mutation rate: 50%
+	model mutation rate: 50%
+	model mutation amount: 3.0
+	self.incSize = 3
