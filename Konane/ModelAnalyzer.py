@@ -107,8 +107,8 @@ class ModelAnalyzer:
                 count += 1
         except KeyboardInterrupt:
             pass
-        print "Tested " + str(self.modelPlayer.model.numTested) + " puzzles"
-        print str(self.modelPlayer.model.getCorrectPercent() * 100.0) + " % correct!"
+        #print "Tested " + str(self.modelPlayer.model.numTested) + " puzzles"
+        #print str(self.modelPlayer.model.getCorrectPercent() * 100.0) + " % correct!"
 
         return self.modelPlayer.model.getCorrectPercent() * 100.0
 
@@ -130,10 +130,12 @@ def folderAnalyzer(folderName):
         for model in bestModels:
             analyzer.modelPlayer.model = model
 
-            percentCorrect = analyzer.analyze(250)
+            percentCorrect = analyzer.analyze(100)
             modelsPercentCorrects[model] = percentCorrect
 
         bestEntry = max(modelsPercentCorrects.items(), key = lambda x: x[1])
+        print "Models depth: " + str(analyzer.attrFile.modelsDepth)
+        print "Opponent depth: " + str(analyzer.attrFile.oppDepth)
         print "Best model for the file was: " + str(bestEntry[0])
         print "Percent was: " + str(bestEntry[1])
 
@@ -170,5 +172,5 @@ def getOpponentFromAttrFile(attrFile):
 
 
 if __name__ == "__main__":
-    folderAnalyzer("data/currEEA/")
+    folderAnalyzer("data/bigData/")
     # analyzeInternetPlayer()
