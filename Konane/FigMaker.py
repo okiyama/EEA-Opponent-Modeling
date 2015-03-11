@@ -17,7 +17,7 @@ import datetime, os, re, sys
 # Make it show a line where a new round starts on the generations graphs
 class FigMaker:
     def __init__(self):
-        self.USING_ATTR = False
+        self.USING_ATTR = True
         self.dataFolder = "data/CLA/data/"
         self.attrFolder = "data/CLA/attr/"
         self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
@@ -300,7 +300,8 @@ class DataFile:
         xlabel(xLabel)
         ylabel(yLabel)
         if self.attrs:
-            title = title + " versus " + self.attrs.opponentName
+            title = title + " with opponent depth " + str(self.attrs.oppDepth) + " and model depth " + str(self.attrs.modelsDepth)
+            # title = title + " with opponent depth " + self.attrs.opponentName + " and model depth " + str(self.attrs.oppDepth)
         suptitle(title)
 
         if not self.outputToFile:
@@ -361,7 +362,9 @@ class DataFile:
         legend()
 
         if self.attrs:
-            title += " versus " + self.attrs.opponentName
+            title = title + " with opponent depth " + str(self.attrs.oppDepth) + " and model depth " + str(self.attrs.modelsDepth)
+            # title = title + " with opponent depth " + self.attrs.opponentName + " and model depth " + str(self.attrs.oppDepth)
+            # title += " versus " + self.attrs.opponentName
         suptitle(title)
 
         if not self.outputToFile:
@@ -397,7 +400,9 @@ class DataFile:
         ylabel(yLabel)
 
         if self.attrs:
-            title += " " + self.attrs.opponentName
+            title = title + " with opponent depth " + str(self.attrs.oppDepth) + " and model depth " + str(self.attrs.modelsDepth)
+            # title = title + " with opponent depth " + self.attrs.opponentName + " and model depth " + str(self.attrs.oppDepth)
+            # title += " " + self.attrs.opponentName
         suptitle(title)
 
         if not self.outputToFile:
@@ -464,7 +469,8 @@ class DataFile:
         legend(loc=4)
 
         if self.attrs:
-            title += " " + self.attrs.opponentName
+            title = title + " with opponent depth " + str(self.attrs.oppDepth) + " and model depth " + str(self.attrs.modelsDepth)
+            # title += " " + self.attrs.opponentName
         suptitle(title)
 
         if not self.outputToFile:
