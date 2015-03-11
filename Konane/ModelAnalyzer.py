@@ -115,6 +115,7 @@ class ModelAnalyzer:
 def folderAnalyzer(folderName):
     dataFileList = sorted(os.listdir(folderName + "/data/"))
     attrFileList = sorted(os.listdir(folderName + "/attr/"))
+    outputFile = open(folderName + "modelAnalysis.txt", "w+", 1)
     moveGen = randomBoardStates.RandomStateGenerator(boardSize=6)
 
     for i in range(len(dataFileList)):
@@ -127,6 +128,7 @@ def folderAnalyzer(folderName):
         analyzer = ModelAnalyzer(attrFileName, dataFileName, opponent, generator=moveGen)
         bestModels = analyzer.getBestModelsFromDataFile(analyzer.dataFile)
         print str(len(bestModels)) + " models to analyze for this file."
+        outputFile.write(str(len(bestModels)) + " models to analyze for this file." + "\n")
         for model in bestModels:
             analyzer.modelPlayer.model = model
 
@@ -138,6 +140,10 @@ def folderAnalyzer(folderName):
         print "Opponent depth: " + str(analyzer.attrFile.oppDepth)
         print "Best model for the file was: " + str(bestEntry[0])
         print "Percent was: " + str(bestEntry[1])
+        outputFile.write("Models depth: " + str(analyzer.attrFile.modelsDepth) + "\n")
+        outputFile.write("Opponent depth: " + str(analyzer.attrFile.oppDepth) + "\n")
+        outputFile.write("Best model for the file was: " + str(bestEntry[0]) + "\n")
+        outputFile.write("Percent was: " + str(bestEntry[1]) + "\n")
 
 
 def analyzeInternetPlayer():
@@ -172,5 +178,5 @@ def getOpponentFromAttrFile(attrFile):
 
 
 if __name__ == "__main__":
-    folderAnalyzer("data/bigData/")
+    folderAnalyzer("data/CLA/")
     # analyzeInternetPlayer()
