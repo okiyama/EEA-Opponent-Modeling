@@ -50,9 +50,10 @@ class ModelAnalyzer:
 
         return modelToRet
 
-    def getBestModelsFromDataFile(self, dataFile):
+    def getBestModelsFromDataFile(self, dataFile, N = None):
         """
         Gets the best models from the given dataFile.
+        Only gets N models if N is not None
         Best means that they have the highest percent correct out of the last EEA round in the file.
         :return: StaticEvalModels with best model from the given dataFile
         """
@@ -65,8 +66,13 @@ class ModelAnalyzer:
 
         correctMax = max(percentCorrects)
         curr = len(percentCorrects) - 1
+        count = 0
         while dataFile.roundNum[curr] == dataFile.roundNum[curr - 1]:
             if percentCorrects[curr] == correctMax:
+                if N is not None:
+                    count += 1
+                    if count > N:
+                        break
                 modelToAdd = StaticEvalModel.StaticEvalModel(self.attrFile.boardSize)
                 modelToAdd.myMovesWeight = dataFile.myMovesWeight[curr]
                 modelToAdd.theirMovesWeight = dataFile.theirMovesWeight[curr]
@@ -126,14 +132,13 @@ def folderAnalyzer(folderName):
         attrFile= FigMaker.AttrFile(attrFileName)
         opponent = getOpponentFromAttrFile(attrFile)
         analyzer = ModelAnalyzer(attrFileName, dataFileName, opponent, generator=moveGen)
-        bestModels = analyzer.getBestModelsFromDataFile(analyzer.dataFile)
+        bestModels = analyzer.getBestModelsFromDataFile(analyzer.dataFile, N=1000) #only 1K models for now
         print str(len(bestModels)) + " models to analyze for this file."
         outputFile.write(str(len(bestModels)) + " models to analyze for this file." + "\n")
-        #We'll only analyze 1000 models, for time concerns
-        for model in bestModels[0:1000]:
+        for model in bestModels:
             analyzer.modelPlayer.model = model
 
-            percentCorrect = analyzer.analyze(100)
+            percentCorrect = analyzer.analyze(200)
             modelsPercentCorrects[model] = percentCorrect
 
         bestEntry = max(modelsPercentCorrects.items(), key = lambda x: x[1])
