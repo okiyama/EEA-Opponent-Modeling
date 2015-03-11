@@ -129,7 +129,8 @@ def folderAnalyzer(folderName):
         bestModels = analyzer.getBestModelsFromDataFile(analyzer.dataFile)
         print str(len(bestModels)) + " models to analyze for this file."
         outputFile.write(str(len(bestModels)) + " models to analyze for this file." + "\n")
-        for model in bestModels:
+        #We'll only analyze 1000 models, for time concerns
+        for model in bestModels[0:1000]:
             analyzer.modelPlayer.model = model
 
             percentCorrect = analyzer.analyze(100)
