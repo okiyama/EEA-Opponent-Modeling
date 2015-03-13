@@ -86,6 +86,29 @@ class RandomStateGenerator:
         else:
             raise ValueError("Side must be W or B")
 
+    def getRandomNoSide(self):
+        """ Gets a random legal board state from a random side.
+         Returns (state, side)
+        :rtype : boardState
+        """
+        side = random.choice(["W", "B"])
+        state = self.getRandom(side)
+        return (state, side)
+
+    def getAvgMoveCount(self):
+        """
+        Gets the average number of moves for a random board state
+        :return: average number of moves
+        """
+        game = konane.Konane(self.boardSize)
+        moveLens = []
+        while True:
+            state, side = self.getRandomNoSide()
+            moves = game.generateMoves(state, side)
+            # print moves
+            moveLens.append(len(moves))
+            print "Average: " + str((float(sum(moveLens)) / len(moveLens)))
+
     def genRandom(self, N = None):
         """ 
         Generates either N random board states and saves them to the file,
@@ -162,4 +185,5 @@ class RandomStateGenerator:
 if __name__ == "__main__":
     generator = RandomStateGenerator(boardSize=8)
     #generator.genRandom()
-    generator.cleanUp()
+    #generator.cleanUp()
+    generator.getAvgMoveCount()
