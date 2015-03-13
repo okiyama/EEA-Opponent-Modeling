@@ -121,10 +121,35 @@ class ModelAnalyzer:
 def folderAnalyzer(folderName):
     dataFileList = sorted(os.listdir(folderName + "/data/"))
     attrFileList = sorted(os.listdir(folderName + "/attr/"))
+    outputFile = open(folderName + "modelAnalysis.txt", "w+", 1)
     moveGen = randomBoardStates.RandomStateGenerator(boardSize=6)
 
     for i in range(len(dataFileList)):
-        analyzeOne(dataFileList, attrFileList, i, moveGen, folderName)
+        modelsPercentCorrects = {}
+        print "Now on " + str(i) + ": " + str(dataFileList[i])
+        attrFileName = folderName + "attr/" + attrFileList[i]
+        dataFileName = folderName + "data/" + dataFileList[i]
+        attrFile= FigMaker.AttrFile(attrFileName)
+        opponent = getOpponentFromAttrFile(attrFile)
+        analyzer = ModelAnalyzer(attrFileName, dataFileName, opponent, generator=moveGen)
+        bestModels = analyzer.getBestModelsFromDataFile(analyzer.dataFile, N=2000) #only 2K models for now
+        print str(len(bestModels)) + " models to analyze for this file."
+        outputFile.write(str(len(bestModels)) + " models to analyze for this file." + "\n")
+        for model in bestModels:
+            analyzer.modelPlayer.model = model
+
+            percentCorrect = analyzer.analyze(500)
+            modelsPercentCorrects[model] = percentCorrect
+
+        bestEntry = max(modelsPercentCorrects.items(), key = lambda x: x[1])
+        print "Models depth: " + str(analyzer.attrFile.modelsDepth)
+        print "Opponent depth: " + str(analyzer.attrFile.oppDepth)
+        print "Best model for the file was: " + str(bestEntry[0])
+        print "Percent was: " + str(bestEntry[1])
+        outputFile.write("Models depth: " + str(analyzer.attrFile.modelsDepth) + "\n")
+        outputFile.write("Opponent depth: " + str(analyzer.attrFile.oppDepth) + "\n")
+        outputFile.write("Best model for the file was: " + str(bestEntry[0]) + "\n")
+        outputFile.write("Percent was: " + str(bestEntry[1]) + "\n")
 
 def analyzeOne(dataFileList, attrFileList, i, moveGen, folderName):
     outputFile = open(folderName + "modelAnalysis" + dataFileList[i] + ".txt", "w+", 1)
