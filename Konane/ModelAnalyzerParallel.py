@@ -6,7 +6,7 @@
 __author__ = 'julian'
 
 import FigMaker, johnMinimaxEvolved, randomBoardStates, random, StaticEvalModel, os
-import gakonane
+import gakonane, threading
 
 class ModelAnalyzer:
     def __init__(self, attrFileName, dataFileName, opponent, generator = None):
@@ -123,8 +123,16 @@ def folderAnalyzer(folderName):
     attrFileList = sorted(os.listdir(folderName + "/attr/"))
     moveGen = randomBoardStates.RandomStateGenerator(boardSize=6)
 
+    threads = []
     for i in range(len(dataFileList)):
-        analyzeOne(dataFileList, attrFileList, i, moveGen, folderName)
+        t = threading.Thread(target=analyzeOne, args=(dataFileList, attrFileList, i, moveGen, folderName))
+        t.setDaemon(True)
+        threads.append(t)
+
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
 
 def analyzeOne(dataFileList, attrFileList, i, moveGen, folderName):
     outputFile = open(folderName + "modelAnalysis" + dataFileList[i] + ".txt", "w+", 1)
@@ -135,13 +143,13 @@ def analyzeOne(dataFileList, attrFileList, i, moveGen, folderName):
     attrFile= FigMaker.AttrFile(attrFileName)
     opponent = getOpponentFromAttrFile(attrFile)
     analyzer = ModelAnalyzer(attrFileName, dataFileName, opponent, generator=moveGen)
-    bestModels = analyzer.getBestModelsFromDataFile(analyzer.dataFile, N=2000) #only 2K models for now
+    bestModels = analyzer.getBestModelsFromDataFile(analyzer.dataFile, N=2) #only 2K models for now
     print str(len(bestModels)) + " models to analyze for this file."
     outputFile.write(str(len(bestModels)) + " models to analyze for this file." + "\n")
     for model in bestModels:
         analyzer.modelPlayer.model = model
 
-        percentCorrect = analyzer.analyze(500)
+        percentCorrect = analyzer.analyze(5)
         modelsPercentCorrects[model] = percentCorrect
 
     bestEntry = max(modelsPercentCorrects.items(), key = lambda x: x[1])

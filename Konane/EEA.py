@@ -47,8 +47,8 @@ class EEA(updatedKonane.Konane):
 
         self.initModels(numTimesToMutate=20)
         self.startTime = strftime("%Y-%m-%d %H:%M:%S")
-        self.datafile = open("data/CLA/data/data-" + self.startTime + ".csv", "w+")
-        self.attrFile = open("data/CLA/attr/attr-" + self.startTime + ".csv", "w+")
+        self.datafile = open("data/currEEA/data/data-" + self.startTime + ".csv", "w+")
+        self.attrFile = open("data/currEEA/attr/attr-" + self.startTime + ".csv", "w+")
         self.logAttributes()
         self.initDataFile()
 
