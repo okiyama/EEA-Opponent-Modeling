@@ -132,13 +132,13 @@ def folderAnalyzer(folderName):
         attrFile= FigMaker.AttrFile(attrFileName)
         opponent = getOpponentFromAttrFile(attrFile)
         analyzer = ModelAnalyzer(attrFileName, dataFileName, opponent, generator=moveGen)
-        bestModels = analyzer.getBestModelsFromDataFile(analyzer.dataFile, N=2000) #only 2K models for now
+        bestModels = analyzer.getBestModelsFromDataFile(analyzer.dataFile, N=1000) #only 2K models for now
         print str(len(bestModels)) + " models to analyze for this file."
         outputFile.write(str(len(bestModels)) + " models to analyze for this file." + "\n")
         for model in bestModels:
             analyzer.modelPlayer.model = model
 
-            percentCorrect = analyzer.analyze(500)
+            percentCorrect = analyzer.analyze(130)
             modelsPercentCorrects[model] = percentCorrect
 
         bestEntry = max(modelsPercentCorrects.items(), key = lambda x: x[1])

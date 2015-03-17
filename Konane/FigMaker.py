@@ -17,10 +17,10 @@ import datetime, os, re, sys
 # Make it show a line where a new round starts on the generations graphs
 class FigMaker:
     def __init__(self):
-        self.USING_ATTR = True
-        self.dataFolder = "data/CLA/data/"
-        self.attrFolder = "data/CLA/attr/"
-        self.outPutFile = "" + str(datetime.datetime.time(datetime.datetime.now())) + ".png"
+        self.USING_ATTR = False
+        self.dataFolder = "data/fromInternet/data/"
+        self.attrFolder = "data/fromInternet/attr/"
+        self.outPutFile = str(datetime.datetime.time(datetime.datetime.now())) + ".png"
 
         self.data = []
         self.attr = []
@@ -99,19 +99,19 @@ class FigMaker:
         dataFile.generateMinMaxMedianFitnessOverTrials(showRoundBreaks = False)
         dataFile.generateMinMaxMedianDiversityOverTrials(showRoundBreaks = True)
         dataFile.generateMinMaxMedianPercentCorrectOverTrials(showRoundBreaks = True)
-        dataFile.generateFitnessOverTrials()
+        # dataFile.generateFitnessOverTrials()
         # dataFile.generateFitnessOverTimes()
-        dataFile.generateAvgFitnessOverTrials()
+        # dataFile.generateAvgFitnessOverTrials()
         # dataFile.generateAvgFitnessOverTimes()
-        dataFile.generateAvgFitnessOverRounds()
-        dataFile.generateMaxFitnessOverTrials()
+        # dataFile.generateAvgFitnessOverRounds()
+        # dataFile.generateMaxFitnessOverTrials()
         # dataFile.generateMaxFitnessOverTimes()
-        dataFile.generateMaxFitnessOverRounds()
-        dataFile.generateDiversityOverTrials()
-        dataFile.generateMaxDiversityOverTrials()
-        dataFile.generateMaxDiversityOverRounds()
-        dataFile.generateAvgDiversityOverTrials()
-        dataFile.generateAvgDiversityOverRounds()
+        # dataFile.generateMaxFitnessOverRounds()
+        # dataFile.generateDiversityOverTrials()
+        # dataFile.generateMaxDiversityOverTrials()
+        # dataFile.generateMaxDiversityOverRounds()
+        # dataFile.generateAvgDiversityOverTrials()
+        # dataFile.generateAvgDiversityOverRounds()
         dataFile.generateAvgPercentCorrectOverTrials(showRoundBreaks = True)
 
 
@@ -192,7 +192,7 @@ class DataFile:
         self.percentCorrect = []
         self.attrs = attrFile
         self.fileName = fileName
-        self.figFolder = "figures/CLA/"
+        self.figFolder = "figures/fromInternet/"
         self.outputToFile = outputToFile
 
         self.createData()
