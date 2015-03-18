@@ -7,6 +7,7 @@ __author__ = 'julian'
 
 import FigMaker, johnMinimaxEvolved, randomBoardStates, random, StaticEvalModel, os
 import gakonane
+from datetime import datetime
 
 class ModelAnalyzer:
     def __init__(self, attrFileName, dataFileName, opponent, generator = None):
@@ -121,7 +122,7 @@ class ModelAnalyzer:
 def folderAnalyzer(folderName):
     dataFileList = sorted(os.listdir(folderName + "/data/"))
     attrFileList = sorted(os.listdir(folderName + "/attr/"))
-    outputFile = open(folderName + "modelAnalysis.txt", "w+", 1)
+    outputFile = open(folderName + str(datetime.now()) + "modelAnalysis.txt", "w+", 1)
     moveGen = randomBoardStates.RandomStateGenerator(boardSize=6)
 
     for i in range(len(dataFileList)):
@@ -188,7 +189,7 @@ def analyzeInternetPlayer():
     opponent = getOpponentFromOnlineAttrFile()
     analyzer = ModelAnalyzer(attrFileName, dataFileName, opponent)
 
-    analyzer.analyze(1000)
+    print analyzer.analyze(1000)
 
 def getOpponentFromOnlineAttrFile():
     opponent = gakonane.KOnane(6, 3)
@@ -211,5 +212,5 @@ def getOpponentFromAttrFile(attrFile):
 
 
 if __name__ == "__main__":
-    folderAnalyzer("data/CLA/")
-    # analyzeInternetPlayer()
+    #folderAnalyzer("data/CLA/")
+    analyzeInternetPlayer()
