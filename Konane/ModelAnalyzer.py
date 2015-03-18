@@ -212,5 +212,5 @@ def getOpponentFromAttrFile(attrFile):
 
 
 if __name__ == "__main__":
-    #folderAnalyzer("data/CLA/")
-    analyzeInternetPlayer()
+    folderAnalyzer("data/CLA/")
+    #analyzeInternetPlayer()
